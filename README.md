@@ -1,3 +1,9 @@
+# Snapmaker U1 Bridge for Bambu Studio — 5.48.0-u1.1
+
+Community revision: [English installation and usage](README.en.md) · [Release notes](RELEASE-NOTES.md). Original upstream documentation follows below.
+
+---
+
 # Snapmaker U1 BambuStudio 兼容包 v5.48.0
 
 让 BambuStudio 支持 Snapmaker U1 打印机的切片配置与**原生级设备控制体验**（通过 Bridge 服务器 + 原生打印确认对话框），支持局域网直连与 Tailscale 级联远程打印。

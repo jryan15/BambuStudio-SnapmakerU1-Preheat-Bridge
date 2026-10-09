@@ -1,0 +1,98 @@
+[
+  {
+    "file": "Epic_Jaban_U1_preheat40_TEST.gcode",
+    "bytes": 349179,
+    "slots": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "layers": 10,
+    "bodyCommandsPreserved": true,
+    "runs": [
+      {
+        "mode": "unique",
+        "changes": 30,
+        "skippedCooldowns": 0
+      },
+      {
+        "mode": "all-combined",
+        "changes": 30,
+        "skippedCooldowns": 29
+      }
+    ]
+  },
+  {
+    "file": "manger_U1_preheat40_TEST.gcode",
+    "bytes": 22400584,
+    "slots": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "layers": 553,
+    "bodyCommandsPreserved": true,
+    "runs": [
+      {
+        "mode": "unique",
+        "changes": 819,
+        "skippedCooldowns": 0
+      },
+      {
+        "mode": "all-combined",
+        "changes": 819,
+        "skippedCooldowns": 817
+      }
+    ]
+  },
+  {
+    "file": "Nativity_cross_6h51m_U1_preheat40_TEST.gcode",
+    "bytes": 25772510,
+    "slots": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "layers": 432,
+    "bodyCommandsPreserved": true,
+    "runs": [
+      {
+        "mode": "unique",
+        "changes": 860,
+        "skippedCooldowns": 0
+      },
+      {
+        "mode": "all-combined",
+        "changes": 860,
+        "skippedCooldowns": 860
+      }
+    ]
+  },
+  {
+    "file": "traveller_U1_preheat40_TEST.gcode",
+    "bytes": 8977733,
+    "slots": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "layers": 428,
+    "bodyCommandsPreserved": true,
+    "runs": [
+      {
+        "mode": "unique",
+        "changes": 552,
+        "skippedCooldowns": 0
+      },
+      {
+        "mode": "all-combined",
+        "changes": 552,
+        "skippedCooldowns": 550
+      }
+    ]
+  }
+]

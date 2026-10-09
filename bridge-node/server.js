@@ -9,11 +9,16 @@ const { pipeline } = require("stream");
 const { WebSocketServer, WebSocket } = require("ws");
 const fetch = require("node-fetch");
 const compression = require("compression");
-const { showPrintDialog, cancelActiveDialog } = require("./dialog");
-const { isLocalRequest } = require("./netUtils");
+const { cancelActiveDialog } = require("./dialog");
+const { processUpload, normalizeOptions, countPauses, isBambuU1 } = require("./advance_preheat");
+const { usedSlotsFromGcode } = require("./file_filaments");
+const { prepareSharedPrint, restoreHeating } = require("./shared_preheat");
+const { prepareTouchscreenFormat, MARKER: TOUCHSCREEN_MARKER } = require("./touchscreen_format");
+const mapping = require(fs.existsSync(path.join(__dirname, "web", "filament_mapping.js"))
+  ? "./web/filament_mapping" : "../bridge/web/filament_mapping");
 const sliceAgent = require("./slice_agent");
 
-const BRIDGE_VERSION = "5.48.0";
+const BRIDGE_VERSION = "5.48.0-u1.1";
 // BRIDGE_PORT env override (e.g. running a second local Bridge for testing)
 const DEFAULT_PORT = parseInt(process.env.BRIDGE_PORT, 10) || 13628;
 const MOONRAKER_TIMEOUT = 10000;
@@ -51,6 +56,7 @@ const WEB_DIR = fs.existsSync(path.join(__dirname, "web", "webui.html"))
   : path.join(PROJECT_DIR, "bridge", "web");
 
 let printerConfig = { host: "", port: 80, apikey: "", mode: "webui", bind: "127.0.0.1", upstream: "" };
+let advanceHeating = normalizeOptions();
 let aiConfig = { provider: "", model: "", apiKey: "", customBaseUrl: "" };
 let pendingPrintFile = "";
 let camMonitorActive = false;
@@ -67,6 +73,7 @@ function loadConfig() {
       const data = JSON.parse(raw);
       printerConfig = { ...printerConfig, ...data };
       if (data.aiConfig) aiConfig = { ...aiConfig, ...data.aiConfig };
+      if (data.advanceHeating) advanceHeating = normalizeOptions(data.advanceHeating);
     } catch (e) {
       log("ERROR", `Failed to load config: ${e.message}`);
     }
@@ -74,7 +81,7 @@ function loadConfig() {
 }
 
 function saveConfig() {
-  fs.writeFileSync(CONFIG_FILE, JSON.stringify({ ...printerConfig, aiConfig }, null, 2), "utf-8");
+  fs.writeFileSync(CONFIG_FILE, JSON.stringify({ ...printerConfig, aiConfig, advanceHeating }, null, 2), "utf-8");
 }
 
 // ── Upstream target (v5.46.0 cascade mode) ──
@@ -452,6 +459,10 @@ app.get("/ailab.js", (req, res) => {
   if (fs.existsSync(p)) return res.sendFile(p, { dotfiles: 'allow' });
   res.status(404).end();
 });
+app.get("/filament_mapping.js", (req, res) => {
+  res.sendFile(path.join(WEB_DIR, "filament_mapping.js"), { dotfiles: 'allow' });
+});
+
 app.get("/gcvt.js", (req, res) => {
   const p = path.join(WEB_DIR, "gcvt.js");
   if (fs.existsSync(p)) return res.sendFile(p, { dotfiles: 'allow' });
@@ -464,6 +475,7 @@ app.get("/api/bridge/config", (req, res) => {
     printer_host: printerConfig.host,
     printer_port: printerConfig.port,
     has_apikey: !!printerConfig.apikey,
+    advanceHeating,
     bind: printerConfig.bind || "127.0.0.1",
     upstream: printerConfig.upstream || "",
   });
@@ -477,6 +489,7 @@ app.get("/api/bridge/config.js", (req, res) => {
     printer_host: printerConfig.host,
     printer_port: printerConfig.port,
     has_apikey: !!printerConfig.apikey,
+    advanceHeating,
     bind: printerConfig.bind || "127.0.0.1",
     upstream: printerConfig.upstream || "",
   })});`);
@@ -535,12 +548,18 @@ app.get("/api/bridge/save_config.js", (req, res) => {
   const cb = req.query.cb || "callback";
   res.type("application/javascript");
   try {
+    const nextHeating = normalizeOptions({
+      enabled: req.query.preheat_enabled === undefined ? advanceHeating.enabled :
+        req.query.preheat_enabled === "true" ? true : req.query.preheat_enabled === "false" ? false : null,
+      leadSeconds: req.query.preheat_seconds === undefined ? advanceHeating.leadSeconds : Number(req.query.preheat_seconds),
+    });
     const target = req.query.target || (req.query.url ? "upstream" : "printer");
     if (target === "upstream") {
       const url = (req.query.url || "").trim().replace(/\/+$/, "");
       if (!url) throw new Error("url is required");
       if (!/^https?:\/\//i.test(url)) throw new Error("url must start with http:// or https://");
       printerConfig.upstream = url;
+      advanceHeating = nextHeating;
       saveConfig();
       log("INFO", `Connection target: upstream bridge ${url}`);
       res.send(`${cb}(${JSON.stringify({ ok: true, upstream: url })});`);
@@ -548,6 +567,7 @@ app.get("/api/bridge/save_config.js", (req, res) => {
     }
     const host = (req.query.host || "").trim();
     if (!host) throw new Error("host is required");
+    advanceHeating = nextHeating;
     printerConfig.host = host;
     printerConfig.port = parseInt(req.query.port) || 80;
     printerConfig.upstream = "";
@@ -655,126 +675,99 @@ app.get("/api/bridge/debug/export", (req, res) => {
   res.send(content);
 });
 
-app.post("/api/bridge/confirm_print", async (req, res) => {
-  if (!pendingPrintFile) return res.status(400).json({ error: "no_pending_print" });
-
-  const options = req.body || {};
-  const filename = pendingPrintFile;
-  pendingPrintFile = "";
-  // Consumed via WebUI — close any lingering native desktop dialog
+async function getPrintFilaments(filename, includeContent = false) {
+  if (typeof filename !== "string" || !filename || /[\r\n\0]/.test(filename)) throw Error("Invalid print filename.");
+  const name = filename.replace(/^gcodes\//, "");
+  const response = await moonrakerFetch("/server/files/metadata?filename=" + encodeURIComponent(name));
+  if (!response.ok) throw Error("Cannot read filament usage for this file.");
+  const metadata = await response.json();
+  const file = await moonrakerFetch("/server/files/gcodes/" + name.split('/').map(encodeURIComponent).join('/'));
+  if (!file.ok) throw Error("Cannot inspect the sliced file's used filaments.");
+  const content = await file.text();
+  const slots = usedSlotsFromGcode(content);
+  const result = {...metadata.result, bridge_used_slots: slots, bridge_pause_count: countPauses(content)};
+  if (!slots.length) throw Error("Cannot identify the filaments used by this sliced file.");
+  return includeContent ? {metadata:result,content,name} : result;
+}
+app.get("/api/bridge/print_filaments.js", async (req,res) => {
+  let data;
+  try { data = {result:await getPrintFilaments(req.query.path)}; }
+  catch(e) { data = {error:e.message}; }
+  res.type("application/javascript").send(`${req.query.cb || 'callback'}(${JSON.stringify(data)});`);
+});
+async function startMappedPrint(filename, options) {
+  let printFilename = filename;
+  const source = await getPrintFilaments(filename,true);
+  const metadata = source.metadata;
+  const table = typeof options.extruder_map_table === "string" ? JSON.parse(options.extruder_map_table) : options.extruder_map_table;
+  const flag = value => [true, 1, "true", "1"].includes(value) ? 1 : 0;
+  mapping.validate(table, mapping.usedSlots(metadata));
+  // Always prepare heating after final head assignments, including saved uploads
+  // that were deliberately stored without speculative preheating.
+  let prepared = isBambuU1(source.content) && source.content.includes('; MACHINE_START_GCODE_END') &&
+    (source.content.includes('; cooldown previous extruder') || source.content.includes('; U1_SHARED_SCHEDULE'))
+    ? prepareSharedPrint(source.content,table,advanceHeating) : {content:source.content,report:{switches:0}};
+  const formatted = prepareTouchscreenFormat(prepared.content);
+  prepared.content = formatted.content;
+  if (prepared.content !== source.content) {
+    const FD = require('form-data'),form = new FD();
+    const directory = path.posix.dirname(source.name);
+    if (directory !== '.') form.append('path',directory);
+    form.append('file',Buffer.from(prepared.content,'utf8'),{filename:path.posix.basename(source.name)});
+    const url = getBaseUrl()+'/server/files/upload';
+    // Like the initial upload, large files must not have a fixed upload timeout.
+    const response = await fetch(url,{method:'POST',headers:{...moonrakerHeaders(),...form.getHeaders()},body:form,agent:agentFor(url)});
+    if (!response.ok) throw Error('Could not save the shared-head heating schedule.');
+    const uploaded = await response.json();
+    const returnedPath = uploaded?.result?.item?.path ?? uploaded?.item?.path;
+    const savedPath = (returnedPath === undefined ? source.name : returnedPath);
+    if (typeof savedPath !== 'string' || !savedPath || /[\\\r\n\0]/.test(savedPath) || savedPath.startsWith('/') || savedPath.split('/').some(part=>part==='..' || part==='.' || !part))
+      throw Error('Prepared upload returned an invalid file path; print was not started.');
+    const verifiedPath = savedPath.replace(/^gcodes\//,'');
+    log('INFO',`Prepared upload path: requested=${source.name}; returned=${JSON.stringify(returnedPath)}; verifying=${verifiedPath}`);
+    const saved = await moonrakerFetch('/server/files/gcodes/'+verifiedPath.split('/').map(encodeURIComponent).join('/'));
+    if (!saved.ok || await saved.text() !== prepared.content)
+      throw Error('The saved prepared file could not be verified; print was not started. Retry the upload.');
+    printFilename = verifiedPath;
+    log('INFO',`Shared-head heating prepared and verified: ${verifiedPath}; ${prepared.report.switches} changes`);
+  }
+  // Validate everything before any printer command or consuming pending state.
+  for (const [configExt, mapExt] of table) {
+    await sendGcode(`SET_PRINT_EXTRUDER_MAP CONFIG_EXTRUDER=${configExt} MAP_EXTRUDER=${mapExt}`);
+  }
+  const heads = [...new Set(table.map(row => row[1]))].sort();
+  await sendGcode(`SET_PRINT_USED_EXTRUDERS EXTRUDERS=${heads.join(',')}`);
+  await sendGcode(`SET_PRINT_PREFERENCES BED_LEVEL=${flag(options.auto_bed_leveling)} FLOW_CALIBRATE=${flag(options.flow_calibrate)} TIME_LAPSE_CAMERA=${flag(options.time_lapse_camera)}`);
+  const result = await callMoonrakerJsonRpc("printer.print.start", { filename: printFilename });
+  if (pendingPrintFile === filename) pendingPrintFile = "";
   cancelActiveDialog();
-
-  let script = `SDCARD_PRINT_FILE_WITH_PARAMETERS FILENAME="${filename}"`;
-  for (const [k, v] of Object.entries(options)) {
-    const val = ["true", "1", "yes"].includes(String(v).toLowerCase()) ? "1" : "0";
-    script += ` ${k.toUpperCase()}=${val}`;
-  }
-
-  log("INFO", `Confirm print: ${script}`);
-
-  try {
-    await sendGcode(script);
-    log("INFO", `Print started: ${filename}`);
-    res.json({ started: true, filename });
-  } catch (e) {
-    log("ERROR", `Confirm print error: ${e.message}`);
-    res.status(502).json({ error: e.message });
-  }
+  return { started: true, filename: printFilename, result };
+}
+// Prevent two confirmation channels from starting the same job concurrently.
+let printStartInProgress = false;
+async function handleMappedPrint(req, res, pending, jsonp) {
+  const reply = (data, status=200) => jsonp
+    ? res.type("application/javascript").send(`${req.query.cb || 'callback'}(${JSON.stringify(data)});`)
+    : res.status(status).json(data);
+  if (printStartInProgress) return reply({error:"A print confirmation is already in progress."}, 409);
+  const options = jsonp ? req.query : req.body || {};
+  const filename = pending ? pendingPrintFile : options.path;
+  if (!filename) return reply({error:pending ? "no_pending_print" : "path_required"}, 400);
+  if (pending && options.filename !== filename) return reply({error:"The pending file changed. Reopen the print confirmation."}, 409);
+  printStartInProgress = true;
+  try { reply(await startMappedPrint(filename, options)); }
+  catch (e) { log("ERROR", `Mapped print rejected: ${e.message}`); reply({error:e.message}, 422); }
+  finally { printStartInProgress = false; }
+}
+app.post("/api/bridge/confirm_print", (req,res) => handleMappedPrint(req,res,true,false));
+app.post("/api/bridge/start_print", (req,res) => handleMappedPrint(req,res,false,false));
+app.get("/api/bridge/confirm_print.js", (req,res) => handleMappedPrint(req,res,true,true));
+app.get("/api/bridge/start_print.js", (req,res) => handleMappedPrint(req,res,false,true));
+app.post("/api/bridge/cancel_pending", (req,res) => {
+  pendingPrintFile = ""; cancelActiveDialog(); res.json({cancelled:true});
 });
-
-app.post("/api/bridge/cancel_pending", (req, res) => {
-  pendingPrintFile = "";
-  cancelActiveDialog();
-  res.json({ cancelled: true });
-});
-
-app.get("/api/bridge/pending_print.js", (req, res) => {
-  const cb = req.query.cb || "callback";
-  res.type("application/javascript");
-  res.send(`${cb}(${JSON.stringify({ filename: pendingPrintFile })});`);
-});
-
-app.get("/api/bridge/confirm_print.js", async (req, res) => {
-  const cb = req.query.cb || "callback";
-  if (!pendingPrintFile) {
-    res.type("application/javascript");
-    res.send(`${cb}(${JSON.stringify({ error: "no_pending_print" })});`);
-    return;
-  }
-  const bedLevel = req.query.auto_bed_leveling === "1" ? 1 : 0;
-  const flowCal = req.query.flow_calibrate === "1" ? 1 : 0;
-  const timelapse = req.query.time_lapse_camera === "1" ? 1 : 0;
-  let mapTable = [];
-  if (req.query.extruder_map_table) {
-    try {
-      if (req.query.extruder_map_table.length > 4096) throw new Error("extruder_map_table too large");
-      mapTable = JSON.parse(req.query.extruder_map_table);
-      if (!Array.isArray(mapTable)) throw new Error("extruder_map_table not an array");
-    } catch (e) { log("WARN", `extruder_map_table parse error: ${e.message}`); mapTable = []; }
-  }
-  const filename = pendingPrintFile;
-  pendingPrintFile = "";
-  // Consumed via WebUI — close any lingering native desktop dialog
-  cancelActiveDialog();
-  log("INFO", `Confirm print: filename=${filename} bed_level=${bedLevel} flow_cal=${flowCal} timelapse=${timelapse} map_table=${JSON.stringify(mapTable)}`);
-  try {
-    for (const [configExt, mapExt] of mapTable) {
-      await sendGcode(`SET_PRINT_EXTRUDER_MAP CONFIG_EXTRUDER=${configExt} MAP_EXTRUDER=${mapExt}`);
-    }
-    if (mapTable.length > 0) {
-      const usedExtruders = [...new Set(mapTable.map(([_, m]) => m))].sort();
-      await sendGcode(`SET_PRINT_USED_EXTRUDERS EXTRUDERS=${usedExtruders.join(',')}`);
-    }
-    await sendGcode(`SET_PRINT_PREFERENCES BED_LEVEL=${bedLevel} FLOW_CALIBRATE=${flowCal} TIME_LAPSE_CAMERA=${timelapse}`);
-    const result = await callMoonrakerJsonRpc("printer.print.start", { filename: filename });
-    log("INFO", `printer.print.start result: ${JSON.stringify(result)}`);
-    res.type("application/javascript");
-    res.send(`${cb}(${JSON.stringify({ started: true, filename, result })});`);
-  } catch (e) {
-    log("ERROR", `confirm_print error: ${e.message}`);
-    res.type("application/javascript");
-    res.send(`${cb}(${JSON.stringify({ error: e.message })});`);
-  }
-});
-
-app.get("/api/bridge/start_print.js", async (req, res) => {
-  const cb = req.query.cb || "callback";
-  const path = req.query.path;
-  if (!path) {
-    res.type("application/javascript");
-    res.send(`${cb}(${JSON.stringify({ error: "path_required" })});`);
-    return;
-  }
-  const bedLevel = req.query.auto_bed_leveling === "1" ? 1 : 0;
-  const flowCal = req.query.flow_calibrate === "1" ? 1 : 0;
-  const timelapse = req.query.time_lapse_camera === "1" ? 1 : 0;
-  let mapTable = [];
-  if (req.query.extruder_map_table) {
-    try {
-      if (req.query.extruder_map_table.length > 4096) throw new Error("extruder_map_table too large");
-      mapTable = JSON.parse(req.query.extruder_map_table);
-      if (!Array.isArray(mapTable)) throw new Error("extruder_map_table not an array");
-    } catch (e) { log("WARN", `extruder_map_table parse error: ${e.message}`); mapTable = []; }
-  }
-  log("INFO", `start_print: path=${path} bed_level=${bedLevel} flow_cal=${flowCal} timelapse=${timelapse} map_table=${JSON.stringify(mapTable)}`);
-  try {
-    for (const [configExt, mapExt] of mapTable) {
-      await sendGcode(`SET_PRINT_EXTRUDER_MAP CONFIG_EXTRUDER=${configExt} MAP_EXTRUDER=${mapExt}`);
-    }
-    if (mapTable.length > 0) {
-      const usedExtruders = [...new Set(mapTable.map(([_, m]) => m))].sort();
-      await sendGcode(`SET_PRINT_USED_EXTRUDERS EXTRUDERS=${usedExtruders.join(',')}`);
-    }
-    await sendGcode(`SET_PRINT_PREFERENCES BED_LEVEL=${bedLevel} FLOW_CALIBRATE=${flowCal} TIME_LAPSE_CAMERA=${timelapse}`);
-    const result = await callMoonrakerJsonRpc("printer.print.start", { filename: path });
-    log("INFO", `printer.print.start result: ${JSON.stringify(result)}`);
-    res.type("application/javascript");
-    res.send(`${cb}(${JSON.stringify({ started: true, path, result })});`);
-  } catch (e) {
-    log("ERROR", `start_print error: ${e.message}`);
-    res.type("application/javascript");
-    res.send(`${cb}(${JSON.stringify({ error: e.message })});`);
-  }
+app.get("/api/bridge/pending_print.js", (req,res) => {
+  res.type("application/javascript").send(`${req.query.cb || 'callback'}(${JSON.stringify({filename:pendingPrintFile})});`);
 });
 
 app.get("/api/bridge/cancel_pending.js", (req, res) => {
@@ -1106,6 +1099,22 @@ async function handleUploadWithConfirm(req, res) {
     let fileContent = fs.readFileSync(file.filepath);
     const isGcode = /\.gcode$/i.test(file.originalFilename);
     if (isGcode) {
+      let heated;
+      try {
+        const original=fileContent.toString('utf-8');
+        // Both transfer modes store a mapping-independent file. Advance heating
+        // is added only when Device confirmation supplies final head choices.
+        heated = {content:isBambuU1(original) ? restoreHeating(original) : original,
+          report:{status:'awaiting_head_mapping',switches:0}};
+        const formatted = prepareTouchscreenFormat(heated.content);
+        heated.content = formatted.content;
+        log('INFO',`Automatic format preparation: ${formatted.status}`);
+      } catch (error) {
+        log("ERROR", `Advance heating rejected upload: ${error.message}`);
+        return res.status(422).json({ error: `Advance heating: ${error.message}` });
+      }
+      fileContent = Buffer.from(heated.content, "utf-8");
+      log("INFO", `Advance heating: ${heated.report.status}; ${heated.report.switches} changes; lead=${advanceHeating.leadSeconds}s`);
       const patched = patchGcodeLayout(fileContent.toString("utf-8"));
       if (patched) {
         fileContent = Buffer.from(patched, "utf-8");
@@ -1151,44 +1160,9 @@ async function handleUploadWithConfirm(req, res) {
         pendingPrintFile = uploadedPath;
         notifyWebui("pending_print", { filename: uploadedPath });
 
-        if (isLocalRequest(req)) {
-          // Local request: confirmation pops the native desktop dialog (existing behavior)
-          log("INFO", `Showing native dialog for: ${uploadedPath}`);
-          try {
-            const dialogResult = await showPrintDialog(uploadedPath, getBaseUrl(), printerConfig.apikey);
-            pendingPrintFile = "";
-
-            if (dialogResult) {
-              let script = `SDCARD_PRINT_FILE_WITH_PARAMETERS FILENAME="${uploadedPath}"`;
-              for (const k of ["auto_bed_leveling", "flow_calibrate", "time_lapse_camera"]) {
-                if (k in dialogResult) {
-                  script += ` ${k.toUpperCase()}=${dialogResult[k] ? "1" : "0"}`;
-                }
-              }
-              log("INFO", `Dialog confirmed, sending: ${script}`);
-              try {
-                await sendGcode(script);
-                log("INFO", `Print started after dialog: ${uploadedPath}`);
-              } catch (e) {
-                log("ERROR", `Failed to start print after dialog: ${e.message}`);
-              }
-            } else {
-              log("INFO", `Dialog cancelled for: ${uploadedPath}`);
-            }
-          } catch (e) {
-            log("ERROR", `Dialog error: ${e.message}`);
-            pendingPrintFile = "";
-          }
-        } else {
-          // Remote request: the home machine stays a pure data bridge — no
-          // desktop popup. The pending print is announced to WebUI clients
-          // (the remote BambuStudio Device tab / browser) via WebSocket, and
-          // the requester confirms there with the same filament-mapping flow.
-          // Requests proxied by `tailscale serve` arrive from loopback with
-          // X-Forwarded-For set to the real client (v5.44.1, traps.md #155).
-          const xffClient = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim();
-          log("INFO", `Remote upload from ${xffClient || req.socket.remoteAddress}: pending print ${uploadedPath}, awaiting remote confirmation via WebUI`);
-        }
+        // Both local and remote clients confirm on the Device page. The native
+        // dialog cannot assign logical project filaments to physical heads.
+        log("INFO", `Awaiting Device filament confirmation: ${uploadedPath}`);
       }
 
       return res.status(uploadResp.status).json({
@@ -1642,7 +1616,8 @@ app.get("/api/ai/check_gcode_format.js", async (req, res) => {
     const head = buf.toString("utf-8");
     // Detect format by layer marker (traps.md #116)
     let format = "unknown";
-    if (head.includes("; FEATURE:")) format = "bambu";
+    if (head.includes(TOUCHSCREEN_MARKER)) format = "prepared";
+    else if (head.includes("; FEATURE:")) format = "bambu";
     else if (head.includes(";TYPE:")) format = "orca";
     res.type("application/javascript");
     res.send(`${cb}(${JSON.stringify({ ok: true, format })});`);

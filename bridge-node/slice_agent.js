@@ -1167,7 +1167,7 @@ function cleanupQAStream(streamId) {
  * @returns {{ content: string, info: object }}
  * @throws {Error} if content is not valid BambuStudio format or already OrcaSlicer format
  */
-function convertGcodeContent(content) {
+function convertGcodeContent(content, options = {}) {
   // Parse block structure
   const headerStart = content.indexOf("; HEADER_BLOCK_START");
   const headerEnd = content.indexOf("; HEADER_BLOCK_END");
@@ -1245,15 +1245,17 @@ function convertGcodeContent(content) {
 
   // Get primary temperatures: use the highest hotend temp (actual print temp, not preheat)
   // BambuStudio EXEC block has M104 S140 (preheat), actual M109 S220 is in the print body
-  const primaryHotendTemp = hotendTemps.length > 0
+  let primaryHotendTemp = hotendTemps.length > 0
     ? Math.max(...hotendTemps.map(t => t.temp))
     : 200;
-  const primaryBedTemp = bedTemps.length > 0
+  let primaryBedTemp = bedTemps.length > 0
     ? Math.max(...bedTemps)
     : 60;
 
   // Find total layers from body
-  const layerMatches = content.match(/;BEFORE_LAYER_CHANGE/g) || content.match(/;LAYER:\d+/g);
+  const layerMatches = options.automatic
+    ? (printBody.match(/^;BEFORE_LAYER_CHANGE\s*$/gm) || printBody.match(/^;LAYER:\d+\s*$/gm))
+    : (content.match(/;BEFORE_LAYER_CHANGE/g) || content.match(/;LAYER:\d+/g));
   const totalLayers = layerMatches ? layerMatches.length : 0;
 
   // Detect multi-extruder from body
@@ -1261,7 +1263,19 @@ function convertGcodeContent(content) {
   const tMatches = printBody.matchAll(/^T(\d+)/gm);
   for (const m of tMatches) toolChanges.add(parseInt(m[1]));
   toolChanges.add(firstTool);
-  const usedTools = [...toolChanges].sort();
+  const usedTools = [...toolChanges].sort((a,b)=>a-b);
+  if (options.automatic) {
+    // Prime the first material at its own startup temperature, not the hottest
+    // material elsewhere in the job. Accept either parameter order.
+    let active = null;
+    for (const line of content.slice(execStart, machineStartEndIdx).split(/\r?\n/)) {
+      const code=line.split(';')[0].trim(), p={};
+      for(const m of code.matchAll(/([A-Z])\s*(-?(?:\d+(?:\.\d*)?|\.\d+))/g)) p[m[1]]=Number(m[2]);
+      if(/^T\d+$/.test(code)) active=Number(code.slice(1));
+      if(/^M10[49]\b/.test(code) && p.S>0 && (p.T??active)===firstTool) primaryHotendTemp=p.S;
+      if(/^M1[49]0\b/.test(code) && p.S>0) primaryBedTemp=p.S;
+    }
+  }
 
   log("INFO", `G-code convert: hotend=${primaryHotendTemp}°C bed=${primaryBedTemp}°C firstTool=T${firstTool} layers=${totalLayers} tools=[${usedTools.join(',')}]`);
 
@@ -1299,21 +1313,18 @@ function convertGcodeContent(content) {
   newExecBlock += "G90\n";
   newExecBlock += "DEFECT_DETECTION_DETECT_BED\n";
   newExecBlock += "SM_PRINT_CHECK_SWITCH_EXTRUDER\n";
-  for (const tool of usedTools) {
-    if (tool !== firstTool) {
-      newExecBlock += `SM_PRINT_EXTRUDER_PREHEAT EXTRUDER=${tool} TEMP=140\n`;
-    }
+  // These firmware macros accept physical heads, unlike T/M104 logical tools.
+  // Each macro checks extruders_used, so unused heads are skipped by firmware.
+  const startupHeads = options.automatic ? [0,1,2,3] : usedTools;
+  for (const tool of startupHeads) {
+    newExecBlock += `SM_PRINT_EXTRUDER_PREHEAT EXTRUDER=${tool} TEMP=140\n`;
   }
-  newExecBlock += `SM_PRINT_AUTO_FEED EXTRUDER=${firstTool}\n`;
-  newExecBlock += `SM_PRINT_FLOW_CALIBRATE EXTRUDER=${firstTool}\n`;
-  for (const tool of usedTools) {
-    if (tool !== firstTool) {
-      newExecBlock += `SM_PRINT_AUTO_FEED EXTRUDER=${tool}\n`;
-      newExecBlock += `SM_PRINT_FLOW_CALIBRATE EXTRUDER=${tool}\n`;
-    }
+  for (const tool of startupHeads) {
+    newExecBlock += `SM_PRINT_AUTO_FEED EXTRUDER=${tool}\n`;
+    newExecBlock += `SM_PRINT_FLOW_CALIBRATE EXTRUDER=${tool}\n`;
   }
   // Turn off all extruders before cleaning (OrcaSlicer standard flow)
-  for (const tool of usedTools) {
+  for (const tool of options.automatic ? [0,1,2,3] : usedTools) {
     newExecBlock += `M104 S0 T${tool} A0\n`;
   }
   newExecBlock += `M104 T${firstTool} S130\n`;
@@ -1384,7 +1395,7 @@ function convertGcodeContent(content) {
     ? ";BEFORE_LAYER_CHANGE"
     : ";LAYER:0";
   const layer0Idx = convertedBody.indexOf(layerStartMarker);
-  if (layer0Idx > 0) {
+  if (layer0Idx > 0 && !options.automatic) {
     const beforeLayer0 = convertedBody.substring(0, layer0Idx);
     const afterLayer0 = convertedBody.substring(layer0Idx);
 
@@ -1438,6 +1449,19 @@ function convertGcodeContent(content) {
   // Convert End G-code: check if it needs conversion
   // BambuStudio with U1 profile already uses PRINT_END/TIMELAPSE_STOP (OrcaSlicer-compatible)
   // Only replace if it uses BambuStudio-specific end commands
+  if (options.automatic) {
+    // Retain the complete sliced body, including pauses, motion, extrusion,
+    // temperatures and end commands. Only the startup is reconstructed.
+    newExecBlock += '; MACHINE_START_GCODE_END\n';
+    const startup=content.slice(execStart,machineStartEndIdx);
+    for(const pattern of [/^G28 Z(?:\s+Z_OFFSET[= ]\s*[-\d.]+)?\s*$/gm,/^BED_MESH_CALIBRATE[^\r\n]*$/gm]) {
+      const original=[...startup.matchAll(pattern)].at(-1)?.[0].trim();
+      if(original && original.includes('Z_OFFSET')) {
+        const target=original.startsWith('G28') ? /^G28 Z\s*$/m : /^BED_MESH_CALIBRATE[^\r\n]*$/m;
+        newExecBlock=newExecBlock.replace(target,original);
+      }
+    }
+  }
   const endPatterns = [
     "; --- end ---",
     "; End G-code",
@@ -1450,7 +1474,7 @@ function convertGcodeContent(content) {
   }
 
   // Only replace end gcode if it's NOT already OrcaSlicer format (PRINT_END)
-  if (endIdx >= 0 && !convertedBody.includes("PRINT_END")) {
+  if (endIdx >= 0 && !convertedBody.includes("PRINT_END") && !options.automatic) {
     const beforeEnd = convertedBody.substring(0, endIdx);
     // Build OrcaSlicer-compatible End G-code
     let orcaEnd = "; End G-code\n";

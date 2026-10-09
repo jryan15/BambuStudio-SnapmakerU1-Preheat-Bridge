@@ -1,0 +1,81 @@
+## Update 8 — touchscreen metadata fix (5.48.0-preheat.8)
+
+The physical Update 7 upload was rejected by the touchscreen. A diagnostic changing only native slicer identification was also rejected, although Moonraker identified it as SnapmakerOrca. Adding native footer filament statistics to that diagnostic reached the touchscreen color-selection dialog. This establishes recognition for the combined identification/statistics changes; physical startup and completion remain unverified.
+
+Automatic conversion now emits native identification plus footer length/volume/weight statistics, total weight, layer count and estimated time. Bambu Studio provenance is retained in a separate source comment that the preheater/shared scheduler recognize. Packed used-filament values are expanded into their original logical slot positions, including unused zeroes; volume is computed in cm3 from length and diameter. Missing or inconsistent usage is rejected. Existing version-7 files receive metadata upgrades without rebuilding startup. Normal Print and Upload both use this path; source-native Orca files remain unchanged.
+
+93 automated tests pass, along with the packaged mock-printer test. Generated statistics exactly match the physically accepted diagnostic, with all 7,398 executable commands unchanged. Four saved models are checked for body preservation and unique/shared heating (conversion-model-validation.json). Update8 targets installed preheat.7 and restores that version. No real printer upload or command was issued while implementing/packaging Update8. Any later uploads require Jason's explicit approval. Older notes below are history.
+## Update 7 — automatic conversion (5.48.0-preheat.7)
+
+Both Print and Upload now call the existing author's converter through a validated automatic-mode wrapper. The author's Orca startup sequence is retained; automatic mode preserves all post-startup commands rather than filtering or replacing the sliced body/end. It carries over explicit Z offsets, selects the first material's startup temperature instead of the maximum temperature across all materials, counts executable layer markers, and turns off the four physical heaters using A0 regardless of sparse logical IDs. Header, thumbnail and config blocks are validated, and executable body equivalence is checked before forwarding. Existing native/manual converted files are not converted twice.
+
+Both transfer modes initially store mapping-independent files without our schedule. Device confirmation regenerates preheating using final head assignments, including for unique mappings and later starts of upload-only files; reversible shared cooldowns are restored before remapping. No-temperature-change files avoid unnecessary heating work. Native/manual converted files without our startup boundary retain existing behavior. The format recommendation is hidden for automatically converted files; the manual Convert tab remains. The touchscreen has its own mapping UI and uses native waits on these upload-only files. Its sparse-slot selection limitations are not fixed by this bridge update.
+
+The test package targets installed preheat.6 and restores it. 90 automated tests and the packaged mock-printer test pass. Large-model evidence is recorded in conversion-model-validation.json. Physical touchscreen acceptance is pending; no installation or real printer command was performed. Earlier notes below are historical.
+# U1 automatic preheating and filament mapping integration
+
+Candidate version: **5.48.0-preheat.6**. Prepared October 8, 2026.
+
+Update 6 replaces the strict prepared-upload path equality check with readback verification of the exact prepared G-code. Valid renamed files are verified and started using the returned path; nested and top-level item responses are supported. If no path is returned, the original path is accepted only after successful exact-content readback. Invalid paths, failed reads and mismatched contents prevent all mapping/start commands. The original pending job remains available on failure. All 85 tests pass, including renamed paths, spaces, root prefixes, missing/alternate response fields and mismatch refusal. The existing real bridge log confirms the old path-check error but does not contain the response that caused it; physical retry is pending. The package targets installed preheat.5 and restores it.
+
+Update 5 shortens the confirmation notices: the missing-pause warning comes first, followed by one line per shared head. Explanatory paragraphs are removed. Mapping, pause and heating behavior remain unchanged. Existing Device UI checks and packaged simulated upload tests pass; the package upgrades installed preheat.4 and restores it.
+Update 4 preserves the shared-head notice but removes its required acknowledgment checkbox. The authoritative file metadata now includes the count of executable PAUSE/M600/M0/M1 commands. A nonblocking reminder appears only for more than four used project filaments with zero pauses; one pause suppresses it regardless of how many spools the user intends to replace. No attempt is made to validate pause placement or require one pause per extra filament. Existing pause commands are preserved verbatim. Each pause creates a lower bound for subsequent preheat insertion; the validator clears remembered heating targets across the pause because the firmware may cool heaters while paused. Original temperature waits and native pause/resume behavior remain. Shared preparation no longer rejects pauses. No new pause, resume, or heater-management commands are injected for the pause itself.
+
+85 automated tests pass, including all four recognized pause commands, repeated pauses, preservation, heating-boundary rejection, UI reminder states and six-color simulated upload/confirmation with one pause and no acknowledgment. The packaged runtime passes the same integration test. Update4 targets installed 5.48.0-preheat.3 and restores that version. Physical pause/resume testing remains next. Earlier version notes below are history.
+Update 3 adds explicitly confirmed shared-spool mapping for up to 32 used logical filaments across four physical heads. All used rows remain visible, shared assignments are summarized, and the user must acknowledge that they use the same loaded spool. After final mapping, the bridge downloads the file, removes its old schedule, regenerates heating using physical head identities, verifies and saves it before applying mappings and starting. Recognized same-head transitions comment out the outgoing cooldown; a changed temperature is applied only at the transition's existing M109. Logical T commands, purge/extrusion, Z lifts and startup remain intact. Snapmaker's published SWITCH_EXTRUDER code maps logical IDs and returns early when the requested physical head is already active, so mechanical swap deletion is unnecessary. Prepared files retain a schedule marker and reversible cooldown comments so later mapping changes rebuild correctly.
+
+82 automated tests pass. The packaged runtime passes six-color upload/confirmation, acknowledgment refusal, failed reupload refusal, and changed-mapping tests. The four saved files pass two shared-head mapping patterns across 4,522 transitions; all printing commands are preserved except the recognized shared-head cooldowns (see shared-model-validation.json). Update3 targets installed 5.48.0-preheat.2 and rolls back to it. Physical shared-head behavior still needs testing. Pause-based spool replacement remains outside this phase: PAUSE/M600 files are rejected by shared preparation. Automatic touchscreen conversion is unchanged. Earlier review details below describe previous versions and are retained as history.
+
+Update 2 fixes the observed all-project-filaments dialog: the previous fallback assumed all typed presets were used when usage metadata was missing. The bridge now reads the actual file's Bambu used-filament header (or analyzes post-startup extrusion where the header is absent), enriches Device metadata with that authoritative list and rechecks the file on print confirmation. It never infers usage from the existence of a project preset. 76 automated tests pass, including missing-usage-metadata UI and full upload/confirmation regressions. `Snapmaker_U1_Filament_Mapping_Test_Update2.zip` targets the installed 5.48.0-preheat.1 and restores that version if requested. The installer uses fresh connections around potentially long file-copy phases to avoid stale keep-alive sockets. Earlier review/version-1 validation details below are retained as history.
+
+Based directly on upstream commit [`a96942e35ca6d30d0231f926f3b05eb8ae7eb816`](https://github.com/VitasGuo/BambuStudio-SnapmakerU1-Compat/commit/a96942e35ca6d30d0231f926f3b05eb8ae7eb816), the author's v5.48.0 mapping update. Local branch: `feature/advance-preheat`. The upstream Git history and origin are retained. No GitHub fork, push, release, live installation change, or real printer command has been made.
+
+## Findings from upstream review
+
+- v5.48.0 replaces the fixed first-four-project-slot screen with dynamic rows for used project filaments. Logical project slots and the four physical heads are distinct.
+- Material and color matching already served as suggestions; upstream did not require an exact match. Each row's dropdown permits selecting any physical head.
+- The fallback `slot % 4` and type-only candidate filtering could still suggest duplicate heads, particularly when printer material labels did not match the project.
+- The local desktop dialog started jobs through `SDCARD_PRINT_FILE_WITH_PARAMETERS`, bypassing the Device mapping screen. The author's own traps.md documents why explicit mapping followed by `printer.print.start` is needed.
+- The JSONP mapping routes applied mappings, but the separate HTTP POST confirmation route treated every option as a boolean and did not apply the supplied mapping table. These paths are now unified.
+- Upstream v5.47–5.48 networking, upload retry, streaming, compression, remote connection settings and dynamic project-slot behavior are retained. The confirmation now happens on the Device page for local and remote upload requests alike.
+
+## Added behavior
+
+1. Automatic preheating runs on Bambu U1 `.gcode` uploads before the author's config-layout adjustment and printer forwarding. No manual export/conversion step is needed for direct printing.
+2. New configurations default to 30 seconds. Existing saved enabled/lead settings, including 40 seconds, are preserved. Settings remain adjustable from 5 to 120 seconds and can be disabled.
+3. The tested preheater retains blocking M109 temperature checks, exact per-filament temperatures, startup and all printing moves. It removes only the identified legacy wipe-tower reheat lines. Repeated identical temperature targets do not falsely invalidate a preheat.
+4. Sparse project tool IDs remain intact. Up to four used filaments can occupy logical slots 1–32, matching Snapmaker's published firmware limit. No compact renumbering or model/settings rewriting is performed.
+5. Head suggestions are distinct even when all printer labels are missing or wrong. Users can override them. Color/type mismatch notices do not block printing or replace the sliced printing temperatures and settings.
+6. Every used project filament must have a valid, distinct physical head. Duplicate, omitted and out-of-range assignments are rejected in the UI and server. Five actually used filaments require a different workflow; five or more entries in the project library are fine if the plate uses four or fewer.
+7. Both JSONP and HTTP confirmation use: explicit mapping → used heads → preferences → `printer.print.start`. No printer filament labels are overwritten.
+8. The pending job is retained after validation/start failures, and a stale confirmation cannot silently start a newly uploaded file. Concurrent confirmations are rejected.
+
+## Firmware cross-check
+
+The published [Snapmaker extruder implementation](https://github.com/Snapmaker/u1-klipper/blob/main/klippy/kinematics/extruder.py) maps explicit M104/M109 T indices by default (`A=1`). The [print task configuration](https://github.com/Snapmaker/u1-klipper/blob/main/klippy/extras/print_task_config.py) supports 32 logical extruders and four physical heads. This supports preserving logical IDs in the preheater and applying users' selected maps before starting. Installed firmware still needs the actual printer test below.
+
+## Validation
+
+72 automated tests pass, including the author's existing conversion, patching and networking tests, preheater regressions, actual Device JavaScript rendering/assignment checks, and a loopback-only simulated printer integration test.
+
+The integration test covers automatic upload processing, config-block movement, no printing on upload, project slots 2/4/6/8, nonidentity manual assignments, JSONP and HTTP confirmation, failed starts, cancellation, stale confirmations, rejected duplicate/invalid maps, missing metadata, disabled processing, invalid settings, idempotence and serving the new shared mapping asset.
+
+The saved Epic, Nativity, manger and traveller outputs were also checked: 30 + 860 + 819 + 552 = **2,261** tool changes. Original Downloads files are no longer present, so inputs were reconstructed by removing our prior scheduled commands from the saved outputs. Regenerating at 30 seconds preserved all other lines and passed every preheat check. See `model-validation.json`.
+
+The optional native esbuild bundling step could not run in this restricted environment: its native process could not read an ancestor directory. The supported source-server path (`node server.js`) was tested end to end. This archive is a source review/test candidate, not a tested one-click upgrade package. The original upstream installers are included for source completeness, but have not been run or validated for upgrading the current installation.
+
+## Next printer test
+
+Use a small four-color plate with project slots 2,4,6,8. Load four known colors in a deliberately different head order; keep the printer's stored labels different if desired. In Device confirmation assign each project color to its actual head. Verify the first selected head, color order, per-filament target temperatures and early heating on swaps. Then repeat a normal slots 1–4 test. Confirm cancellation does not start the job. The mapping test is pending; only the earlier preheater version has been tested physically.
+
+The separate touchscreen-format converter is unchanged. This candidate does not yet make raw Bambu G-code touchscreen-compatible and does not add Bambu's native AMS dropdown integration. The Device confirmation screen is the manual assignment point.
+
+## Prepared installation test package
+
+A separate `Snapmaker_U1_Filament_Mapping_Test.zip` now contains the source runtime and production dependencies, `INSTALL.cmd`, `RESTORE.cmd`, exact-baseline/package checksums and step-by-step `START-HERE.md`. It targets Jason's existing 5.39.0-preheat.2 installation. No optional native bundling step is needed. The packaged runtime passed the same simulated upload/mapping test, and all 1,531 payload files were tested through installation, checksum verification, already-installed detection, complete rollback, busy-printer refusal and changed-baseline refusal in a temporary installation. The real installation is still unchanged. The reusable installer source is `tools/install-test-update.cjs`; its manifest and payload are generated for each prepared package.
+
+## Continuing toward a fork
+
+Keep upstream `origin` for fetching updates. Add a separate remote for a future user-owned fork when requested, and push this branch there. The local integration commit records our changes on top of the author's exact latest source rather than replacing it with the older copied installation.
+
+To run automated checks from source: install the `bridge-node` package dependencies, then run `npm test` in `bridge-node`. Use a temporary APPDATA/XDG_CONFIG_HOME for test isolation because the upstream slice-agent module initializes its workspace on import. The integration test uses random loopback ports and temporary config directories; it never contacts the U1.

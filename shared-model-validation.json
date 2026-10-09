@@ -1,0 +1,98 @@
+[
+  {
+    "file": "Epic_Jaban_U1_preheat40_TEST.gcode",
+    "mode": "first-two-combined",
+    "slots": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "changes": 30,
+    "skippedCooldowns": 8
+  },
+  {
+    "file": "Epic_Jaban_U1_preheat40_TEST.gcode",
+    "mode": "all-combined",
+    "slots": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "changes": 30,
+    "skippedCooldowns": 29
+  },
+  {
+    "file": "manger_U1_preheat40_TEST.gcode",
+    "mode": "first-two-combined",
+    "slots": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "changes": 819,
+    "skippedCooldowns": 23
+  },
+  {
+    "file": "manger_U1_preheat40_TEST.gcode",
+    "mode": "all-combined",
+    "slots": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "changes": 819,
+    "skippedCooldowns": 817
+  },
+  {
+    "file": "Nativity_cross_6h51m_U1_preheat40_TEST.gcode",
+    "mode": "first-two-combined",
+    "slots": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "changes": 860,
+    "skippedCooldowns": 152
+  },
+  {
+    "file": "Nativity_cross_6h51m_U1_preheat40_TEST.gcode",
+    "mode": "all-combined",
+    "slots": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "changes": 860,
+    "skippedCooldowns": 860
+  },
+  {
+    "file": "traveller_U1_preheat40_TEST.gcode",
+    "mode": "first-two-combined",
+    "slots": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "changes": 552,
+    "skippedCooldowns": 14
+  },
+  {
+    "file": "traveller_U1_preheat40_TEST.gcode",
+    "mode": "all-combined",
+    "slots": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "changes": 552,
+    "skippedCooldowns": 550
+  }
+]

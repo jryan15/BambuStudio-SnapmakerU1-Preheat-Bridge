@@ -1,0 +1,34 @@
+[
+  {
+    "file": "Epic_Jaban_U1_preheat40_TEST.gcode",
+    "toolChanges": 30,
+    "leadSeconds": 30,
+    "allOtherLinesPreserved": true,
+    "verified": true,
+    "source": "reconstructed from earlier preheated output"
+  },
+  {
+    "file": "Nativity_cross_6h51m_U1_preheat40_TEST.gcode",
+    "toolChanges": 860,
+    "leadSeconds": 30,
+    "allOtherLinesPreserved": true,
+    "verified": true,
+    "source": "reconstructed from earlier preheated output"
+  },
+  {
+    "file": "manger_U1_preheat40_TEST.gcode",
+    "toolChanges": 819,
+    "leadSeconds": 30,
+    "allOtherLinesPreserved": true,
+    "verified": true,
+    "source": "reconstructed from earlier preheated output"
+  },
+  {
+    "file": "traveller_U1_preheat40_TEST.gcode",
+    "toolChanges": 552,
+    "leadSeconds": 30,
+    "allOtherLinesPreserved": true,
+    "verified": true,
+    "source": "reconstructed from earlier preheated output"
+  }
+]
