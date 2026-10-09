@@ -383,13 +383,15 @@ function Install-NpmDependencies {
     try {
         Push-Location $BridgeDir
         $npmCmd = Join-Path (Split-Path $NodePath) 'npm.cmd'
-        & $npmCmd install --production 2>&1 | ForEach-Object { Write-Host "    $_" -ForegroundColor DarkGray }
+        & $npmCmd install --omit=dev 2>&1 | ForEach-Object { Write-Host "    $_" -ForegroundColor DarkGray }
+        if ($LASTEXITCODE -ne 0) { throw "npm install failed (exit $LASTEXITCODE)." }
         Pop-Location
         Write-Host "  npm dependencies installed" -ForegroundColor Green
     } catch {
         Pop-Location
         Write-Host "  [!] npm install failed: $_" -ForegroundColor Yellow
         Write-Host "  You may need to run 'npm install' manually in $BridgeDir" -ForegroundColor Yellow
+        throw
     }
 }
 

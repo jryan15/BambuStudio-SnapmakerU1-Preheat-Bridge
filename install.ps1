@@ -1,11 +1,11 @@
 Import-Module "$PSScriptRoot\install-common.psm1"
 Set-ConsoleUtf8
 
-$Host.UI.RawUI.WindowTitle = "Snapmaker U1 - BambuStudio Compatibility Pack v5.48.0 Installer"
+$Host.UI.RawUI.WindowTitle = "Snapmaker U1 - BambuStudio Preheat Bridge 5.48.0-u1.2 Installer"
 
 Write-Host ""
 Write-Host "  ======================================================" -ForegroundColor Cyan
-Write-Host "    Snapmaker U1 BambuStudio Compatibility Pack v5.48.0" -ForegroundColor Cyan
+Write-Host "    Snapmaker U1 BambuStudio Preheat Bridge 5.48.0-u1.2" -ForegroundColor Cyan
 Write-Host "  ======================================================" -ForegroundColor Cyan
 Write-Host ""
 
@@ -90,10 +90,25 @@ if (-not (Test-Path $bridgeSrc)) {
     Write-Host "  Bridge source not found, skipping Bridge installation" -ForegroundColor Yellow
 } else {
     try {
-        if (Test-Path $bridgeDst) {
-            Remove-Item $bridgeDst -Recurse -Force
+        foreach ($required in @('server.js', 'package.json')) {
+            if (-not (Test-Path -LiteralPath (Join-Path $bridgeSrc $required) -PathType Leaf)) {
+                throw "Incomplete bridge payload: missing $required."
+            }
         }
-        Copy-Item $bridgeSrc $bridgeDst -Recurse -Force
+        Stop-BridgeProcess | Out-Null
+        $remaining = Get-NetTCPConnection -LocalPort 13628 -ErrorAction SilentlyContinue | Where-Object { $_.State -eq 'Listen' }
+        if ($remaining) { throw 'Bridge is still running. No bridge files were replaced.' }
+        $expected = [IO.Path]::GetFullPath((Join-Path $bambuDir 'bridge'))
+        if ([IO.Path]::GetFullPath($bridgeDst) -ne $expected) { throw 'Invalid bridge destination.' }
+        if (Test-Path -LiteralPath $bridgeDst) {
+            $backup = $bridgeDst + '.backup-' + [Guid]::NewGuid().ToString('N')
+            Move-Item -LiteralPath $bridgeDst -Destination $backup -ErrorAction Stop
+            Write-Host "  Previous bridge retained at $backup" -ForegroundColor Green
+        }
+        New-Item -ItemType Directory -Path $bridgeDst -ErrorAction Stop | Out-Null
+        Get-ChildItem -LiteralPath $bridgeSrc -Force | ForEach-Object {
+            Copy-Item -LiteralPath $_.FullName -Destination $bridgeDst -Recurse -Force -ErrorAction Stop
+        }
         Write-Host "  Bridge files copied to $bridgeDst" -ForegroundColor Green
 
         if (Test-Path $webSrc) {
@@ -128,7 +143,7 @@ if (-not (Test-Path $bridgeSrc)) {
         }
     } catch {
         Write-Host "  [!] Bridge installation failed: $_" -ForegroundColor Yellow
-        Write-Host "  You can install Bridge manually later" -ForegroundColor Yellow
+        exit 1
     }
 }
 
@@ -160,7 +175,10 @@ if ($bridgeOk) {
 Write-Host "  [9/9] Starting Bridge Server..." -ForegroundColor White
 $vbsPath = "$env:APPDATA\BambuStudio-Bridge\start-hidden.vbs"
 if (Test-Path $vbsPath) {
-    Start-BridgeAndWait -VbsPath $vbsPath -BambuDir $bambuDir -StopExistingFirst | Out-Null
+    if (-not (Start-BridgeAndWait -VbsPath $vbsPath -BambuDir $bambuDir -StopExistingFirst)) {
+        Write-Host "  Installation incomplete: bridge startup failed." -ForegroundColor Red
+        exit 1
+    }
 
     # Register watchdog scheduled task (auto-restart bridge if it crashes)
     try {

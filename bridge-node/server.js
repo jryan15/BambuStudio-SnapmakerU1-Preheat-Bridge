@@ -18,7 +18,7 @@ const mapping = require(fs.existsSync(path.join(__dirname, "web", "filament_mapp
   ? "./web/filament_mapping" : "../bridge/web/filament_mapping");
 const sliceAgent = require("./slice_agent");
 
-const BRIDGE_VERSION = "5.48.0-u1.1";
+const BRIDGE_VERSION = "5.48.0-u1.2";
 // BRIDGE_PORT env override (e.g. running a second local Bridge for testing)
 const DEFAULT_PORT = parseInt(process.env.BRIDGE_PORT, 10) || 13628;
 const MOONRAKER_TIMEOUT = 10000;

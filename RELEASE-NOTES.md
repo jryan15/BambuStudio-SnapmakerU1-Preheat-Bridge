@@ -1,4 +1,4 @@
-# 5.48.0-u1.1 — Advance heating and filament mapping
+# 5.48.0-u1.2 — Advance heating and filament mapping
 
 Based on upstream 5.48.0, commit a96942e35ca6d30d0231f926f3b05eb8ae7eb816. Original attribution and GPL-3.0 license retained.
 
@@ -21,3 +21,7 @@ Based on upstream 5.48.0, commit a96942e35ca6d30d0231f926f3b05eb8ae7eb816. Origi
 Touchscreen-started uploads can wait for heating. Five-plus-color touchscreen startup is unresolved and also failed in a native Snapmaker Orca test. The startup correction requires further physical confirmation; automated checks passed. Manual Convert retains upstream behavior. Linux is unvalidated for this revision.
 
 No printer firmware changes are required.
+
+Installer repair: stop the bridge before replacement, retain the previous directory as a backup, copy contents explicitly, and fail on npm or startup errors.
+
+Dependency cleanup: removed unused http-proxy-middleware and its dependency chain. npm audit reports zero vulnerabilities as of 2026-10-09.
