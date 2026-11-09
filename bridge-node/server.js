@@ -18,7 +18,7 @@ const mapping = require(fs.existsSync(path.join(__dirname, "web", "filament_mapp
   ? "./web/filament_mapping" : "../bridge/web/filament_mapping");
 const sliceAgent = require("./slice_agent");
 
-const BRIDGE_VERSION = "5.48.0-u1.2";
+const BRIDGE_VERSION = "5.48.0-u1.3";
 // BRIDGE_PORT env override (e.g. running a second local Bridge for testing)
 const DEFAULT_PORT = parseInt(process.env.BRIDGE_PORT, 10) || 13628;
 const MOONRAKER_TIMEOUT = 10000;
@@ -217,24 +217,42 @@ async function getTailscaleInfo() {
   return info;
 }
 
-const logStream = fs.createWriteStream(LOG_FILE, { flags: "a", encoding: "utf-8" });
+// Bounded disk logs; verbose request/status traffic stays in the memory ring.
+const LOG_MAX_BYTES = 5 * 1024 * 1024;
+const LOG_BACKUPS = 3;
 const debugLog = [];
 const DEBUG_LOG_MAX = 2000;
-
+let logBytes = fs.existsSync(LOG_FILE) ? fs.statSync(LOG_FILE).size : 0;
+function writeDiskLog(line) {
+  const bytes = Buffer.byteLength(line + "\n", "utf8");
+  if (logBytes + bytes > LOG_MAX_BYTES) {
+    for (let i = LOG_BACKUPS; i >= 1; i--) {
+      const target = LOG_FILE + "." + i;
+      const source = i === 1 ? LOG_FILE : LOG_FILE + "." + (i - 1);
+      if (fs.existsSync(target)) fs.unlinkSync(target);
+      if (fs.existsSync(source)) {
+        // Discard an oversized legacy log instead of retaining hundreds of MB.
+        if (fs.statSync(source).size <= LOG_MAX_BYTES) fs.renameSync(source, target);
+        else fs.unlinkSync(source);
+      }
+    }
+    logBytes = 0;
+  }
+  fs.appendFileSync(LOG_FILE, line + "\n", "utf8");
+  logBytes += bytes;
+}
 function log(level, msg) {
   const ts = new Date().toISOString().replace("T", " ").replace("Z", "");
   const line = `${ts} [${level}] bridge: ${msg}`;
-  logStream.write(line + "\n");
   debugLog.push(line);
   if (debugLog.length > DEBUG_LOG_MAX) debugLog.splice(0, debugLog.length - DEBUG_LOG_MAX);
+  if (level === "DEBUG" || (level === "INFO" && msg.startsWith(">>> "))) return;
+  try { writeDiskLog(line); }
+  catch (err) { console.error("Bridge log write failed: " + err.message); }
   if (level === "ERROR") console.error(line);
   else if (level === "WARN") console.warn(line);
   else console.log(line);
 }
-
-process.on("exit", () => {
-  try { logStream.end(); } catch (_) {}
-});
 
 // Prevent bridge crash from unhandled errors — log and keep running
 process.on("uncaughtException", (err) => {

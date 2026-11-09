@@ -144,7 +144,23 @@ function addPreheat(content, lead = 30, toolMap = null) {
     }
     if (/^(SM_|MOVE_TO_|ROUGHLY_|FINELY_|T\d+\b|G28\b)/.test(code)) pos = {};
   }
-  if (!switches.length) throw Error('No explicit tool-change temperature waits found.');
+  if (!switches.length) {
+    // Settings comments can contain a tool-change template even in a one-tool job.
+    // Accept only a body with no change away from its startup logical tool.
+    let selected = null;
+    for (let i = 0; i < lines.length; i++) {
+      const code = lines[i].split(';')[0].trim();
+      const tool = code.match(/^T(\d+)$/);
+      if (tool) {
+        const next = Number(tool[1]);
+        if (i > body && (selected === null || next !== selected))
+          throw Error('Tool change without explicit temperature waits; no output written.');
+        selected = next;
+      }
+    }
+    return {content, report:{status:'no_tool_changes', leadSeconds:lead, switches:0,
+      removedLegacyReheats:0, rows:[]}};
+  }
   if (lines.some(l => /^M104\b.*; preheat T/.test(l))) throw Error('Existing Orca preheating found; use original Bambu file.');
   for (const s of switches) {
     let at = s.line;
