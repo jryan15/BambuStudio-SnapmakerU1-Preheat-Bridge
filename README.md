@@ -1,8 +1,17 @@
+# 5.48.0-u1.3 — Single-color printing and bounded logs
+
+- Fixed single-color prints being rejected with “No explicit tool-change temperature waits found.”
+- Preserved existing filament mapping and temperature-wait commands.
+- Removed routine debug and request traffic from the disk log.
+- Added automatic log rotation: 5 MiB per file, with three backups.
+- Oversized legacy logs are discarded during rotation.
+- Successfully tested on the printer.
+  
 [中文文档](README.zh-CN.md)
 
 # Snapmaker U1 Bridge for Bambu Studio
 
-Version **5.48.0-u1.2** adds advance heating and flexible filament mapping to the upstream 5.48.0 compatibility package. This is a community revision, not an official Snapmaker or Bambu Lab release.
+Version **5.48.0-u1.3** adds advance heating and flexible filament mapping to the upstream 5.48.0 compatibility package. This is a community revision, not an official Snapmaker or Bambu Lab release.
 
 Based on [VitasGuo/BambuStudio-SnapmakerU1-Compat](https://github.com/VitasGuo/BambuStudio-SnapmakerU1-Compat), commit a96942e35ca6d30d0231f926f3b05eb8ae7eb816. Original author attribution and the GPL-3.0 license are retained. The original documentation remains in [README.zh-CN.md](README.zh-CN.md).
 
@@ -11,7 +20,7 @@ Based on [VitasGuo/BambuStudio-SnapmakerU1-Compat](https://github.com/VitasGuo/B
 1. Finish any active print and close Bambu Studio.
 2. Extract the Windows release ZIP to a folder.
 3. Right-click install.bat and choose Run as administrator. The upstream installer installs the profiles and bridge. Node.js is required and may be installed by that installer.
-4. Reopen Bambu Studio and confirm the Device page reports **5.48.0-u1.2**.
+4. Reopen Bambu Studio and confirm the Device page reports **5.48.0-u1.3**.
 
 Existing testers can instead use their separately supplied Windows-Update ZIP. Extract it and run INSTALL.cmd; RESTORE.cmd restores the previous bridge. That update archive is specific to its recorded installation baseline.
 
