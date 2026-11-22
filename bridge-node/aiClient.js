@@ -9,7 +9,7 @@ const fetch = require("node-fetch");
 
 const AI_PROVIDERS = {
   local: {
-    name: "本地模型 (LM Studio)",
+    name: "Local model (LM Studio)",
     baseUrl: "http://127.0.0.1:1234/v1",
     defaultModel: "google/gemma-4-e2b",
     availableModels: ["google/gemma-4-e2b", "qwen/qwen3.6-35b-a3b"],

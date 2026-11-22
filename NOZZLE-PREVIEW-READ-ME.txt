@@ -1,0 +1,55 @@
+For the COMPLETE setup interface in this package, use SETUP.bat and SETUP-READ-ME.txt.
+The instructions below describe the older profile-only entry point.
+
+U1 Nozzle Profiles - 5.48.0-u1.4-preview.2
+Bridge runtime remains the proven 5.48.0-u1.3. This is a profile-only preview.
+
+EXISTING WINDOWS USERS
+1. Close Bambu Studio.
+2. Extract the whole ZIP into a new folder.
+3. Double-click ADD-NOZZLE-PROFILES.bat (no administrator rights needed).
+4. If asked, choose BambuStudio or BambuStudioBeta.
+5. Reopen Bambu Studio; use Printer selection to enable the U1 nozzle sizes.
+6. Select the matching nozzle, its [Bridge test] process, and matching filament.
+   Check sliced preview BEFORE sending a small test print.
+All heads used in a print must have the same physical nozzle size.
+
+The updater adds profiles and merges their registry entries. Existing 0.4 mm
+process/filament settings and machine G-code are retained. The system Snapmaker
+profiles are backed up under the selected Bambu config's nozzle-profile-backups.
+To undo: close Bambu; replace system/Snapmaker and system/Snapmaker.json with
+the corresponding backup copies. User presets elsewhere are not modified.
+Future Bambu/vendor updates may replace cached profiles; rerun this add-on.
+
+NEW INSTALLATIONS
+The included install.bat is the existing full Windows installer with expanded
+profile data. Right-click > Run as administrator. This refreshes system profiles;
+use ADD-NOZZLE-PROFILES.bat for an existing installation to retain custom changes.
+
+INCLUDED
+0.2 mm: official 0.08, 0.10 and 0.12 mm process baselines.
+0.4 mm: existing profile retained.
+0.6 mm: official 0.18, 0.24 and 0.30 mm process baselines.
+0.8 mm: official 0.24, 0.32 and 0.40 mm process baselines.
+Only nozzle/material combinations represented by both the existing integration
+and official Snapmaker presets are added. No 1.0 mm or mixed-diameter printing.
+New profiles use Snapmaker's nozzle-specific temperatures, volumetric limits,
+widths, layer limits and retractions where supported by this integration.
+Our Bambu-compatible startup/tool-change/end G-code is preserved; Orca's native
+multi-extruder scripts and ooze-prevention behavior are NOT imported wholesale.
+
+VALIDATION AND LIMITS
+62 added presets pass inheritance/default/registry/geometry-range checks.
+Existing bridge test suite: 94 passing tests. Existing runtime files unchanged.
+No hard-coded nozzle diameter found in bridge preprocessing modules.
+Actual Bambu import/slicing and Windows updater execution have NOT been verified
+in this environment. Linux Bambu executable could not start due to missing
+WebKit libraries. Physical print confirmation for new sizes is still required.
+Do not advertise this preview as fully tested nozzle support.
+
+SOURCE
+Official baseline: https://github.com/Snapmaker/snapmaker-profiles
+Exact source commit and profile mapping: tools/nozzle-profiles/provenance.json
+Reproduce: python tools/nozzle-profiles/build.py <fresh official checkout>
+Run on a clean base checkout; then python tools/nozzle-profiles/validate.py
+Existing GPL-3.0 license retained. This preview has not been pushed to GitHub.

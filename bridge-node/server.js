@@ -18,7 +18,7 @@ const mapping = require(fs.existsSync(path.join(__dirname, "web", "filament_mapp
   ? "./web/filament_mapping" : "../bridge/web/filament_mapping");
 const sliceAgent = require("./slice_agent");
 
-const BRIDGE_VERSION = "5.48.0-u1.3";
+const BRIDGE_VERSION = "5.48.0-u1.4-test.7";
 // BRIDGE_PORT env override (e.g. running a second local Bridge for testing)
 const DEFAULT_PORT = parseInt(process.env.BRIDGE_PORT, 10) || 13628;
 const MOONRAKER_TIMEOUT = 10000;
@@ -114,7 +114,8 @@ function hasUpstreamTarget() {
 // range (covers machines where the CLI is not on PATH).
 
 function detectTailscaleIP() {
-  const ifaces = os.networkInterfaces();
+  let ifaces;
+  try { ifaces = os.networkInterfaces(); } catch (_) { return null; }
   for (const name of Object.keys(ifaces)) {
     for (const iface of ifaces[name] || []) {
       if (iface.family === "IPv4" && !iface.internal) {
@@ -403,6 +404,7 @@ app.get("/fluidd/config.json", (req, res) => {
   const configPath = path.join(fluiddDir, "config.json");
   try {
     const config = JSON.parse(fs.readFileSync(configPath, "utf-8"));
+    if (!config.endpoints || !config.endpoints.length) config.endpoints = [`${req.protocol}://${req.get("host")}`];
     log("DEBUG", `Fluidd config.json served, endpoints=${JSON.stringify(config.endpoints)}`);
     res.json(config);
   } catch (e) {
@@ -799,7 +801,7 @@ app.get("/api/bridge/cancel_pending.js", (req, res) => {
 app.get("/api/bridge/check_update.js", async (req, res) => {
   const cb = req.query.cb || "callback";
   try {
-    const r = await fetchWithTimeout("https://api.github.com/repos/VitasGuo/BambuStudio-SnapmakerU1-Compat/releases/latest", {
+    const r = await fetchWithTimeout("https://api.github.com/repos/jryan15/BambuStudio-SnapmakerU1-Preheat-Bridge/releases/latest", {
       headers: { "User-Agent": "BambuStudio-Bridge" },
     }, 8000);
     if (!r.ok) throw new Error(`GitHub API ${r.status}`);
@@ -1835,15 +1837,15 @@ function handleWsConnection(ws) {
   moonrakerWs.on("close", stopPing);
   moonrakerWs.on("error", stopPing);
 
-  ws.on("message", (data) => {
+  ws.on("message", (data, isBinary) => {
     try {
       const msg = JSON.parse(data.toString());
       log("DEBUG", `WS client→Moonraker: ${msg.method || msg.id || "unknown"}`);
     } catch (_) {}
     if (moonrakerWs.readyState === WebSocket.OPEN) {
-      moonrakerWs.send(data);
+      moonrakerWs.send(data, { binary: isBinary });
     } else if (moonrakerWs.readyState === WebSocket.CONNECTING) {
-      pendingMsgs.push(data);
+      pendingMsgs.push({ data, isBinary });
       log("DEBUG", `WS queued pending msg (queue=${pendingMsgs.length})`);
     } else {
       log("WARN", `WS client msg dropped: Moonraker state=${moonrakerWs.readyState}`);
@@ -1852,20 +1854,21 @@ function handleWsConnection(ws) {
 
   moonrakerWs.on("open", () => {
     log("INFO", `WS Moonraker connected, flushing ${pendingMsgs.length} pending msgs`);
-    for (const msg of pendingMsgs) {
-      if (moonrakerWs.readyState === WebSocket.OPEN) moonrakerWs.send(msg);
+    for (const { data, isBinary } of pendingMsgs) {
+      if (moonrakerWs.readyState === WebSocket.OPEN) moonrakerWs.send(data, { binary: isBinary });
     }
     pendingMsgs.length = 0;
   });
 
-  moonrakerWs.on("message", (data) => {
+  moonrakerWs.on("message", (data, isBinary) => {
     try {
       const msg = JSON.parse(data.toString());
       if (msg.result) log("DEBUG", `WS Moonraker→client: result id=${msg.id}`);
       else if (msg.error) log("WARN", `WS Moonraker→client: error id=${msg.id} ${msg.error.message || ""}`);
       else if (msg.method) log("DEBUG", `WS Moonraker→client: notify ${msg.method}`);
     } catch (_) {}
-    if (ws.readyState === WebSocket.OPEN) ws.send(data);
+    // Node ws delivers even text messages as Buffers; preserve the original opcode.
+    if (ws.readyState === WebSocket.OPEN) ws.send(data, { binary: isBinary });
   });
 
   moonrakerWs.on("close", (code, reason) => {

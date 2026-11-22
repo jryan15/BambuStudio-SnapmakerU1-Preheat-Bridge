@@ -57,7 +57,7 @@ function initGcvt(){
 \
 <!-- Actions -->\
 <button onclick="gcvtConvert()" class="ai-btn ai-btn-primary" id="gcvtBtn" style="padding:5px 14px;font-size:13px;">'+gcvtT('转换','Convert')+'</button>\
-<button onclick="gcvtOpenFolder()" class="ai-btn ai-btn-outline" style="font-size:12px;padding:4px 10px;" title="打开 G-code 文件夹">\
+<button onclick="gcvtOpenFolder()" class="ai-btn ai-btn-outline" style="font-size:12px;padding:4px 10px;" title="Open G-code folder">\
 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>'+gcvtT('文件夹','Folder')+'</button>\
 </div>\
 </div>\
@@ -156,7 +156,7 @@ function gcvtLoadOriginal(gcodeName){
   if(right)right.innerHTML='<div style="text-align:center;padding:40px 20px;color:var(--text3);">'+gcvtT('转换后在此显示','Converted result shown here')+'</div>';
   bridgeGET('/api/ai/read_gcode?gcode_name='+encodeURIComponent(gcodeName)+'&max_lines=200',function(d){
     if(!d||!d.ok){
-      if(left)left.innerHTML='<div style="text-align:center;padding:40px 20px;color:var(--danger);">'+gcvtT('加载失败: ','Load failed: ')+gcvtEsc(d&&d.error||'未知错误')+'</div>';
+      if(left)left.innerHTML='<div style="text-align:center;padding:40px 20px;color:var(--danger);">'+gcvtT('加载失败: ','Load failed: ')+gcvtEsc(d&&d.error||gcvtT('未知错误','Unknown error'))+'</div>';
       return;
     }
     if(left)left.textContent=d.content||'';
@@ -176,7 +176,7 @@ function gcvtUploadFile(input){
       if(info){info.textContent=file.name+' '+gcvtT('已上传','Uploaded');info.style.display='inline';}
       gcvtLoadOriginal(d.gcode_name||d.name);
     } else {
-      if(info){info.textContent=gcvtT('上传失败: ','Upload failed: ')+(d&&d.error||'未知错误');info.style.color='var(--danger)';info.style.display='inline';}
+      if(info){info.textContent=gcvtT('上传失败: ','Upload failed: ')+(d&&d.error||gcvtT('未知错误','Unknown error'));info.style.color='var(--danger)';info.style.display='inline';}
     }
   }).catch(function(e){
     if(info){info.textContent=gcvtT('上传失败','Upload failed');info.style.color='var(--danger)';info.style.display='inline';}
@@ -199,7 +199,7 @@ function gcvtConvert(){
   bridgeGET('/api/ai/convert_gcode?gcode_name='+encodeURIComponent(gcodeName),function(d){
     if(btn){btn.disabled=false;btn.textContent=gcvtT('转换','Convert');}
     if(!d||!d.ok){
-      alert(gcvtT('G-code 转换失败: ','G-code convert failed: ')+(d&&d.error||'未知错误'));
+      alert(gcvtT('G-code 转换失败: ','G-code convert failed: ')+(d&&d.error||gcvtT('未知错误','Unknown error')));
       return;
     }
     gcvtState.convertedGcodeName=d.converted_gcode_name;
@@ -255,7 +255,7 @@ function gcvtUploadToPrinter(){
     if(d&&d.ok){
       if(btn)btn.textContent=gcvtT('已上传','Uploaded');
     } else {
-      alert(gcvtT('上传到打印机失败: ','Upload to printer failed: ')+(d&&d.error||'未知错误'));
+      alert(gcvtT('上传到打印机失败: ','Upload to printer failed: ')+(d&&d.error||gcvtT('未知错误','Unknown error')));
     }
   });
 }
@@ -263,6 +263,6 @@ function gcvtUploadToPrinter(){
 // ─── Open G-code Folder ───
 function gcvtOpenFolder(){
   bridgeGET('/api/ai/open_gcode_folder',function(d){
-    if(!d||!d.ok){alert(gcvtT('打开文件夹失败: ','Open folder failed: ')+(d&&d.error||'未知错误'));}
+    if(!d||!d.ok){alert(gcvtT('打开文件夹失败: ','Open folder failed: ')+(d&&d.error||gcvtT('未知错误','Unknown error')));}
   });
 }

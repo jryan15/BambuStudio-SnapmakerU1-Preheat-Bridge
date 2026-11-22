@@ -61,7 +61,7 @@ describe("convertGcodeContent — format detection", () => {
     const content = "; HEADER_BLOCK_START\n; HEADER_BLOCK_END\n; EXECUTABLE_BLOCK_START\n;TYPE:Outer Wall\n; EXECUTABLE_BLOCK_END\n";
     assert.throws(
       () => convertGcodeContent(content),
-      /已是 OrcaSlicer 格式/
+      /already in OrcaSlicer format/
     );
   });
 
@@ -69,7 +69,7 @@ describe("convertGcodeContent — format detection", () => {
     const content = "; HEADER_BLOCK_START\n; HEADER_BLOCK_END\n; EXECUTABLE_BLOCK_START\nPRINT_START\n; EXECUTABLE_BLOCK_END\nG1 X10 Y10\n";
     assert.throws(
       () => convertGcodeContent(content),
-      /无法识别格式/
+      /Unrecognized G-code format/
     );
   });
 });
@@ -173,4 +173,19 @@ describe("convertGcodeContent — successful conversion", () => {
     assert.ok(result.includes("DEFECT_DETECTION_STOP"));
     assert.ok(result.includes("M84 ; Motors off"));
   });
+});
+
+
+describe("manual conversion regression: layer comments and bed offsets", () => {
+  for (const automatic of [false, true]) {
+    it(`preserves offsets and ignores config markers (automatic=${automatic})`, () => {
+      const source = makeBambuGcode({layers: 15})
+        .replace('; config=nozzle_diameter 0.4', '; layer_change_gcode = ;BEFORE_LAYER_CHANGE\\nG92 E0')
+        .replace('PRINT_START\n', 'PRINT_START\nG28 Z Z_OFFSET -0.07\nBED_MESH_CALIBRATE PROBE_COUNT=11,11 Z_OFFSET=-0.07\n');
+      const result = convertGcodeContent(source, {automatic});
+      assert.equal(result.info.total_layers, 15);
+      assert.match(result.content, /^G28 Z Z_OFFSET -0\.07$/m);
+      assert.match(result.content, /^BED_MESH_CALIBRATE PROBE_COUNT=11,11 Z_OFFSET=-0\.07$/m);
+    });
+  }
 });

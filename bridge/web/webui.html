@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <title>BambuStudio Bridge</title>
-<script src="filament_mapping.js?v=5.48.0-preheat.6"></script>
-<link rel="stylesheet" href="ailab.css?v=5.48.0">
+<script src="filament_mapping.js?v=u1.4-test.7"></script>
+<link rel="stylesheet" href="ailab.css?v=u1.4-test.7">
 <style>
 :root{--bg:#f0f2f5;--panel:#fff;--panel2:#f5f5f5;--border:#e0e0e0;--primary:#2196f3;--primary-light:#64b5f6;--danger:#f44336;--success:#4caf50;--warn:#ff9800;--text:#333;--text2:#666;--text3:#999;--radius:10px}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -60,9 +60,9 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:'Segoe UI',system-u
 .cam-err p{font-size:14px;margin:4px 0}
 .cam-err .hint{font-size:12px;color:rgba(255,255,255,.3)}
 
-.ctrl-layout{display:flex;gap:12px;height:100%}
-.ctrl-left{flex:1;min-width:0}
-.ctrl-right{flex:0 0 auto;min-width:200px;display:flex;flex-direction:column;align-items:center}
+.ctrl-layout{display:flex;flex-wrap:wrap;gap:12px;height:100%}
+.ctrl-left{flex:1 1 280px;min-width:0}
+.ctrl-right{flex:0 0 200px;min-width:0;margin-inline:auto;display:flex;flex-direction:column;align-items:center}
 .temp-list{display:flex;flex-direction:column;gap:2px}
 .temp-item{display:flex;align-items:center;gap:8px;padding:5px 8px;border-radius:8px;cursor:pointer;transition:all .1s}
 .temp-item:hover{background:var(--bg)}
@@ -70,13 +70,13 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:'Segoe UI',system-u
 .temp-item .t-icon{width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;border-radius:6px;flex-shrink:0}
 .temp-item .t-icon.h{background:rgba(244,67,54,.1);color:var(--danger)}
 .temp-item .t-icon.b{background:rgba(33,150,243,.1);color:var(--primary)}
-.temp-item .t-info{flex:1;min-width:0}
+.temp-item .t-info{flex:1;min-width:min-content}
 .temp-item .t-info .t-name{font-size:13px;color:var(--text2)}
 .temp-item .t-info .t-val{font-size:16px;font-weight:600;white-space:nowrap}
-.temp-item .t-set{width:64px;height:30px;border:1px solid var(--border);border-radius:6px;text-align:center;font-size:14px;color:var(--text);background:var(--panel)}
+.temp-item .t-set{flex:0 0 auto;width:64px;height:30px;border:1px solid var(--border);border-radius:6px;text-align:center;font-size:14px;color:var(--text);background:var(--panel)}
 .temp-item .t-set:focus{outline:none;border-color:var(--primary)}
 
-.tool-tabs{display:flex;gap:5px;margin-bottom:8px}
+.tool-tabs{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px}
 .tool-tab{padding:4px 12px;border-radius:14px;border:1px solid var(--border);background:var(--panel);font-size:13px;cursor:pointer;transition:all .15s;color:var(--text2)}
 .tool-tab.active{background:var(--primary);border-color:var(--primary);color:#fff}
 .tool-tab:hover:not(.active){border-color:var(--primary);color:var(--primary)}
@@ -248,7 +248,7 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:'Segoe UI',system-u
 <div class="nav-item" data-tab="fluidd" onclick="switchTab('fluidd')" title="Fluidd Console"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><polyline points="16,9 11,14 16,19"/><line x1="8" y1="18" x2="8" y2="18"/></svg><span data-i18n="fluidd_console">Console</span></div>
 <div class="nav-item" data-tab="debug" onclick="switchTab('debug')" title="Debug Logs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg><span data-i18n="debug_logs">Debug</span></div>
 <div class="nav-item" data-tab="ailab" onclick="switchTab('ailab')" title="AI Lab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6v6H9z"/><path d="M3 9h6v6H3z"/><path d="M15 9h6v6h-6z"/><path d="M9 15h6v6H9z"/></svg><span>AI Lab</span></div>
-<div class="nav-item" data-tab="gcvt" onclick="switchTab('gcvt')" title="G-code 转换"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 014-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg><span data-i18n="gcode_convert">转换</span></div>
+<div class="nav-item" data-tab="gcvt" onclick="switchTab('gcvt')" title="G-code Convert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 014-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg><span data-i18n="gcode_convert">转换</span></div>
 <div class="nav-item" data-tab="about" onclick="switchTab('about')" title="About"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg><span data-i18n="about">About</span></div>
 </div>
 </div>
@@ -357,7 +357,7 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:'Segoe UI',system-u
 <div class="ctrl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div>
 <span class="ctrl-label" data-i18n="speed">Speed</span>
 <span class="ctrl-val" id="speedVal">100%</span>
-<div class="ctrl-btns" style="flex:1;display:flex;gap:4px;justify-content:flex-end;">
+<div class="ctrl-btns" style="flex:1;display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-end;">
 <button class="tbtn" onclick="setSpeed(50)" data-speed="50">50%</button>
 <button class="tbtn" onclick="setSpeed(80)" data-speed="80">80%</button>
 <button class="tbtn active" onclick="setSpeed(100)" data-speed="100">100%</button>
@@ -467,7 +467,7 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:'Segoe UI',system-u
 <div id="fluidd-content" style="display:none; width:100%; height:100%;">
   <iframe src="/fluidd/" style="width:100%; height:100%; border:none;"></iframe>
 </div>
-<div id="debug-content" style="display:none; width:100%; height:100%; overflow:hidden;">
+<div id="debug-content" style="display:none;flex-direction:column; width:100%; height:100%; overflow:hidden;">
   <div style="display:flex;align-items:center;gap:8px;padding:8px 12px;background:#1a1a2e;border-bottom:1px solid #2a2a3e;">
     <span style="color:#0f8bff;font-weight:600;font-size:13px;" data-i18n="debug_logs">Debug Logs</span>
     <span style="color:#888;font-size:11px;" id="dbgCount"></span>
@@ -486,7 +486,7 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:'Segoe UI',system-u
 <div style="max-width:640px;margin:0 auto;padding:32px 24px;">
 <div style="text-align:center;margin-bottom:28px">
 <div style="width:72px;height:72px;border-radius:16px;overflow:hidden;margin:0 auto 12px"><img src="/snapmaker.png" style="width:100%;height:100%;object-fit:contain"></div>
-<div style="font-size:20px;font-weight:700;color:var(--text)">BambuStudio U1 Compat</div>
+<div style="font-size:20px;font-weight:700;color:var(--text)">Snapmaker U1 Preheat Bridge</div>
 <div style="font-size:13px;color:var(--text3);margin-top:4px" id="aboutVer"></div>
 </div>
 
@@ -498,7 +498,7 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:'Segoe UI',system-u
 <div class="about-section">
 <h3 data-i18n="about_usage">Usage Guide</h3>
 <div style="font-size:13px;color:var(--text2);line-height:1.8">
-<div class="about-step"><span class="about-step-num">1</span><span data-i18n="about_step1">Install the compat pack (run install.bat as admin), then restart BambuStudio and add Snapmaker U1 printer</span></div>
+<div class="about-step"><span class="about-step-num">1</span><span data-i18n="about_step1">Run SETUP.bat, choose your nozzle sizes, then enable their entries in Bambu Studio Printer Selection. All four heads must use the selected diameter.</span></div>
 <div class="about-step"><span class="about-step-num">2</span><span data-i18n="about_step2">Slice your model, click Print → select Print in the dialog → Bridge shows a confirmation dialog</span></div>
 <div class="about-step"><span class="about-step-num">3</span><span data-i18n="about_step3">In the confirmation dialog: review G-code info, adjust filament mapping (auto-matched by type, click dropdown to change), set print options</span></div>
 <div class="about-step"><span class="about-step-num">4</span><span data-i18n="about_step4">Start print → monitor progress and camera on the Device tab</span></div>
@@ -514,7 +514,7 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:'Segoe UI',system-u
 <li data-i18n="about_tip1">Filament colors in the dialog are labels from the slicer, not actual colors. Matching is based on filament type (PLA, PETG, TPU, etc.) only.</li>
 <li data-i18n="about_tip2">Multiple G-code slots can map to the same physical extruder (e.g. 4-color PLA printed with 1 spool).</li>
 <li data-i18n="about_tip3">If the camera doesn't update, try toggling it off and on again.</li>
-<li data-i18n="about_tip4">BambuStudio updates may overwrite configs — just re-run install.bat to restore.</li>
+<li data-i18n="about_tip4">If a Bambu Studio update removes the profiles, close Bambu and rerun SETUP.bat. Review its detected paths before applying.</li>
 <li data-i18n="about_tip5">Bridge auto-detects printers via mDNS. If detection fails, open http://127.0.0.1:13628 to configure manually.</li>
 </ul>
 </div>
@@ -522,19 +522,19 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:'Segoe UI',system-u
 <div class="about-section">
 <h3 data-i18n="about_author">Author</h3>
 <div style="font-size:13px;color:var(--text2);line-height:1.8">
-<div>Developed by <strong style="color:var(--text)">Vitas Guo</strong></div>
+<div>Maintained by <strong style="color:var(--text)">jryan15</strong><br>Based on Vitas Guo's BambuStudio compatibility project. <a href="https://github.com/VitasGuo/BambuStudio-SnapmakerU1-Compat" target="_blank" rel="noopener">Original project</a></div>
 </div>
 </div>
 
 <div class="about-section">
 <h3 data-i18n="about_ai">Development Assistant</h3>
-<div style="font-size:13px;color:var(--text2);line-height:1.8" data-i18n="about_ai_text">This project was developed with the assistance of ByteDance's Solo, using Zhipu AI's GLM-5.1 & 5.2.</div>
+<div style="font-size:13px;color:var(--text2);line-height:1.8" data-i18n="about_ai_text">The upstream project credits Solo and GLM. This fork adds bridge fixes, nozzle profiles and a Windows setup tool.</div>
 </div>
 
 <div class="about-section">
 <h3 data-i18n="about_license">Open Source License</h3>
 <div style="font-size:13px;color:var(--text2);line-height:1.8">
-<p data-i18n="about_license_text">This project is licensed under AGPL-3.0. It references or incorporates code from the following open-source projects:</p>
+<p data-i18n="about_license_text">This repository ships a GPL-3.0 license. Referenced projects have their own licenses:</p>
 <div style="margin-top:8px">
 <div style="margin-bottom:4px"><a href="javascript:void(0)" onclick="openExternal('https://github.com/SoftFever/OrcaSlicer')" style="color:var(--primary);text-decoration:none">OrcaSlicer</a> — AGPL-3.0</div>
 <div style="margin-bottom:4px"><a href="javascript:void(0)" onclick="openExternal('https://github.com/bambulab/BambuStudio')" style="color:var(--primary);text-decoration:none">BambuStudio</a> — AGPL-3.0</div>
@@ -548,7 +548,7 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:'Segoe UI',system-u
 <div id="updateStatus" style="margin-bottom:12px"></div>
 <div style="font-size:13px;color:var(--text2);margin-bottom:8px">
 <span data-i18n="about_repo_url">Repository URL:</span>
-<div style="margin-top:4px;padding:8px 12px;background:var(--bg);border-radius:6px;font-size:12px;word-break:break-all"><a href="javascript:void(0)" onclick="openExternal('https://github.com/VitasGuo/BambuStudio-SnapmakerU1-Compat')" style="color:var(--primary);text-decoration:none;user-select:all">https://github.com/VitasGuo/BambuStudio-SnapmakerU1-Compat</a></div>
+<div style="margin-top:4px;padding:8px 12px;background:var(--bg);border-radius:6px;font-size:12px;word-break:break-all"><a href="javascript:void(0)" onclick="openExternal('https://github.com/jryan15/BambuStudio-SnapmakerU1-Preheat-Bridge')" style="color:var(--primary);text-decoration:none;user-select:all">https://github.com/jryan15/BambuStudio-SnapmakerU1-Preheat-Bridge</a></div>
 </div>
 <div style="margin-top:8px;font-size:12px;color:var(--text3)" data-i18n="about_update_hint">Check GitHub for the latest version and updates</div>
 </div>
@@ -628,7 +628,7 @@ if(d&&d.error)console.warn('openExternal failed:',d.error);
 }
 var D={extruder:{},extruder1:{},extruder2:{},extruder3:{},heater_bed:{},toolhead:{},print_stats:{},system_stats:{},display_status:{},fan:{},'fan_generic cavity_fan':{},'filament_feed left':{},'filament_feed right':{},filament_parameters:{},gcode_move:{},'led cavity_led':{},virtual_sdcard:{},motion_report:{},idle_timeout:{},machine_state_manager:{}};
 var toolNames=['extruder','extruder1','extruder2','extruder3'];
-var curLang=(function(){try{var s=localStorage.getItem('bridge_lang');if(s)return s;}catch(e){}return'zh';})();
+var curLang=(function(){try{var s=localStorage.getItem('bridge_lang');if(s==='en'||s==='zh')return s;}catch(e){}return'en';})();
 var I18N={
 en:{
 camera:'Camera',control:'Control',print_job:'Print Job',filament:'Filament',
@@ -660,13 +660,13 @@ ws_not_connected:'WebSocket not connected. Please wait and try again.',
 gcode_filament:'G-code',machine_filament:'Machine',filament_used:'used',filament_match:'Matched',filament_mismatch:'Type mismatch!',filament_none:'No filament',physical_slot:'Slot',
 gcode_info:'G-code Info',estimated_time:'Est. Time',estimated_weight:'Est. Weight',filament_mapping:'Filament Mapping',click_to_change:'Click to change',
 about:'About',about_desc:'Description',about_desc_text:'This compatibility pack enables BambuStudio to control Snapmaker U1 printers with a native-level experience, including print confirmation, filament mapping, camera monitoring, device control, AI Lab (G-code optimization + print assistant), and G-code Convert (BambuStudio→OrcaSlicer).',
-about_usage:'Usage Guide',about_step1:'Install the compat pack (run install.bat as admin), then restart BambuStudio and add Snapmaker U1 printer',about_step2:'Slice your model, click Print → select Print in the dialog → Bridge shows a confirmation dialog',about_step3:'In the confirmation dialog: review G-code info, adjust filament mapping (auto-matched by type, click dropdown to change), set print options',about_step4:'Start print → monitor progress and camera on the Device tab',about_step5:'Use Control panel for real-time adjustments: extruder/bed temp, fan speed, LED, print speed (5 presets)',about_step6:'AI Lab: G-code optimization (LLM diagnoses print issues and generates patches) + Print Assistant (streaming Q&A with thinking mode)',about_step7:'G-code Convert: convert BambuStudio G-code to OrcaSlicer-compatible format for direct printing on U1 device panel',
-about_tips:'Tips',about_tip1:'Filament colors in the dialog are labels from the slicer, not actual colors. Matching is based on filament type (PLA, PETG, TPU, etc.) only.',about_tip2:'Multiple G-code slots can map to the same physical extruder (e.g. 4-color PLA printed with 1 spool).',about_tip3:'If the camera doesn\'t update, try toggling it off and on again.',about_tip4:'BambuStudio updates may overwrite configs — just re-run install.bat to restore.',about_tip5:'Bridge auto-detects printers via mDNS. If detection fails, open http://127.0.0.1:13628 to configure manually.',
+about_usage:'Usage Guide',about_step1:'Run SETUP.bat, choose your nozzle sizes, then enable their entries in Bambu Studio Printer Selection. All four heads must use the selected diameter.',about_step2:'Slice your model, click Print → select Print in the dialog → Bridge shows a confirmation dialog',about_step3:'In the confirmation dialog: review G-code info, adjust filament mapping (auto-matched by type, click dropdown to change), set print options',about_step4:'Start print → monitor progress and camera on the Device tab',about_step5:'Use Control panel for real-time adjustments: extruder/bed temp, fan speed, LED, print speed (5 presets)',about_step6:'AI Lab: G-code optimization (LLM diagnoses print issues and generates patches) + Print Assistant (streaming Q&A with thinking mode)',about_step7:'G-code Convert: convert BambuStudio G-code to OrcaSlicer-compatible format for direct printing on U1 device panel',
+about_tips:'Tips',about_tip1:'Filament colors in the dialog are labels from the slicer, not actual colors. Matching is based on filament type (PLA, PETG, TPU, etc.) only.',about_tip2:'Multiple G-code slots can map to the same physical extruder (e.g. 4-color PLA printed with 1 spool).',about_tip3:'If the camera doesn\'t update, try toggling it off and on again.',about_tip4:'If a Bambu Studio update removes the profiles, close Bambu and rerun SETUP.bat. Review its detected paths before applying.',about_tip5:'Bridge auto-detects printers via mDNS. If detection fails, open http://127.0.0.1:13628 to configure manually.',
 about_github:'View on GitHub',about_update_hint:'Check GitHub for the latest version and updates',
 about_repo_url:'Repository URL:',
 update_checking:'Checking for updates...',update_check_fail:'Update check failed',update_available:'New version v{ver} available!',update_manual:'Please visit the repository URL above to download',update_latest:'You are on the latest version',
-about_author:'Author',about_ai:'Development Assistant',about_ai_text:'This project was developed with the assistance of ByteDance\'s Solo, using Zhipu AI\'s GLM-5.1 & 5.2.',
-about_license:'Open Source License',about_license_text:'This project is licensed under AGPL-3.0. It references or incorporates code from the following open-source projects:',
+about_author:'Author',about_ai:'Development Assistant',about_ai_text:'The upstream project credits Solo and GLM. This fork adds bridge fixes, nozzle profiles and a Windows setup tool.',
+about_license:'Open Source License',about_license_text:'This repository ships a GPL-3.0 license. Referenced projects have their own licenses:',
 gcode_convert:'Convert'
 },
 zh:{
@@ -712,6 +712,7 @@ gcode_convert:'转换'
 function t(k){return(I18N[curLang]||I18N.en)[k]||I18N.en[k]||k;}
 function setLang(lang){
 curLang=lang;
+document.documentElement.lang=lang==='zh'?'zh-CN':'en';
 try{localStorage.setItem('bridge_lang',lang);}catch(e){}
 document.querySelectorAll('[data-i18n]').forEach(function(el){
 var k=el.getAttribute('data-i18n');
@@ -741,7 +742,8 @@ function switchTab(tab){
   $('ailab-content').style.display=tab==='ailab'?'block':'none';
   $('gcvt-content').style.display=tab==='gcvt'?'block':'none';
   if(tab==='debug') loadDebugLogs();
-  if(tab==='about'){$('aboutVer').textContent=$('devVer').textContent||'v5.48.0';checkUpdate();}
+  if(tab==='about'){$('aboutVer').textContent=$('devVer').textContent||'Version unavailable';checkUpdate();}
+  if(tab!=='debug' && dbgAutoInterval) toggleDebugAuto();
   if(tab==='ailab') aiLoadConfig();
   if(tab==='gcvt') gcvtInit();
 }
@@ -1065,7 +1067,13 @@ row.className='modal-map-row '+(match?'matched':'mismatched');
 }
 }
 
-function cmpVer(a,b){var pa=a.split('.').map(Number),pb=b.split('.').map(Number);for(var i=0;i<3;i++){var x=pa[i]||0,y=pb[i]||0;if(x>y)return 1;if(x<y)return -1;}return 0;}
+function cmpVer(a,b){
+function parse(v){var m=String(v).replace(/^v/,'').match(/^(\d+)\.(\d+)\.(\d+)(?:-u1\.(\d+))?(?:-(.*))?$/);return m?{n:[+m[1],+m[2],+m[3],+(m[4]||0)],pre:m[5]||''}:null;}
+var x=parse(a),y=parse(b);if(!x||!y)return null;
+for(var i=0;i<4;i++){if(x.n[i]!==y.n[i])return x.n[i]>y.n[i]?1:-1;}
+if(x.pre===y.pre)return 0;if(!x.pre)return 1;if(!y.pre)return -1;
+return x.pre.localeCompare(y.pre,undefined,{numeric:true});
+}
 
 var lastUpdateCheck=0;
 function checkUpdate(){
@@ -1080,12 +1088,14 @@ if(!d||d.error){el.innerHTML='<span style="color:var(--text3);font-size:12px">'+
 if(!d.latest){el.innerHTML='<span style="color:var(--text3);font-size:12px">'+t('update_check_fail')+'</span>';return;}
 var cur=d.current||'0.0.0';
 var c=cmpVer(d.latest,cur);
+el.textContent='';
 if(c>0){
-var repoUrl=d.url||'https://github.com/VitasGuo/BambuStudio-SnapmakerU1-Compat';
-el.innerHTML='<div style="padding:10px 16px;background:rgba(255,152,0,.1);border:1px solid #ff9800;border-radius:8px;font-size:13px;color:#ff9800">'+t('update_available').replace('{ver}',d.latest)+'<br><a href="javascript:void(0)" onclick="openExternal(\''+repoUrl+'\')" style="font-size:11px;color:var(--primary);text-decoration:underline">'+t('update_manual')+'</a></div>';
-}else{
-el.innerHTML='<span style="color:#4caf50;font-size:12px">&#10003; '+t('update_latest')+'</span>';
-}
+var msg=document.createElement('div');msg.textContent=t('update_available').replace('{ver}',d.latest);el.appendChild(msg);
+var link=document.createElement('a');link.href='https://github.com/jryan15/BambuStudio-SnapmakerU1-Preheat-Bridge/releases';link.target='_blank';link.rel='noopener';link.textContent=t('update_manual');el.appendChild(link);
+}else if(c===0){el.textContent=t('update_latest');}
+else if(c===null){el.textContent=curLang==='en'?'Version could not be compared. Check Releases manually.':'无法比较版本，请查看发布页面。';}
+else{el.textContent=curLang==='en'?'This installed build is newer than the latest public release.':'当前安装版本高于最新公开版本。';}
+
 });
 }
 
@@ -1485,7 +1495,7 @@ function applyPrinterConfig(){
 }
 
 </script>
-<script src="ailab.js?v=5.48.0"></script>
-<script src="gcvt.js?v=5.48.0"></script>
+<script src="ailab.js?v=u1.4-test.7"></script>
+<script src="gcvt.js?v=u1.4-test.7"></script>
 </body>
 </html>

@@ -46,7 +46,7 @@ function setAppDataDir(dir) {
     for (const f of ["soul.md", "knowledge.md", "memory.md"]) {
       const src = path.join(bundleWorkspaceDir, f);
       const dst = path.join(WORKSPACE_DIR, f);
-      if (fs.existsSync(src)) fs.copyFileSync(src, dst);
+      if (fs.existsSync(src) && !fs.existsSync(dst)) fs.copyFileSync(src, dst);
     }
     // 复制子目录（skills/, tools/）
     for (const sub of ["skills", "tools"]) {
@@ -57,7 +57,7 @@ function setAppDataDir(dir) {
         for (const f of fs.readdirSync(srcDir).filter(f => f.endsWith(".md"))) {
           const src = path.join(srcDir, f);
           const dst = path.join(dstDir, f);
-          fs.copyFileSync(src, dst);
+          if (!fs.existsSync(dst)) fs.copyFileSync(src, dst);
         }
       }
     }
@@ -65,12 +65,12 @@ function setAppDataDir(dir) {
 }
 
 // 默认使用 APPDATA/XDG_CONFIG/BambuStudio-Bridge/ai-lab
-setAppDataDir(path.join(
+setAppDataDir(path.join(process.env.BRIDGE_CONFIG_DIR || path.join(
   process.platform === "win32"
     ? (process.env.APPDATA || os.homedir())
     : (process.env.XDG_CONFIG_HOME || path.join(os.homedir(), ".config")),
-  "BambuStudio-Bridge", "ai-lab"
-));
+  "BambuStudio-Bridge"
+), "ai-lab"));
 
 // ─── Workspace 系统：从 Markdown 文件加载 Agent 上下文 ───
 
@@ -1186,10 +1186,10 @@ function convertGcodeContent(content, options = {}) {
   // Check if already OrcaSlicer format by layer marker style
   // BambuStudio uses "; FEATURE:", OrcaSlicer uses ";TYPE:" — this is the most reliable differentiator
   if (content.includes(";TYPE:")) {
-    throw new Error("该文件已是 OrcaSlicer 格式（包含 ;TYPE: 层标记），无需转换。请选择 BambuStudio 生成的 G-code 文件进行转换。");
+    throw new Error("This file is already in OrcaSlicer format (;TYPE: markers). No conversion is needed.");
   }
   if (!content.includes("; FEATURE:")) {
-    throw new Error("该文件既不包含 BambuStudio 层标记（; FEATURE:）也不包含 OrcaSlicer 层标记（;TYPE:），无法识别格式。");
+    throw new Error("Unrecognized G-code format: no BambuStudio ; FEATURE: or OrcaSlicer ;TYPE: layer markers were found.");
   }
 
   const headerBlock = headerStart >= 0 && headerEnd >= 0
@@ -1253,9 +1253,8 @@ function convertGcodeContent(content, options = {}) {
     : 60;
 
   // Find total layers from body
-  const layerMatches = options.automatic
-    ? (printBody.match(/^;BEFORE_LAYER_CHANGE\s*$/gm) || printBody.match(/^;LAYER:\d+\s*$/gm))
-    : (content.match(/;BEFORE_LAYER_CHANGE/g) || content.match(/;LAYER:\d+/g));
+  const layerMatches = printBody.match(/^;BEFORE_LAYER_CHANGE[ \t]*\r?$/gm)
+    || printBody.match(/^;LAYER:\d+[ \t]*\r?$/gm);
   const totalLayers = layerMatches ? layerMatches.length : 0;
 
   // Detect multi-extruder from body
@@ -1453,7 +1452,9 @@ function convertGcodeContent(content, options = {}) {
     // Retain the complete sliced body, including pauses, motion, extrusion,
     // temperatures and end commands. Only the startup is reconstructed.
     newExecBlock += '; MACHINE_START_GCODE_END\n';
-    const startup=content.slice(execStart,machineStartEndIdx);
+  }
+  {
+    const startup=content.slice(Math.max(0, execStart), machineStartEndIdx >= 0 ? machineStartEndIdx : Math.max(0, execEnd));
     for(const pattern of [/^G28 Z(?:\s+Z_OFFSET[= ]\s*[-\d.]+)?\s*$/gm,/^BED_MESH_CALIBRATE[^\r\n]*$/gm]) {
       const original=[...startup.matchAll(pattern)].at(-1)?.[0].trim();
       if(original && original.includes('Z_OFFSET')) {

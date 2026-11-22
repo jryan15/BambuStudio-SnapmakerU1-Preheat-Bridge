@@ -1,0 +1,101 @@
+Snapmaker U1 Complete Setup - 5.48.0-u1.4-test.8 (Windows)
+Installer-only revision; included bridge remains 5.48.0-u1.4-test.7.
+
+TEST PREVIEW: Read TEST.6-QA.md before running Setup. Start with an idle printer;
+this build has not been tested on physical hardware or installed into live Bambu Studio.
+
+START HERE
+1. Extract the entire ZIP into a new folder.
+2. Close Bambu Studio. Double-click SETUP.bat and approve the administrator prompt.
+3. Setup checks your bridge automatically and marks installed nozzle sizes.
+4. Check the additional sizes you want, then click Add selected profiles,
+   Install, or Update (the button follows the detected installation).
+5. Reopen Bambu and enable the U1 sizes through printer selection.
+
+The main window shows the program folder, settings folder and Installation action.
+Use the Installation dropdown to remove sizes or uninstall.
+Details: detected paths, progress messages, errors and backup locations.
+Choose the settings folder for the Bambu Studio edition you use.
+The console is hidden. PowerShell naming warnings are suppressed.
+
+No changes occur just by opening the interface. You can close it after inspecting
+its detection. All four heads must use the same nozzle diameter for a print.
+
+WHAT IT DOES
+- Current bridge: checks runtime files and dependencies, leaves it running.
+- Older bridge (including u1.1/u1.2): stages the included u1.4-test.7 bridge and npm
+  dependencies, backs up, stops only that bridge, replaces it and verifies startup.
+- Modified bridge runtime: explicitly shows replacement in the plan; full backup.
+- Newer bridge: retained without downgrade; not certified with these profiles.
+- Fresh installation: adds profiles, installs bridge, launcher and watchdog.
+- Node.js: reuses a suitable installed Node 22+ with npm or downloads the latest
+  Node 22 Windows archive from nodejs.org and checks its published SHA-256.
+  Internet is needed for bridge installation/dependencies, not profile-only adds.
+- 0.4 mm is always present as the shared base. 0.2/0.6/0.8 are optional.
+- Unchecked existing sizes stay installed. Missing selected profiles are added.
+  Existing profile files, user presets, connection settings and workspace survive.
+- install.bat and reinstall.bat open the same setup interface.
+
+TESTING DURING A PRINT
+If the summary says the current bridge is retained, profile installation can run
+while the printer prints. Close Bambu first. If the bridge needs installation,
+replacement, or uninstall, wait for the printer to finish, then answer the idle confirmation.
+Setup does not command the physical printer, and the idle confirmation is your
+confirmation, not an automatic read of the printer's status.
+
+REMOVAL
+In the Installation dropdown select Remove nozzle profiles to remove checked optional sizes.
+The 0.4 inheritance base stays. In the Installation dropdown select Uninstall add-on for the bridge, startup,
+watchdog, and unmodified packaged profiles. Edited system profiles and required
+ancestors are retained. User presets and connection settings are always kept.
+An old customized profile that differs from this payload may remain deliberately.
+No unrelated Bambu vendor files, user directories, or Node processes are removed.
+Custom presets may refer to removed printer profiles: reinstall that size to reuse.
+The shared bridge is used by all Bambu installations; uninstall affects that shared
+connection. Profiles are changed only in the chosen program/settings folders.
+
+BACKUPS / FAILURE
+Affected paths are backed up under:
+%APPDATA%\BambuStudio-Bridge\setup-backups\<timestamp>
+restore.json records each original path and its corresponding numbered backup.
+The watchdog XML is saved when applicable. A failed application attempts automatic
+file rollback and restores the old launcher/task. If restoration cannot complete,
+the result window reports the backup location. Keep backups until testing passes.
+setup-installed.json tracks installed files and hashes. Backups/settings are
+retained on uninstall. Old backups are not pruned automatically in this test build.
+
+VALIDATION / RELEASE STATUS
+PowerShell files parsed; file-engine tests exercise selected installation,
+preservation, repeat runs, removal, backup rollback, current/older/newer bridge
+classification. Bridge runtime is u1.4-test.7; conversion/printing logic is unchanged.
+The actual Windows GUI, UAC, scheduled tasks, Node bootstrap, process stop/start,
+and Bambu import/slicing must still be tested on Windows. Additional nozzle sizes
+need physical print testing before public release. This is a test package, not a
+claim of full Windows validation. It has not been pushed or published to GitHub.
+
+SOURCE
+Source and test scripts are included under setup/. Official nozzle preset source
+and commit are in tools/nozzle-profiles/provenance.json. GPL-3.0 license retained.
+
+PREVIOUS TEST 4 FIXES
+Nozzle sizes now have distinct model identities, so Bambu does not combine them.
+All entries now show Snapmaker U1 - 0.2/0.4/0.6/0.8 mm. Preset names stay unchanged.
+Previous preview profiles are migrated without replacing their custom settings.
+Close Bambu, run setup, then enable the new models under Printer Selection.
+Fluidd v1.38.1 web assets and its license/source reference are included.
+The bridge now reports the same test version as the setup package.
+This update restarts the bridge; wait for your printer to finish first.
+
+TEST 5 AUDIT FIXES
+English is the default language; saved language choices are retained.
+About and update checks use this fork, with correct U1 revision comparison.
+Debug layout and refresh timer are corrected. AI workspace edits survive restart.
+Connection settings tolerate unavailable network-interface detection.
+Old grouped nozzle profiles show Needs repair instead of Installed.
+Bridge update status shows the installed and target versions.
+See AUDIT-REPORT.md for checks performed and remaining Windows/printer tests.
+
+TEST 7: See TEST.7-QA.md for fixes, hardware results inherited from test.6, and remaining checks.
+
+TEST 8: Settings target follows the selected application, not old Beta profiles.
+See TEST.8-QA.md.

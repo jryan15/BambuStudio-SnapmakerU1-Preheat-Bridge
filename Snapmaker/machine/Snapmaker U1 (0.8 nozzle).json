@@ -1,0 +1,36 @@
+{
+    "type": "machine",
+    "name": "Snapmaker U1 (0.8 nozzle)",
+    "inherits": "Snapmaker U1 (0.4 nozzle)",
+    "from": "system",
+    "instantiation": "true",
+    "setting_id": "GM_U1N_08",
+    "printer_model": "Snapmaker U1 - 0.8 mm",
+    "printer_variant": "0.8",
+    "nozzle_type": "hardened_steel",
+    "default_print_profile": "0.40mm Standard @Snapmaker U1 (0.8 nozzle) [Bridge test]",
+    "nozzle_diameter": [
+        "0.8"
+    ],
+    "min_layer_height": [
+        "0.16"
+    ],
+    "max_layer_height": [
+        "0.56"
+    ],
+    "retraction_length": [
+        "1.5"
+    ],
+    "retraction_speed": [
+        "30"
+    ],
+    "deretraction_speed": [
+        "30"
+    ],
+    "retraction_minimum_travel": [
+        "1"
+    ],
+    "default_filament_profile": [
+        "Generic PLA @U1 0.8 nozzle [Bridge test]"
+    ]
+}

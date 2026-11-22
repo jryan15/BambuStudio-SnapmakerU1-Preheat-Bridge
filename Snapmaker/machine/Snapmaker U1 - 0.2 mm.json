@@ -1,0 +1,12 @@
+{
+    "type": "machine_model",
+    "name": "Snapmaker U1 - 0.2 mm",
+    "model_id": "Snapmaker-U1-02",
+    "nozzle_diameter": "0.2",
+    "machine_tech": "FFF",
+    "family": "Snapmaker",
+    "bed_model": "Snapmaker U1_bed_texture.stl",
+    "bed_texture": "Snapmaker U1_texture.svg",
+    "hotend_model": "",
+    "default_materials": "Generic PLA @U1 0.2 nozzle [Bridge test]"
+}

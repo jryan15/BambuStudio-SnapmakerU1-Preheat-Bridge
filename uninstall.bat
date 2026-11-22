@@ -1,3 +1,3 @@
 @echo off
-%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File "%~dp0uninstall.ps1"
-if errorlevel 1 pause
+start "" "%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -STA -WindowStyle Hidden -ExecutionPolicy Bypass -File "%~dp0setup\Setup.ps1" -InitialMode 2
+exit /b

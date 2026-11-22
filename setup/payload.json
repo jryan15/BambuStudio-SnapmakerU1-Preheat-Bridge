@@ -1,0 +1,3334 @@
+{
+  "version": "5.48.0-u1.4-test.8",
+  "bridgeVersion": "5.48.0-u1.4-test.7",
+  "files": [
+    {
+      "path": "Snapmaker/Snapmaker U1 - 0.2 mm_cover.png",
+      "sha256": "08522f94109d18ca337a4c9bb742e5939d95745914fbd1f8a56f74fb0a284e72"
+    },
+    {
+      "path": "Snapmaker/Snapmaker U1 - 0.4 mm_cover.png",
+      "sha256": "08522f94109d18ca337a4c9bb742e5939d95745914fbd1f8a56f74fb0a284e72"
+    },
+    {
+      "path": "Snapmaker/Snapmaker U1 - 0.6 mm_cover.png",
+      "sha256": "08522f94109d18ca337a4c9bb742e5939d95745914fbd1f8a56f74fb0a284e72"
+    },
+    {
+      "path": "Snapmaker/Snapmaker U1 - 0.8 mm_cover.png",
+      "sha256": "08522f94109d18ca337a4c9bb742e5939d95745914fbd1f8a56f74fb0a284e72"
+    },
+    {
+      "path": "Snapmaker/Snapmaker U1_bed.stl",
+      "sha256": "ebb7c82d655f1c6dec19a16fc49a1b58ad7f9561ea56e08cee3cf8f2233ecc78"
+    },
+    {
+      "path": "Snapmaker/Snapmaker U1_bed_texture.stl",
+      "sha256": "2358f8d8f45a2d159976761f5c565c8072caca4aa9372c87431acad34235bd20"
+    },
+    {
+      "path": "Snapmaker/Snapmaker U1_cover.png",
+      "sha256": "08522f94109d18ca337a4c9bb742e5939d95745914fbd1f8a56f74fb0a284e72"
+    },
+    {
+      "path": "Snapmaker/Snapmaker U1_texture.svg",
+      "sha256": "c4e8c980499318cff6dd3d3d1776483555b0b229454f37d201bf1aa39b9eca98"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu ABS @U1.json",
+      "sha256": "e258b9e68136e8eb47bef00e89a4c44513cf51c31babfeea6e4098092c17bea2"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu ABS-GF @U1.json",
+      "sha256": "41a11c655e240fd560f4d3ee4115a4d7c154004de8ed701a2b603295bb061b71"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu ASA @U1.json",
+      "sha256": "00c0f3395f911e1403dcec4ae84d417de019eece0f1cc04ba1e889a81d4de671"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu ASA-Aero @U1.json",
+      "sha256": "052c7b47395e67172f1344a00022c10a8e7fc7484702ea892fe437b50637a1cf"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu ASA-CF @U1.json",
+      "sha256": "47dff20f02e69d6b9a2a18155e3b723d015bf5719545612f7c09fbdf5d759f44"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PA-CF @U1.json",
+      "sha256": "f9ba54b3d41244005d73f9c75f18542fe26da7c8fdd19764c9850f45f614cec3"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PA6-CF @U1.json",
+      "sha256": "f0177e03be5f177cac7d4076343a3847208384614ead849b96f01cb5fa0fb6ea"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PA6-GF @U1.json",
+      "sha256": "0b6ba8364e3edf87957d4f5a8cdca38ed6d87df0111166bc6633e07a515976c7"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PAHT-CF @U1.json",
+      "sha256": "ae35821449253d7eaf08fbc78110fb3429722363049e8351b235001d905abcaf"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PC @U1.json",
+      "sha256": "d1b5e94537e24357d705d5c8d10582932657f1fa6679ab84f4cb56e5f32b31a7"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PC FR @U1.json",
+      "sha256": "07a19934fba8d9363ee2732d01893a70844a87f05f88a7586f35c3a46187eb83"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PET-CF @U1.json",
+      "sha256": "8731d0eea6818430a0c27449ded0e1902a992a08574f06c0677fae78a1d98f1d"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PETG Basic @U1.json",
+      "sha256": "ba7e0840f23c6c3c7d76b409e410ba10edf902a3d382c1caa9729105cff0a685"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PETG HF @U1.json",
+      "sha256": "2222d16b0697a9d427a6f20209c3b80236560bd72f7f15c52b8bb387ab5bb3e6"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PETG Translucent @U1.json",
+      "sha256": "5f8367274dcec25cdc7f115f1dea888ae3fc6fd9c53183cabcf69b439c540669"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PETG-CF @U1.json",
+      "sha256": "99f91aa72e85137d796fbf725a008451c833e85a67d5525cdec38a3b606693d5"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PLA Aero @U1.json",
+      "sha256": "4e43d8322c20c9aecd3e42f471ad4487d815928d7ee6bebe2ddb36d9e17faf7c"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PLA Basic @U1.json",
+      "sha256": "af9412d8c7ffd526704596a3c68111f408b9dbf20bf18320dc8cec976bf8b15e"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PLA Dynamic @U1.json",
+      "sha256": "53aace55374e5ccdd10d1b2f06405ffba7171f0d6b3eb71a51dfb272538bbc28"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PLA Galaxy @U1.json",
+      "sha256": "32b6ee14b469a6195731ba800d655e133c27075e20eac9f7259e447a76f431e8"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PLA Glow @U1.json",
+      "sha256": "d5a4cf94e5034656771ef2f110970c7961b849b8d07da9ef5732e93d88e1b778"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PLA Lite @U1.json",
+      "sha256": "36e38d46db1c8b4dfd9627d6a90d3615a2fb1f3428efe93988c698ee0b729020"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PLA Marble @U1.json",
+      "sha256": "5f93010b78dd9e11b6328ad4a2d96a2c286da70e16c0add8d91c937c3b7601ba"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PLA Matte @U1.json",
+      "sha256": "542cb4f2be0c9418577924dcefdbc9df921dbf2b06d94aef60f1911d3811f6d4"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PLA Metal @U1.json",
+      "sha256": "124ae0dc6116b90d7601cae213fc98a093b21e6860e287d67f2da29398a4c5aa"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PLA Silk @U1.json",
+      "sha256": "f8c57dee011df3f176f01e786a695f29ff868df83d33767e97160c47d9776e10"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PLA Silk+ @U1.json",
+      "sha256": "bfa4b9d5712a6aa6bd7858ce3d7b2120c63f38a90fcee19252784ead086b1359"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PLA Sparkle @U1.json",
+      "sha256": "fa902028606d803bf8043bef6264d68300f1ee0d35a755e203ad1aa376caa15f"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PLA Tough @U1.json",
+      "sha256": "9a1f38518861ceea1f26556e7281f55cd6bccf0bda601c50ae2a234b23ee35d0"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PLA Tough+ @U1.json",
+      "sha256": "977ed9922a3af1e1312460eae720c96c565e3de3ee718d7eb4aff918db41f66a"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PLA Translucent @U1.json",
+      "sha256": "9241088c4e682c6828bd5aea3b3455a753a19fc8be0f719889d3ff29e3da601c"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PLA Wood @U1.json",
+      "sha256": "4f854c23dbcc83af30c8fa90372bbf74548a5c027782472e03430e5ab00757eb"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PLA-CF @U1.json",
+      "sha256": "c7f22b2b1532f943640e4ee017a03ec5d9ad90952d5b530562e35710b45fd8af"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PPA-CF @U1.json",
+      "sha256": "0d3110da07c3fab5f7dcfbe02dcabcc857ccbcf5891d63a3c77ac6289d7ed866"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PPS-CF @U1.json",
+      "sha256": "7e0265b0a2a2fe43063d4970198475fbd773b83883c5ac59d62f22caf4de9c7e"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu PVA @U1.json",
+      "sha256": "4b82c725a698a8820c8f6cc997dc2e0bc465a4835e8869b917008e9d3a6b02fd"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu Support For PLA @U1.json",
+      "sha256": "6bebf833da17e7c3e48c35d2b42cb1d54073ee319bd28d4cda99d7745b9778dc"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu Support For PLA-PETG @U1.json",
+      "sha256": "5b2e86a5a880a2b38c37426b6da8b9181b7e0b06a79558e481c7f9296aa39cbe"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu Support for ABS @U1.json",
+      "sha256": "1aeb3c9771085f15188a8cfafe3820b5953937d60faac1010781d92cdec3ca0f"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu TPU 85A @U1.json",
+      "sha256": "fa55f74f4169eb70c9af07838c7e3efbaf0441ad770efbaa8dc68c6c2ed615f3"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu TPU 90A @U1.json",
+      "sha256": "1f1ee60be432124847a10c18b38a2f13fe8d978c089dbe2648764d8a706c1f0a"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu TPU 95A @U1.json",
+      "sha256": "3a4870bd006f1a12f546b335b1656d75cb2f67ec08e987a914fc530dbda232a0"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu TPU 95A HF @U1.json",
+      "sha256": "9093930c98d129ee21db5ff130d84c1f12faa93eb88f8c087b78360a1ca46bb3"
+    },
+    {
+      "path": "Snapmaker/filament/Bambu TPU for AMS @U1.json",
+      "sha256": "c71df55796d60274bca3f028db0956c2b4e5b91cac0bdc2e3b66f1c6e2bd748f"
+    },
+    {
+      "path": "Snapmaker/filament/Generic ABS @U1 0.2 nozzle [Bridge test].json",
+      "sha256": "dc95be7873a645c71b07591aa1388d86224d472869882c43265536545bc7aaf3"
+    },
+    {
+      "path": "Snapmaker/filament/Generic ABS @U1 0.6 nozzle [Bridge test].json",
+      "sha256": "188346f577136b8cf85746f96b460fdd064c8166f26960d8e096fefca4050926"
+    },
+    {
+      "path": "Snapmaker/filament/Generic ABS @U1 0.8 nozzle [Bridge test].json",
+      "sha256": "58bd1cd6d3050685c1279c3defab89883ef81953a6ea45fcb791a676e24ecb70"
+    },
+    {
+      "path": "Snapmaker/filament/Generic ABS @U1.json",
+      "sha256": "db59061ee7b3a5110720048400370ceb125b420f2b980509c5acbc5792626384"
+    },
+    {
+      "path": "Snapmaker/filament/Generic ASA @U1 0.2 nozzle [Bridge test].json",
+      "sha256": "546293937bb0735d668ca9d41f288acaab8f1abf1318a1f23b0a651f86b73b9d"
+    },
+    {
+      "path": "Snapmaker/filament/Generic ASA @U1 0.6 nozzle [Bridge test].json",
+      "sha256": "135f9bc64e8de6a0135bb90a1e7536c9e7cc1e6368800173402ce5f0cd4956fd"
+    },
+    {
+      "path": "Snapmaker/filament/Generic ASA @U1 0.8 nozzle [Bridge test].json",
+      "sha256": "48f98ddd7dae0ae86e9f665770e9b7a56a952a6a8b5718b76da94ce59b3b7c5f"
+    },
+    {
+      "path": "Snapmaker/filament/Generic ASA @U1.json",
+      "sha256": "b443e8ab7a715027fd9bd9a8afab104a4791115d8e7b0d831270ea03cc4b5b50"
+    },
+    {
+      "path": "Snapmaker/filament/Generic BVOH @U1.json",
+      "sha256": "61daf24f9158daeff26ab6c89c6c042c949b00ad45c76a1aab91e9a9af8dab9c"
+    },
+    {
+      "path": "Snapmaker/filament/Generic EVA @U1.json",
+      "sha256": "73de8af3f86ccee2110587ec15b248aa1442541ec68452d7c6461deb6583bb45"
+    },
+    {
+      "path": "Snapmaker/filament/Generic HIPS @U1.json",
+      "sha256": "9bbe725aa702b7d4886d11adc421bc87b4675c25c4177d49fc37b34a65773c4b"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PA-CF @U1 0.6 nozzle [Bridge test].json",
+      "sha256": "4113094793a52ff236ecde27e5b5ed743e6f02e5b4fa841f5c65caefd9fc53a8"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PA-CF @U1 0.8 nozzle [Bridge test].json",
+      "sha256": "b04e0efab38e1170e0a45cfac5558dbb3476b1ff2d3fc4016028c9f8c3fdd4d9"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PA-CF @U1.json",
+      "sha256": "19b92adedade8f01b50b9eef003a3791848d030cec914b8e4e447c48208693ac"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PC @U1 0.6 nozzle [Bridge test].json",
+      "sha256": "dc1a0e359f2e31b82635cbf711d8648b5701c566f54bb2abb13da48da0f4d8bd"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PC @U1 0.8 nozzle [Bridge test].json",
+      "sha256": "7584e64f73d0ccf3aef1390598fdb23f5cf3b0c5fd4da543d5b8469f14dea335"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PC @U1.json",
+      "sha256": "2803216c8b491a4021d3b95dbfaf5bc34c8fef05dbb29b49ca00d58cf4ddec2b"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PCTG @U1.json",
+      "sha256": "7225e39ac2b483b70f3d9489f9f0710b4d7b0c91212fdbb965b727e8a2d3c794"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PE @U1.json",
+      "sha256": "24970b082cb2b9b351ed27c8b0414b0eb9971d7e5de1f6d9bfd1739ab4c59601"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PE-CF @U1.json",
+      "sha256": "260bb3a272b5a7024b67ee09612901513640e56b541cc40e47010d98a2c57125"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PETG @U1 0.2 nozzle [Bridge test].json",
+      "sha256": "cb4773c0fe3d69bda85d3b67336e10efb69a02fd3a100bc67b963368928a2b55"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PETG @U1 0.6 nozzle [Bridge test].json",
+      "sha256": "eb52d5db3f1d88f09ec6452fd5e1839ca83738b206f901dfad0c60e4c527fa7c"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PETG @U1 0.8 nozzle [Bridge test].json",
+      "sha256": "e3aaa33527de3484819beb74380366b45806cb0584a45b752fcb593045c77b29"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PETG @U1.json",
+      "sha256": "d1b70241f451551c96767e1414c8d8fd79ba248bab0e9b9414a2b337329fba4d"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PETG HF @U1 0.2 nozzle [Bridge test].json",
+      "sha256": "bb99f1add977d4e388e625da72dea41db794c39debd78976aa80adb98731d178"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PETG HF @U1 0.6 nozzle [Bridge test].json",
+      "sha256": "fcf36fed71bb5122dfc08e4f63f559bc5f8c3b64b69a58ee8007abf5e94c6c9a"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PETG HF @U1 0.8 nozzle [Bridge test].json",
+      "sha256": "8d4580791ab94cdb726dbdc8f2369c4a51fef6010e99ee9ea59a728b4995d627"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PETG HF @U1.json",
+      "sha256": "c2292474b9f4295ca542b0029c801cbf756e1c6b2e59fe9ea4dc4f40e7a43d14"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PETG-CF @U1 0.6 nozzle [Bridge test].json",
+      "sha256": "eda0e3f3a4c0a45494721923c50bd93d532ba57eea4c981c2bcd1d09706a7bed"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PETG-CF @U1 0.8 nozzle [Bridge test].json",
+      "sha256": "c377b64cac28a39252dc10c62f2dbcc72b358178186c80ce4e821343fba7f85a"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PETG-CF @U1.json",
+      "sha256": "324523d343b7953b9cabdee4dc3b0d8c40ac224443ca74bf9049ad84853eb721"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PHA @U1.json",
+      "sha256": "5347c36060d69f9756ef2a40964a7c4eb8887534a3a2be466fa8141e9f4e59ab"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PLA @U1 0.2 nozzle [Bridge test].json",
+      "sha256": "2bba3a8ce05206bef13196ff2c5c448efa7e52de5ac40252269350ba1c6477e4"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PLA @U1 0.6 nozzle [Bridge test].json",
+      "sha256": "bdf891778b9ca2b10b633725c0083267e4727ec6903e00a71a5fcb3ef7ae3fdf"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PLA @U1 0.8 nozzle [Bridge test].json",
+      "sha256": "ee46e2c3917ba8234021cce1b66b74a2bdc0f727ed4efc4472cdc8e5b94e3404"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PLA @U1.json",
+      "sha256": "c80753fcc291e4ae2745c772e3256d8097e1f76451570ab6b2163042e1258721"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PLA High Speed @U1 0.2 nozzle [Bridge test].json",
+      "sha256": "8e7c9fbcfd16d4d335944944694a0441a6a45bb0b39fde1ff2a8ac438a1f0e46"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PLA High Speed @U1 0.6 nozzle [Bridge test].json",
+      "sha256": "73dd2047c1538a3d1d6258eb913ba3e0834facfb1458036d442a2a3ea52d7701"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PLA High Speed @U1 0.8 nozzle [Bridge test].json",
+      "sha256": "e5f8cd26c4bbc7a39d74922a14e33bd94c203a949b738f5ea9072920ebfb8439"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PLA High Speed @U1.json",
+      "sha256": "cf45f6eba801d97c01f1ea08fbb5d3ef31d878bc9a6ef7b1468365217b0f9673"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PLA Silk @U1 0.2 nozzle [Bridge test].json",
+      "sha256": "9e73ea62085df8beadb3ad85053ad9b9141c5c6504720dfda941bfe351f591bb"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PLA Silk @U1 0.6 nozzle [Bridge test].json",
+      "sha256": "d7ea4c4d9b10fdfe86b238ff5e4a386dbb67da4e3df2057711ac5b632f35d497"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PLA Silk @U1 0.8 nozzle [Bridge test].json",
+      "sha256": "0873fe29cbea1ff12b6021d1844debd2529f2866cd56d6d29bbff3ac6109caaa"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PLA Silk @U1.json",
+      "sha256": "71a2a23b92796b44bf94cf591b39a6708a3708be4bc0feb7a28c140b10dd5525"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PLA-CF @U1 0.6 nozzle [Bridge test].json",
+      "sha256": "aa1743bcdad9ca55a044a89f333dfb98b8b5c6c59398b62d510320b0e61ff45b"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PLA-CF @U1 0.8 nozzle [Bridge test].json",
+      "sha256": "47b6b201f7ff25b520d698196fbe5d3bb37ec12032b687f861da8ea0e8f232ab"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PLA-CF @U1.json",
+      "sha256": "a435c538689babc22ca988ba8a7b088cae37cb395f73925756279897788ab396"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PP @U1.json",
+      "sha256": "d8b2e8f3df652c4637057ab69b0dc0a672605746a4d179e55f56e16dd9d2cd9f"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PP-CF @U1.json",
+      "sha256": "3461db3da732da20736de5e73554653a795cb7fbec8a9219e10dc95afe355150"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PP-GF @U1.json",
+      "sha256": "51f979dfe812d6fe3b6d993054edf1f9f01dcf7c831b4ffa9081c76cdb0224b3"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PPA-CF @U1.json",
+      "sha256": "e3c046af60bcabfc75badc8931c11141a1bb525b31b7a4cf66be69ef51db47d4"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PPA-GF @U1.json",
+      "sha256": "5c8bd2506f672c3bfc5c62a5b6707d87596074431554cafd6d12534a61406e14"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PPS-CF @U1.json",
+      "sha256": "a6b773ccfe3bfe4a14b0499f9987bf9887a37899dc2d368fd51f894b9623df31"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PVA @U1 0.6 nozzle [Bridge test].json",
+      "sha256": "fb2fb7534b8ab623a99f1efd6609c390d9d9e7db64772761ee780aa6ae8b62f1"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PVA @U1 0.8 nozzle [Bridge test].json",
+      "sha256": "0b43a3e2f4bc5c695ced9d3e606443fb07dc4b0bbcefaa5c48eaee35dcc1888f"
+    },
+    {
+      "path": "Snapmaker/filament/Generic PVA @U1.json",
+      "sha256": "8a9651a0738def3e80d718ee3b3506d8c9b9bca5f040ea1b6a4745f0dad3d3fd"
+    },
+    {
+      "path": "Snapmaker/filament/Generic TPU @U1 0.6 nozzle [Bridge test].json",
+      "sha256": "c4154e42dc2a3cd1e4f733b2f1ea2f00f2277bbfa6d4fe3b3fe08e29ac3e6a8f"
+    },
+    {
+      "path": "Snapmaker/filament/Generic TPU @U1 0.8 nozzle [Bridge test].json",
+      "sha256": "ab166a43e02213f948b32bd833441ece74c87916869a9a174101956b2e5f4239"
+    },
+    {
+      "path": "Snapmaker/filament/Generic TPU @U1.json",
+      "sha256": "4c3559769d9ffcbc66e70b8c45b1c59aaafdddd9ad9b6671be939497693015d7"
+    },
+    {
+      "path": "Snapmaker/filament/Generic TPU for AMS @U1.json",
+      "sha256": "b448f6e9af39d36b543f251aa40c9056b9336a6bfbb33c41a7f67b1d32f31c98"
+    },
+    {
+      "path": "Snapmaker/filament/Snapmaker PETG HF @U1 0.2 nozzle [Bridge test].json",
+      "sha256": "f966202535b455fc450d9648ab8389dc7645bd513bae5b5622e9bd02c4840a3b"
+    },
+    {
+      "path": "Snapmaker/filament/Snapmaker PETG HF @U1 0.6 nozzle [Bridge test].json",
+      "sha256": "61d559a1ffb935ca2384280b026947bff7fa9eb0f078e422cbfe506e760e2f71"
+    },
+    {
+      "path": "Snapmaker/filament/Snapmaker PETG HF @U1 0.8 nozzle [Bridge test].json",
+      "sha256": "8d9a781329e73890b45e08fa6af7ec092001e7254c13c11bc389ed7de3f5a534"
+    },
+    {
+      "path": "Snapmaker/filament/Snapmaker PETG HF @U1.json",
+      "sha256": "bccaaf3c6b02bb1e02768d5ee521216f8753aae8125a4b50f6fa71e2ba5cc7fb"
+    },
+    {
+      "path": "Snapmaker/filament/Snapmaker PLA Basic @U1.json",
+      "sha256": "27bd9b1bf0f2ce83faa5e9a4c8a509dacb3004fa17babe53c25dca0f9c14fee3"
+    },
+    {
+      "path": "Snapmaker/filament/Snapmaker PLA Matte @U1 0.2 nozzle [Bridge test].json",
+      "sha256": "8e20f0c0d3008874e4cfb7277df8de9d859ab28a91419a71af6dcd6814a9548a"
+    },
+    {
+      "path": "Snapmaker/filament/Snapmaker PLA Matte @U1 0.6 nozzle [Bridge test].json",
+      "sha256": "49e4c04bf360222d956b5e9887ef590f4632faf8aea2fcea2b5fb70a1060a9bd"
+    },
+    {
+      "path": "Snapmaker/filament/Snapmaker PLA Matte @U1 0.8 nozzle [Bridge test].json",
+      "sha256": "c6ee5960c67ddcd4aa200e28af732c5c6678908268dc3474cda5e7c2f394a20c"
+    },
+    {
+      "path": "Snapmaker/filament/Snapmaker PLA Matte @U1.json",
+      "sha256": "b78415afbb03c3b5c8ae6f44ade98514b050f370a18b080f19deef5164268ece"
+    },
+    {
+      "path": "Snapmaker/filament/Snapmaker PLA Silk @U1 0.2 nozzle [Bridge test].json",
+      "sha256": "f144a9fdb7e9381764a44cb88a6c97a04fb16bedb26371aa5976587b191b5688"
+    },
+    {
+      "path": "Snapmaker/filament/Snapmaker PLA Silk @U1 0.6 nozzle [Bridge test].json",
+      "sha256": "647286d5136ba8fffcfd8834f64eb83ec859409d99911be12c50a7ff37e7dd72"
+    },
+    {
+      "path": "Snapmaker/filament/Snapmaker PLA Silk @U1 0.8 nozzle [Bridge test].json",
+      "sha256": "cac99d7839cf403a2f61f65168ba43761e4d5ba29eaef6a0247f329f34bc9a8f"
+    },
+    {
+      "path": "Snapmaker/filament/Snapmaker PLA Silk @U1.json",
+      "sha256": "1fcf922a8766910f2456f3b2e2d2a57a3fb4fa60b474dee38b68d50d34694206"
+    },
+    {
+      "path": "Snapmaker/filament/Snapmaker PLA SnapSpeed @U1 0.2 nozzle [Bridge test].json",
+      "sha256": "61218cde5faf41245a1b397e5adb854edda125a1ae71e5e51a109acf6134264a"
+    },
+    {
+      "path": "Snapmaker/filament/Snapmaker PLA SnapSpeed @U1 0.6 nozzle [Bridge test].json",
+      "sha256": "9a6ebb6e7c105c16fa86ae4b1d2c62104fdb13806777cdb4e7c8eba78e326a7b"
+    },
+    {
+      "path": "Snapmaker/filament/Snapmaker PLA SnapSpeed @U1 0.8 nozzle [Bridge test].json",
+      "sha256": "3cee852838bf80359955b8dc6e1dec700e729eafbadc6647c9b82bec7b2b5877"
+    },
+    {
+      "path": "Snapmaker/filament/Snapmaker PLA SnapSpeed @U1.json",
+      "sha256": "db6250f6248fe99215dd3140cdbfd3d6d3fdfd2a89055231e928b4630bdaa5d4"
+    },
+    {
+      "path": "Snapmaker/filament/Snapmaker TPU 90A @U1 0.6 nozzle [Bridge test].json",
+      "sha256": "de7e74380a333c0a2d653a08b2b03f512ff7cd83bd10051c4d927ca5959a1a8f"
+    },
+    {
+      "path": "Snapmaker/filament/Snapmaker TPU 90A @U1 0.8 nozzle [Bridge test].json",
+      "sha256": "5777a39f5c58aecdd63748527b05dbb1d8a2ff7e3e0284c03a17644484a7b44e"
+    },
+    {
+      "path": "Snapmaker/filament/Snapmaker TPU 90A @U1.json",
+      "sha256": "be6604835916f5a4b3f3267c9b132484058611fbfbc79353869a905c824fcc26"
+    },
+    {
+      "path": "Snapmaker/filament/Snapmaker TPU 95A HF @U1 0.6 nozzle [Bridge test].json",
+      "sha256": "74b5c83bb3999016ce2733b9e737f96b3b79b9d6c3d973c7430bced7328d4395"
+    },
+    {
+      "path": "Snapmaker/filament/Snapmaker TPU 95A HF @U1 0.8 nozzle [Bridge test].json",
+      "sha256": "8146fa669a7b32f9744336bdb1e80987ba40d6a3fb20f1548b9f4c4e2a976a25"
+    },
+    {
+      "path": "Snapmaker/filament/Snapmaker TPU 95A HF @U1.json",
+      "sha256": "2f03b0b4a488cde24ec13ff7c6dc8a102ef5438e871b5d275ea13c6ed82ef31c"
+    },
+    {
+      "path": "Snapmaker/filament/fdm_filament_abs.json",
+      "sha256": "1af2da445ee98c3d75d56cd4f1f80989794b8fe02bed3a1afe349b0b1e6c80c7"
+    },
+    {
+      "path": "Snapmaker/filament/fdm_filament_common.json",
+      "sha256": "a1df911e8bce66ed589cb59c6d85096bb73a93ff9dd75cdc5b6b668209399896"
+    },
+    {
+      "path": "Snapmaker/filament/fdm_filament_pet.json",
+      "sha256": "81ebc927bac2705587258b58727f9552e3cc1b9d5388018533d6021cfc60fd29"
+    },
+    {
+      "path": "Snapmaker/filament/fdm_filament_pla.json",
+      "sha256": "e1014b2bb54ec97764df03318342a68c6f3470da748f777e8c3eb7a6f79268a7"
+    },
+    {
+      "path": "Snapmaker/filament/fdm_filament_tpu.json",
+      "sha256": "e46653db8d038cbf81bd0c4fb2967ba2f6fb10e6245073bd18775868a7386081"
+    },
+    {
+      "path": "Snapmaker/machine/Snapmaker U1 (0.2 nozzle).json",
+      "sha256": "a0089a01f5f01a9a24c01866a9dd2c0f7a693b2f1886994faab871578e284e77"
+    },
+    {
+      "path": "Snapmaker/machine/Snapmaker U1 (0.4 nozzle).json",
+      "sha256": "e7847f7983e68bcf821736275a2829010858d9a4a3cf67fdd22aa84e9a84890f"
+    },
+    {
+      "path": "Snapmaker/machine/Snapmaker U1 (0.6 nozzle).json",
+      "sha256": "576d9c76aca746f6277a72e698fdb5b3eec14b754f7c3d06606cdaf84c76db18"
+    },
+    {
+      "path": "Snapmaker/machine/Snapmaker U1 (0.8 nozzle).json",
+      "sha256": "b37280f78e7c454ef5b32172e19e2b7aa0b238c5f2ce0e03013788e57651645e"
+    },
+    {
+      "path": "Snapmaker/machine/Snapmaker U1 - 0.2 mm.json",
+      "sha256": "a6ce0338738bc2977cb02fac7fdbf5eabde74157d60f261feb9750c44e410084"
+    },
+    {
+      "path": "Snapmaker/machine/Snapmaker U1 - 0.4 mm.json",
+      "sha256": "228a26ec586f80baceb68b87e046aa552341e94b4affb950973c67448202d96c"
+    },
+    {
+      "path": "Snapmaker/machine/Snapmaker U1 - 0.6 mm.json",
+      "sha256": "8912822329f96a31c2f457507bd7b1d048f44a56f98044e2d03b24e7bfe7f023"
+    },
+    {
+      "path": "Snapmaker/machine/Snapmaker U1 - 0.8 mm.json",
+      "sha256": "13cc07eaecca90473740d62c126b542900d2b51bf74ce8ead35bde0f27048ebb"
+    },
+    {
+      "path": "Snapmaker/machine/Snapmaker U1.json",
+      "sha256": "642291829032e06e2161dbf399a50755f7926823d1085741e6caa570611f6374"
+    },
+    {
+      "path": "Snapmaker/machine/fdm_machine_common.json",
+      "sha256": "be5f7a7bf03a76952e483e26104d94cf03b5d727c8516e7ab84d3858c227acf0"
+    },
+    {
+      "path": "Snapmaker/process/0.08 Extra Fine @Snapmaker U1.json",
+      "sha256": "3488188492141afecb0eb53f7224cc3cbd96f824593affb62851030a32bb6bda"
+    },
+    {
+      "path": "Snapmaker/process/0.08 High Quality @Snapmaker U1.json",
+      "sha256": "184ff4408423dd64ee49c07133c607b823fac84f194d6e7e35c64f6d53b8e63d"
+    },
+    {
+      "path": "Snapmaker/process/0.08mm High Quality @Snapmaker U1 (0.2 nozzle) [Bridge test].json",
+      "sha256": "df8dbb7ef70fad82fbb3914ae7a386de7ba2596491c98f7382bc08783ca44924"
+    },
+    {
+      "path": "Snapmaker/process/0.10mm High Quality @Snapmaker U1 (0.2 nozzle) [Bridge test].json",
+      "sha256": "7052c5e16f172dcdf74ce8e5abc3e8d513f043b0c8a65d9891c5fe4e5f92af8b"
+    },
+    {
+      "path": "Snapmaker/process/0.12 Fine @Snapmaker U1.json",
+      "sha256": "115f8506a60e35fefd7b778f3e1616dfc390b3e20e6da1cc6628a630e923c7c8"
+    },
+    {
+      "path": "Snapmaker/process/0.12 High Quality @Snapmaker U1.json",
+      "sha256": "be502d00b657841e1da5341e987ce1a4cae4df7f2c3c96e61be9a201e60c8869"
+    },
+    {
+      "path": "Snapmaker/process/0.12mm Standard @Snapmaker U1 (0.2 nozzle) [Bridge test].json",
+      "sha256": "3f8e255587401b2d6db4eb0dd01f5679403b4d7589494355f3db778dc92aba79"
+    },
+    {
+      "path": "Snapmaker/process/0.16 High Quality @Snapmaker U1.json",
+      "sha256": "d410314a99d4a38fb1c0f5e56328fa73bc565116900f0b70f4aa13ac7f47f9f7"
+    },
+    {
+      "path": "Snapmaker/process/0.16 Optimal @Snapmaker U1.json",
+      "sha256": "8126f23b053052355436e6700e9861684436a08dcf20117c104e4f814c6ba121"
+    },
+    {
+      "path": "Snapmaker/process/0.18mm Standard @Snapmaker U1 (0.6 nozzle) [Bridge test].json",
+      "sha256": "befeef6ed240debf2d1c0ac5df85e874d97811acfb0b790fba2060841fe79491"
+    },
+    {
+      "path": "Snapmaker/process/0.20 Standard @Snapmaker U1.json",
+      "sha256": "b17ac54dbe84ca228d123da7b7762354441b4ee58801a777a144b43aef289556"
+    },
+    {
+      "path": "Snapmaker/process/0.20 Strength @Snapmaker U1.json",
+      "sha256": "fa49c1843b78c6e1dd6218da174c9f8dec4c6f38af172abcbb788d4711d32ad8"
+    },
+    {
+      "path": "Snapmaker/process/0.24 Draft @Snapmaker U1.json",
+      "sha256": "9777874b861dae25d7b9f0b499dc007db1698a4d264652a0b4791399972a50ab"
+    },
+    {
+      "path": "Snapmaker/process/0.24mm Standard @Snapmaker U1 (0.6 nozzle) [Bridge test].json",
+      "sha256": "1b37fea88d0ef6e29305b506e715d28b6c3bb0dd25335339c23430f22605e55b"
+    },
+    {
+      "path": "Snapmaker/process/0.24mm Standard @Snapmaker U1 (0.8 nozzle) [Bridge test].json",
+      "sha256": "cc845d9a81b151816d572d1a10c6f8d7b2023d1dd26435e44a1bd8f24be298ec"
+    },
+    {
+      "path": "Snapmaker/process/0.28 Extra Draft @Snapmaker U1.json",
+      "sha256": "4de94fe3c8b97e4a40726c66def7876b7d2709f42f55d3f43730e9a68522bbb1"
+    },
+    {
+      "path": "Snapmaker/process/0.30mm Standard @Snapmaker U1 (0.6 nozzle) [Bridge test].json",
+      "sha256": "7cf16d84a2f77608c26d7fac754b31af7b9dbfc34fe9aeddc63b4717733f56d2"
+    },
+    {
+      "path": "Snapmaker/process/0.32mm Standard @Snapmaker U1 (0.8 nozzle) [Bridge test].json",
+      "sha256": "9624f88e6313085c4de4317f7363691faf80aef5d7ead92d8de11d80739d6057"
+    },
+    {
+      "path": "Snapmaker/process/0.40mm Standard @Snapmaker U1 (0.8 nozzle) [Bridge test].json",
+      "sha256": "28316d8c1d8d79eff31ea6e472298842eaeaeb9f25dbdfc03d184a311843dbf5"
+    },
+    {
+      "path": "Snapmaker/process/0.40mm Strength @Snapmaker U1 (0.8 nozzle) [Bridge test].json",
+      "sha256": "a15acfb74fae9b92e34f56145336bb5e75f9d44919476fe0e316d5a2eadffe20"
+    },
+    {
+      "path": "Snapmaker/process/fdm_process_U1_0.08.json",
+      "sha256": "61c6581e6e27c45463c8836d69b85654e01afb7b5d90107360b3ee461867f42c"
+    },
+    {
+      "path": "Snapmaker/process/fdm_process_U1_0.12.json",
+      "sha256": "c3319ebfe1ce8a3fd706eaddf1741a5d7176106a14620ccfef22c6e3312ec51e"
+    },
+    {
+      "path": "Snapmaker/process/fdm_process_U1_0.16.json",
+      "sha256": "2d19c754420229b09a3ba265dbaf788df8e07881846dbefa61bde5e9283af744"
+    },
+    {
+      "path": "Snapmaker/process/fdm_process_U1_0.20.json",
+      "sha256": "7b76d9f01eeb250a453e0e07b8b510437ab91bef514f4389b010100d3437bc6d"
+    },
+    {
+      "path": "Snapmaker/process/fdm_process_U1_0.24.json",
+      "sha256": "d8d59517eabad2ea7c714859f9e23b1cce6de98a818205af35ff7b28bace48f4"
+    },
+    {
+      "path": "Snapmaker/process/fdm_process_U1_0.28.json",
+      "sha256": "6ae250c53edbd7fb1edc0f04891b9882ba2f77d0c1f54e90a9aa8030ea6880f7"
+    },
+    {
+      "path": "Snapmaker/process/fdm_process_common.json",
+      "sha256": "f67ed530c7f70b11253c6ed3710e1be3ef4c53836cd22231d5a926f460837a1c"
+    },
+    {
+      "path": "bridge-node/advance_preheat.js",
+      "sha256": "b2ade490924e7135148ffd23668b5684ac4bc3ebb2910a75a604350653e738f6"
+    },
+    {
+      "path": "bridge-node/aiClient.js",
+      "sha256": "a78ada4023d513e488f486cf7371ed4602de5b15ef39d819b3d80c38d7d674aa"
+    },
+    {
+      "path": "bridge-node/dialog.js",
+      "sha256": "163e67593c613acab2fad31afc9919a81fe7ffa39f1371533d9aca19753392dc"
+    },
+    {
+      "path": "bridge-node/file_filaments.js",
+      "sha256": "5f824934384a7c127ae2f4a4319db9bd538815852beea360ac19d556c9bbfe30"
+    },
+    {
+      "path": "bridge-node/netUtils.js",
+      "sha256": "6f88c8891e6601d6be2c7b32956bfda7ac208f13adaba500969d2a232b6f77cd"
+    },
+    {
+      "path": "bridge-node/package-lock.json",
+      "sha256": "9e14791240b307d2fd3d0b904722b6fcffe0f1ec40fc5aab74cb7c6781a18955"
+    },
+    {
+      "path": "bridge-node/package.json",
+      "sha256": "ac63b440c966e961704ba22046a18c6e2c304ef084ecad77aa44501428a705f6"
+    },
+    {
+      "path": "bridge-node/server.js",
+      "sha256": "68a00518cc17d0caac490815c0a1fad7271b94f20ab3fc604e35fe6ca44ad784"
+    },
+    {
+      "path": "bridge-node/shared_preheat.js",
+      "sha256": "5fa9884e435f2bfcbffb58864a6858530c8284f332bdb957c71c086c3e4c0bba"
+    },
+    {
+      "path": "bridge-node/slice_agent.js",
+      "sha256": "ccc1b70d9b5ed0797a35680f78c2d0320e4c5e5daeac8732b4cad62bf28e414c"
+    },
+    {
+      "path": "bridge-node/start-bridge.sh",
+      "sha256": "79e4240970ac1f0e7f584d24ca0976ae7307b6cce736dfe8d3168789ed3ee8e0"
+    },
+    {
+      "path": "bridge-node/touchscreen_format.js",
+      "sha256": "bef8ce3d3d25d1cd2f291eff07e040c611b540884360fe1d8b7d4baf1fdd462a"
+    },
+    {
+      "path": "bridge-node/watchdog.ps1",
+      "sha256": "c5af917a4628d594cddb732fdf362ee3eee0da860c054fd9b0945d0e2f606106"
+    },
+    {
+      "path": "bridge-node/workspace/knowledge.md",
+      "sha256": "16a6ee10bee28195ce8e737d461f3238086ebd434c0c047a24ab50a358d32b7e"
+    },
+    {
+      "path": "bridge-node/workspace/memory.md",
+      "sha256": "fb38b94d94e082670b4f18551274f34bed11682fdb2e7016f13f2f1882f8aeb1"
+    },
+    {
+      "path": "bridge-node/workspace/skills/analyze_model.md",
+      "sha256": "5e4d2f9e75b8ecf6c400c6549346b1421672fe3bcd0d71aefc00d533044f7f69"
+    },
+    {
+      "path": "bridge-node/workspace/skills/optimize_gcode.md",
+      "sha256": "7ae91ba6a58e1d1162d7529a5ca8ce31ad7b099b5dca967bbbca28fa20f33902"
+    },
+    {
+      "path": "bridge-node/workspace/skills/patch_gcode.md",
+      "sha256": "abee2f386a1a965599eb61a9fb86676f94760a7539005482fcb0638f9a6a2d21"
+    },
+    {
+      "path": "bridge-node/workspace/skills/print_qa.md",
+      "sha256": "9f2ef4eff8a34aadab89c25ea75018a7e6bb63297288e657a601f12d44eec1ca"
+    },
+    {
+      "path": "bridge-node/workspace/skills/rawpath.md",
+      "sha256": "529973f5aa61d4a09791275766fc97a58966a8fea0f2f22190f2907757002302"
+    },
+    {
+      "path": "bridge-node/workspace/skills/review_gcode.md",
+      "sha256": "1e6a74b375d54bb799605ec46b86ba418440b71c7bb1e9428f9e2de2be53234a"
+    },
+    {
+      "path": "bridge-node/workspace/skills/slice_strategy.md",
+      "sha256": "043c54886dc0d47f3c022a7cf756936b9d5d1aa745ec4b3fac715641411fbe08"
+    },
+    {
+      "path": "bridge-node/workspace/soul.md",
+      "sha256": "daa63968c3253ff6d2c01c363cd0ec2431c32cc5b4f0d17df7f2b1577e3dc289"
+    },
+    {
+      "path": "bridge-node/workspace/tools/voxelflow_analyze.md",
+      "sha256": "870440a180f9159d49ef2eea498260150a4c6c464f50984b195e3e8b72f84117"
+    },
+    {
+      "path": "bridge-node/workspace/tools/voxelflow_rawpath.md",
+      "sha256": "f2c80092f843e50afb527bc1e731162f9a12cd83b49b3072d00d91136b1885b9"
+    },
+    {
+      "path": "bridge-node/workspace/tools/voxelflow_slice.md",
+      "sha256": "4993e9a1273fdd38c6446f79e27d6cf791aa98810314514edc66c80eb2bdf65c"
+    },
+    {
+      "path": "bridge/web/FLUIDD-LICENSE.txt",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "bridge/web/FLUIDD-SOURCE.txt",
+      "sha256": "5ddb093246ef3dcfbafff80f248528addd2143e645d3238a5bf298016bd01992"
+    },
+    {
+      "path": "bridge/web/ailab.css",
+      "sha256": "23c3bed8c281292717130820fa436b7e906f2a90b653f2c145c3f1185eabddc3"
+    },
+    {
+      "path": "bridge/web/ailab.js",
+      "sha256": "ad8e73ffeda3b9d33b1209bc4ddde2e911e1381ddee132b4303455147596b6eb"
+    },
+    {
+      "path": "bridge/web/dist/assets/AfcPrintStartDialogTool-BQT3cRm2.js",
+      "sha256": "fef9c468eb7f58b023bfe7131f00e530af48363813b1e22f2a14d78938bbe00a"
+    },
+    {
+      "path": "bridge/web/dist/assets/AppBtnCollapseGroup-D3wt7InZ.js",
+      "sha256": "3cb1afddb35e190928d6887de128864460616ee34cfc3c642325db5ffb935e5b"
+    },
+    {
+      "path": "bridge/web/dist/assets/AppChart-CaRjef7V.js",
+      "sha256": "55a3236f7fc3b24dce27f9cac523e63c9bd240dcc2e57fcaffd54f148d6a86fa"
+    },
+    {
+      "path": "bridge/web/dist/assets/AppChart-DQ4vOyOv.css",
+      "sha256": "015e8516d2dfe3083ca39f456d48b66b2206f87a8e633f5575f09b900da525cb"
+    },
+    {
+      "path": "bridge/web/dist/assets/AppColorPicker-CzgFGFlL.js",
+      "sha256": "4089d0cd3f51ea0d4105af4090c3caa081eeeabd0c67b508493a0f780fca103e"
+    },
+    {
+      "path": "bridge/web/dist/assets/AppColorPicker-DY59qRAE.css",
+      "sha256": "41b194f5b6c2789b68f797e033ea3e61ecf9bc13cba48184935948086017fc84"
+    },
+    {
+      "path": "bridge/web/dist/assets/AppInlineChart-BWWgW9Jo.js",
+      "sha256": "cd2bf7329967134607c5d508fcc6d3b915c4b2e483d450b24205b63dbac969b7"
+    },
+    {
+      "path": "bridge/web/dist/assets/AppInlineChart-CIdlNXN4.css",
+      "sha256": "c5dd70c4c7144704245944b1ff68910b034da1260e243b79a7903fb4f55ca0ca"
+    },
+    {
+      "path": "bridge/web/dist/assets/AppNamedSlider-CmCqChwb.js",
+      "sha256": "1fdbecb391e065aefc56a8fe0dfd19d9ce217829136f72e01b7e992a8f4c4b45"
+    },
+    {
+      "path": "bridge/web/dist/assets/AppSettingsNav-B6exGjxw.js",
+      "sha256": "a36724f34d8016945417bbefd12f693ed45f0cfa33f4ee163319f23ff8429537"
+    },
+    {
+      "path": "bridge/web/dist/assets/AppTextField-KTP7MU6R.js",
+      "sha256": "2f878c3f6b059c13916307e537dc269ce090bb189c30aba21b3098838da8faee"
+    },
+    {
+      "path": "bridge/web/dist/assets/BeaconCard-BtL_yy-W.js",
+      "sha256": "9b5df77f3eef433d96aedf10bcf006197b0a08759a595f5d0e53e98b84fa2abf"
+    },
+    {
+      "path": "bridge/web/dist/assets/BeaconCard-CEcIMqLQ.css",
+      "sha256": "e45f9fb0e9e4fe2b4e6b5c28ce62c93a8223236010577e24621d43df0caeed65"
+    },
+    {
+      "path": "bridge/web/dist/assets/Configure-BqVvlyi2.js",
+      "sha256": "ebb1b0a2a1806bb22c2b4c358fddbd76cc32aebf15f577264af5667e01fc28fd"
+    },
+    {
+      "path": "bridge/web/dist/assets/Configure-jpJLplJh.css",
+      "sha256": "5e5238243fe417828964ac60044af7450fb65b4644ad28e253e9b2d89f576fa2"
+    },
+    {
+      "path": "bridge/web/dist/assets/Console-HNYRLpLH.js",
+      "sha256": "5027f256203cc582c8248c7c5a6e8afbc52039ce65269b4f42aa05ef7d543d09"
+    },
+    {
+      "path": "bridge/web/dist/assets/ConsoleCard-kSbAf-JB.js",
+      "sha256": "00589697ef3c24137c39c2269c151854f72507eef0c60a6de31c4ef6c8fce2db"
+    },
+    {
+      "path": "bridge/web/dist/assets/ConsoleCard-wznOIkYo.css",
+      "sha256": "7a15fca822107eb6ba7053b26a0446e83bab50874490265e90383cac6db59793"
+    },
+    {
+      "path": "bridge/web/dist/assets/Dashboard-Bu4hE5X6.js",
+      "sha256": "99bc047085fc4a6cefe4ed2f5f6426fd1dd0687019c260551fce0d145fdd967c"
+    },
+    {
+      "path": "bridge/web/dist/assets/Dashboard-CKV2ZgbB.css",
+      "sha256": "c2df4d46157d49fea89b94c6c5751453c76abf7493a5ac3ee3e34a9f13f3bd84"
+    },
+    {
+      "path": "bridge/web/dist/assets/DeviceCamera-BSUZwsxG.js",
+      "sha256": "413ab90bac3575e1e3022724173be87c46fb61287edbeee0634242d7a8ded41d"
+    },
+    {
+      "path": "bridge/web/dist/assets/Diagnostics-BbM4Re7j.js",
+      "sha256": "2a27db2f9b567f1d790aec7b06892565a50b9b052ef1be179fda95e71d59ed1f"
+    },
+    {
+      "path": "bridge/web/dist/assets/Diagnostics-_-XoX9i3.css",
+      "sha256": "8045e26f6da5d81a8703d56eb13710d5cf218dcb218767d3c0584709d3347e04"
+    },
+    {
+      "path": "bridge/web/dist/assets/DiskUsageCard-DFzmTL94.js",
+      "sha256": "55b0019ca6a0b7195f1f18ef53c181d90e886b1c2369b0e703a3947fbf46007d"
+    },
+    {
+      "path": "bridge/web/dist/assets/FileSystem-DqQH7wGv.css",
+      "sha256": "50ad74cbb89ba8b932f2a0cc246757a57161563c8c044bc6b143628d08e45d9e"
+    },
+    {
+      "path": "bridge/web/dist/assets/FileSystem-gdaQO3e4.js",
+      "sha256": "1ba29c5093c81d768617e268d6ce62b2ed9a5318654e14e80b50efd51d9341a2"
+    },
+    {
+      "path": "bridge/web/dist/assets/FullscreenCamera-CowZ90zr.js",
+      "sha256": "5b47aebb95e821d98d9ab3f1ad5c58ec72255b2cb6d81c48156af9821b8fa04a"
+    },
+    {
+      "path": "bridge/web/dist/assets/GcodePreview-DFkzV0iS.js",
+      "sha256": "eadc495de9bdf7d31eb0fab5bd8b71df325767b098337db1e4d492f6ff1ffcd1"
+    },
+    {
+      "path": "bridge/web/dist/assets/GcodePreviewCard-2sNt3_AG.css",
+      "sha256": "10ae8cb7c55d220786c6209ed4dd3e64936939cd4d4396ce8eafb77e2b4a80ff"
+    },
+    {
+      "path": "bridge/web/dist/assets/GcodePreviewCard-BpEcUlUl.js",
+      "sha256": "0d20c9a22bc70a345b6093b67e6be7399d2a02e1fe23f32f4a2e5674a1f17b4a"
+    },
+    {
+      "path": "bridge/web/dist/assets/History-DXuBOM-_.js",
+      "sha256": "c12badf0391aca01fd030c0a94dbcd9ffd9ece653a257f0dd9361af399c09477"
+    },
+    {
+      "path": "bridge/web/dist/assets/History-IqaLA2bn.css",
+      "sha256": "58e4ef3a2f11e265c3403e07ba88ffe3bd88a962f24e79107543a05d1904ab00"
+    },
+    {
+      "path": "bridge/web/dist/assets/HlsstreamCamera-BTgpOD_K.js",
+      "sha256": "fe27f91b643541415776680435a27bceb2d3500d6f0c3208554998c2b1153a89"
+    },
+    {
+      "path": "bridge/web/dist/assets/Icons-DelM7gxf.js",
+      "sha256": "fe57349ec9bcd3787b65807745eee25aea5956c776b60c3e1484347efef04038"
+    },
+    {
+      "path": "bridge/web/dist/assets/IframeCamera-ETdKQ-GD.js",
+      "sha256": "049d6468755b39cf39089d2ac1af939903e5b818c7790364119a9f8c31a700b5"
+    },
+    {
+      "path": "bridge/web/dist/assets/IpstreamCamera-BS0UnwOH.js",
+      "sha256": "e71a73bda410cf70278861fdb3011b97b64ae3a6c7583d278005461982250e37"
+    },
+    {
+      "path": "bridge/web/dist/assets/JobHistoryItemStatus-ir4et7pw.js",
+      "sha256": "e3f23fa49ffd16bc1de625131fb6b82c4f2797701f807dbcd269e179692bcd53"
+    },
+    {
+      "path": "bridge/web/dist/assets/JobQueueCard-CrDSIGmA.js",
+      "sha256": "25dc204cfd2427f81d78a57fe2afced5b569b5df224380549ef70b5c0def0c4a"
+    },
+    {
+      "path": "bridge/web/dist/assets/JobQueueCard-wD83NPR2.css",
+      "sha256": "d3a2e680a176ac1404c3d5b718f05a1252eddd27d28776bbd4d6086ab354441c"
+    },
+    {
+      "path": "bridge/web/dist/assets/Jobs-BVOXC6aL.js",
+      "sha256": "16878ad140d0db922f9e3198b0e80c1793fc23ae406b3e49515b28f4dcc4d5e7"
+    },
+    {
+      "path": "bridge/web/dist/assets/MacroCategorySettings-DEwzuryi.js",
+      "sha256": "4dc9556e2e3e991e8b12871dde4994f8ca84e3458c5f6266c128da2d91d3dab5"
+    },
+    {
+      "path": "bridge/web/dist/assets/MjpegstreamerAdaptiveCamera-C6Be9Ggw.js",
+      "sha256": "df71ef545ed76307a8468068a85d0600e505d9ef87a1f807c74533e695a480f7"
+    },
+    {
+      "path": "bridge/web/dist/assets/MjpegstreamerCamera-zlfu-_IM.js",
+      "sha256": "78a5833703085d36891b034bcefac05fc6e9701f8c9c7e2a2f62e6e88a2c1cfc"
+    },
+    {
+      "path": "bridge/web/dist/assets/NotFound-_alnQtA2.js",
+      "sha256": "2f5d496a5b99b2d4f63bd5289e1b0c2c243b1cfc82e9ffee7faa490a5c1044c3"
+    },
+    {
+      "path": "bridge/web/dist/assets/Settings-D-7ouhHX.js",
+      "sha256": "862d06bbd764518f0b6c6f3fd6c1b6d0ea3040358c459ec21523279cdadedb1d"
+    },
+    {
+      "path": "bridge/web/dist/assets/Settings-DBzJD1xO.css",
+      "sha256": "5d5cfb9d5aaf329f96fc3296666c2a3a223d07daebe21bc9f8fe2196d361b1b6"
+    },
+    {
+      "path": "bridge/web/dist/assets/System-BlvP9rKp.js",
+      "sha256": "0d990bda063d470a38cf46f5bb2727541c2b8fdf5625e6bd792186d2211ed8b7"
+    },
+    {
+      "path": "bridge/web/dist/assets/Timelapse-C8nYrEGX.css",
+      "sha256": "872a101e6836e4168722ac6ec3173d26dbdc9f9d622f2698302ca5eda4f6c66d"
+    },
+    {
+      "path": "bridge/web/dist/assets/Timelapse-DOagNpgZ.js",
+      "sha256": "7e4be61795711138770685f3fa6f0074fffa1ba0cb09f9e0c4199ebe7afc217f"
+    },
+    {
+      "path": "bridge/web/dist/assets/TimelapseRenderSettingsDialog-Cps2wzll.js",
+      "sha256": "7b435db31b9e0260bc562900694d249023f4135e5bfce5cbcdced8ab1e6b6b28"
+    },
+    {
+      "path": "bridge/web/dist/assets/Tune-BHkxONzW.css",
+      "sha256": "63e867f4bd4cd89e70c77b297192fbfdfbf0dc45fa3a6664d9a0d88971f80425"
+    },
+    {
+      "path": "bridge/web/dist/assets/Tune-dstb9xtH.js",
+      "sha256": "92422af80f6516afff4e09c2edcc076a118aa921b5b3076044cdb9b696538cba"
+    },
+    {
+      "path": "bridge/web/dist/assets/Uv4LMjpegCamera-BEfs1U4v.js",
+      "sha256": "97adfb09355e8b605a75158831e09151cb4be24a9a914a5476ba4759f8d62fac"
+    },
+    {
+      "path": "bridge/web/dist/assets/VModel-w3Krb54F.js",
+      "sha256": "bdee5e844e9a42dd785f8409632449e937920010f9e41046e3e06d42c3865a46"
+    },
+    {
+      "path": "bridge/web/dist/assets/Watch-CyFL_YBj.js",
+      "sha256": "0a0aadd92b00c1d393871c3ce291ead27af2cd484297eacb6d39ae23ba2eb378"
+    },
+    {
+      "path": "bridge/web/dist/assets/WebrtcCamerastreamerCamera-DawK5xZj.js",
+      "sha256": "aaa5d5ae7ef1c53f0aa45372343fa123f5c5df953cc889899c1cab605eebdb4b"
+    },
+    {
+      "path": "bridge/web/dist/assets/WebrtcGo2RtcCamera-C1R9nKeX.js",
+      "sha256": "36e105559dd406fb92d0e7f482d09b2d957ffe08e33c2eca04589f52409233c1"
+    },
+    {
+      "path": "bridge/web/dist/assets/WebrtcMediamtxCamera-BIY89J0h.js",
+      "sha256": "6293e31fbaf199245838d8c5bd6bcb6921eb4ea9800fdb6852abfebd8a51c0c3"
+    },
+    {
+      "path": "bridge/web/dist/assets/_plugin-vue2_normalizer-BGKUv7Z2.js",
+      "sha256": "993c1de18abdf25cc15da6b280996c7814363b353fc700b91e4b2db9f4aa2537"
+    },
+    {
+      "path": "bridge/web/dist/assets/af-7CwGNRwk.js",
+      "sha256": "fffb7e031dc60a22c4f744a8c394f03539eb4a5c64d1993ec4b46ebafaa9ac27"
+    },
+    {
+      "path": "bridge/web/dist/assets/ar-C9QILje9.js",
+      "sha256": "7cd2e31a1e7ea34a6f8b007c2f657e1d0642eb52aaa37fb40615e2ff10bf2b42"
+    },
+    {
+      "path": "bridge/web/dist/assets/browser-CD6speBm.js",
+      "sha256": "3ae0dad2aebb39183ac887b1271ffd18c3da45ef630f1f3180807078ea116e1e"
+    },
+    {
+      "path": "bridge/web/dist/assets/camera-DJ4d_P9_.js",
+      "sha256": "20ebe0d8788ac093128d0c16054990472a6fa8eff3277cc687731b3ddb2f8e71"
+    },
+    {
+      "path": "bridge/web/dist/assets/codicon-DF1abBS2.ttf",
+      "sha256": "77f902557231f95c4c71ae517d09a1a842753656f5f665086b3e5ad8095538da"
+    },
+    {
+      "path": "bridge/web/dist/assets/cs-BoK5zobD.js",
+      "sha256": "ba4beefbc7c54a1daf22d3fc8ecc05effbb2a29eff7d43dd19d63a11c54b43f9"
+    },
+    {
+      "path": "bridge/web/dist/assets/css-DIMkf-bt.js",
+      "sha256": "361b35ed3c739617f90ee999b6bcfe6e7047c1d30c52df58401c50486f5fd8e4"
+    },
+    {
+      "path": "bridge/web/dist/assets/css.worker-DwfUZ3fB.js",
+      "sha256": "f8e2985ddc8de1b2533bb71e65182ebf3e7f9b1968f5c8b638daa48515719d61"
+    },
+    {
+      "path": "bridge/web/dist/assets/cssMode-DcV4vc95.js",
+      "sha256": "ecc69448d1689929a4ccd70c4d476b7d71c4b42de3f85face15a983de45c6585"
+    },
+    {
+      "path": "bridge/web/dist/assets/de-BoAhsOzX.js",
+      "sha256": "173eeb664b7935adb1647748eb222c14df3423c5ffddf76063785e806816d172"
+    },
+    {
+      "path": "bridge/web/dist/assets/dynamicImports-qNCGxksJ.js",
+      "sha256": "734e303e2d012656d50e25cf2ab7f27bed8895cbe189cf44403937e683d3d359"
+    },
+    {
+      "path": "bridge/web/dist/assets/editor.worker-CRz__AKW.js",
+      "sha256": "a8d36cd1157642e5729b76731d3c20eb4f773c7706594643e5baa7791861629d"
+    },
+    {
+      "path": "bridge/web/dist/assets/en-Bf4yA98I.js",
+      "sha256": "56daaf3aa3ac6549af69e0f4e80b067f0cef3cbd18e4ed438c21017f2dfeed5d"
+    },
+    {
+      "path": "bridge/web/dist/assets/es-Bwg3ZCwV.js",
+      "sha256": "64aadf9363bdc2abee1bafeba6e716b5bed867bd4189b91da5bb03dda823af1b"
+    },
+    {
+      "path": "bridge/web/dist/assets/file-data-transfer-BphkXqDT.js",
+      "sha256": "4e1c6045f0d257a787b365dc6d5cbd4bb032ece7318b45635ad391c72e52669f"
+    },
+    {
+      "path": "bridge/web/dist/assets/fr-Dm-7EG40.js",
+      "sha256": "ea1adcc88960cbce9a21cc8a1c00d4e959a3e08f2d14ce5c86b0633059d35c55"
+    },
+    {
+      "path": "bridge/web/dist/assets/hu-Bh9P1Sdr.js",
+      "sha256": "b5e74234a36b7f373f84d6630299fe8bd8ae84ed7ee6964f8b0b82e40f26200d"
+    },
+    {
+      "path": "bridge/web/dist/assets/index-B5NJjjpu.js",
+      "sha256": "139e0080b4674df47f87732ef1e45e7a42d92b574ca30439fd2f537b1784e429"
+    },
+    {
+      "path": "bridge/web/dist/assets/index-DW9TONRi.css",
+      "sha256": "d0746c0310806c442e415a91be48f0beebed7cd663afdacb1f72e73788a65718"
+    },
+    {
+      "path": "bridge/web/dist/assets/it-DBy6sBWm.js",
+      "sha256": "94a0e359ce2818a90c648cba211470a6bb0976ada782f6a80906d87e59f0cdb0"
+    },
+    {
+      "path": "bridge/web/dist/assets/ja-DCYPogNB.js",
+      "sha256": "39199df3d03a86b0c0e4baa461483205adec7589c68a75272d51c5429970e55a"
+    },
+    {
+      "path": "bridge/web/dist/assets/json.worker-CV9fqkUp.js",
+      "sha256": "266d65936d65a0287c07f6264dc9ce720e92c35b6b0d84d98653e4c58bf95fcf"
+    },
+    {
+      "path": "bridge/web/dist/assets/jsonMode-Cw4iP3rX.js",
+      "sha256": "0e477fc2166db621c5f01337c831015337a8b54f7daebf92e081079d80dbc075"
+    },
+    {
+      "path": "bridge/web/dist/assets/ko-i0YnNdHX.js",
+      "sha256": "09a86ba8340095565c9dab2bb59fd07141d38c2611c2433a3a46b34cf41266ff"
+    },
+    {
+      "path": "bridge/web/dist/assets/lodash-CZSpLV_R.js",
+      "sha256": "2bc29ba0e9ced8d354096bf754f7b8ce277ca5360f6f9192ab520d4bbf198f2e"
+    },
+    {
+      "path": "bridge/web/dist/assets/lspLanguageFeatures-8IGrxjS1.js",
+      "sha256": "8d4ab6c0a4aec8455ba8bf053ad45c792a07cd9c52ef40eb0a96232e86dcc9b6"
+    },
+    {
+      "path": "bridge/web/dist/assets/markdown-Cimd5fb3.js",
+      "sha256": "621e51234c4fea96a2a3a6e0dd59151f1c0216d7cb4a963361ee29aa302c7977"
+    },
+    {
+      "path": "bridge/web/dist/assets/mjpegStream.worker-t6QLCVyx.js",
+      "sha256": "045de335dedeebb0bbf37ea06c6c6ed0341f77aab94c447570e420e8b67c838a"
+    },
+    {
+      "path": "bridge/web/dist/assets/monacoCodeLensWorker-Pm3EKEqe.js",
+      "sha256": "a9b7813cc67ef17abdc68bf0416ea199ee96225201481c8b7f6f7f47a76bf3b6"
+    },
+    {
+      "path": "bridge/web/dist/assets/monacoDocumentSymbolsWorker-Xqbs4tWx.js",
+      "sha256": "fad6d93b3500bc81df44790311216e376e515f49c56afa2df645c0731df0a935"
+    },
+    {
+      "path": "bridge/web/dist/assets/monacoFoldingRangesWorker-hlHUwiv0.js",
+      "sha256": "4e1b79e4c6fa8bcc042d1634a2feb0890d2095b935cda7d868e85580681d764d"
+    },
+    {
+      "path": "bridge/web/dist/assets/nl-CXb7aX1p.js",
+      "sha256": "e45c1c03004b5427bef1bd70b456913751ae528d19642f9a24a38390ff4c194b"
+    },
+    {
+      "path": "bridge/web/dist/assets/parseGcode.worker-BFePDIup.js",
+      "sha256": "03fb2d5ae95674a61e1b85b2b091b76ab0ba8a602428311d95d71e84ab3a5c1a"
+    },
+    {
+      "path": "bridge/web/dist/assets/pl-DdgDvDEz.js",
+      "sha256": "23c90250d592b3f1dfab4135d95ecf9b45ad0e66fa04c16a352d570d8025d44b"
+    },
+    {
+      "path": "bridge/web/dist/assets/preload-helper-DclECHGd.js",
+      "sha256": "8674df70cbffd5753771a8dd5b08ac3b6ec29c1170468e46848760a0ffeea550"
+    },
+    {
+      "path": "bridge/web/dist/assets/pt-BR-BWw-g3C6.js",
+      "sha256": "4ee4b473a40ee6d518885f776d84a2094d38807474a924384d6727fded665a76"
+    },
+    {
+      "path": "bridge/web/dist/assets/pt-BZiVe4ez.js",
+      "sha256": "7ae131bf9b2c5d97755a9ea0b9d8beb92e31a5acfaf16b54cbe7a44876c1e58b"
+    },
+    {
+      "path": "bridge/web/dist/assets/qr-scanner-worker.min-CJaXo3yu.js",
+      "sha256": "b157457419e0a544694c3b10a6affcb0846da74d89c328178726722ef8f85f67"
+    },
+    {
+      "path": "bridge/web/dist/assets/raleway-cyrillic-400-normal-B1ZxqHSH.woff2",
+      "sha256": "58595093e22b9aca94b18ae5b76b61bef158b63a87828cc4fcd6d5e11e70ef4f"
+    },
+    {
+      "path": "bridge/web/dist/assets/raleway-cyrillic-400-normal-BOk4FNQ-.woff",
+      "sha256": "f73cea3dc14f1b29c693970a801ccd684fbfcdbb4fccf41d073c17b231dca723"
+    },
+    {
+      "path": "bridge/web/dist/assets/raleway-cyrillic-ext-400-normal-QD38Acpa.woff",
+      "sha256": "e2ec182c4ba3effa7da0e916d0e48e7b723da5f168c78d3a7d1879a71d2299cd"
+    },
+    {
+      "path": "bridge/web/dist/assets/raleway-cyrillic-ext-400-normal-zbv6uFvq.woff2",
+      "sha256": "5fa7b587d83c527eaf3411234a156ca0993c2d8d1aa923a351e3306d901567e9"
+    },
+    {
+      "path": "bridge/web/dist/assets/raleway-latin-400-normal-C5eIEfLm.woff2",
+      "sha256": "2318962e7930f55b45907ee85a6b6165ca3bba437b05ca17068a5c876d3de18b"
+    },
+    {
+      "path": "bridge/web/dist/assets/raleway-latin-400-normal-sMcq1OIP.woff",
+      "sha256": "b57c24f082aec6ab1daa4aec034e79b95a0381bd929f03baf4795d724650c2bb"
+    },
+    {
+      "path": "bridge/web/dist/assets/raleway-latin-ext-400-normal-B4d0sYmR.woff2",
+      "sha256": "e8ab3804b770bc1f6ee998bdcaa28e05d02346654356869ae726469e5148dd0d"
+    },
+    {
+      "path": "bridge/web/dist/assets/raleway-latin-ext-400-normal-DoUy7GWe.woff",
+      "sha256": "15f05025b909fa0577ba9fa927bdc7758610596a2697e1902ebb9191646a7892"
+    },
+    {
+      "path": "bridge/web/dist/assets/raleway-vietnamese-400-normal-CTqj18iX.woff",
+      "sha256": "18924cce05f1fa41bb4f6d124d293de44f18fbb3623ed965275c7555fa413df0"
+    },
+    {
+      "path": "bridge/web/dist/assets/raleway-vietnamese-400-normal-CTw6K1Xj.woff2",
+      "sha256": "4a5c4ac2798f5c0f19481494607048397fa3e45c2c34d4564842357d0cd98820"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-300-normal-D0x1uCa7.woff",
+      "sha256": "1c9387727df3ee2c770ac3d0ac2da964794b28633fabecc0f2ff87487b77d61f"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-300-normal-DzUz0kzv.woff2",
+      "sha256": "b054e90b2260ca3790dd89fc23d63f1a2dd7a446204dc2162f2a15a95811dec7"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-400-normal-BepgbcUK.woff",
+      "sha256": "383c105bb30e149e8f2603918cbbf3e2f1051bb170a16ad3e329f695c136128c"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-400-normal-CBPI_iaY.woff2",
+      "sha256": "fe349e5377e88095a1b04b615bf5e745f1899556545383c348a007aab628815e"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-500-normal-C8ZOEKN4.woff",
+      "sha256": "ca94f499f57a4030baacee0bce1b1e6a21f41a14d8d1491db0a98727f0568d9a"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-500-normal-CLao9AfR.woff2",
+      "sha256": "0991339551f58fb49d106c4b2a2beaf403823c0cdd0ed99d1a38f1a8b20d1595"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-700-normal-C2o7G-SM.woff2",
+      "sha256": "450e0c66acb4c5377a4f30dd5dec8370152f5f9521c0bc452589b3586bd978eb"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-700-normal-D8g9KsRf.woff",
+      "sha256": "e49c6d295ba3dbd3a8f890ec383d7505e94653bf005a4b6018239fd2313874a4"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-ext-300-normal-C0UYUNTV.woff",
+      "sha256": "447b6e2d213e9d3225b388098d62ab42780adcc123a7b559e36555bfcaaa42fd"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-ext-300-normal-DIxttMbC.woff2",
+      "sha256": "88c0fef59b53be2fe400bc83d10bea46f691ac102185243eeb14bfc7b6216b9c"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-ext-400-normal-DhDk0Xwi.woff",
+      "sha256": "8a8ac89e32a6f299be8fe353e7303f3b281ebe127ce6aa7ee2670e9c11e1e251"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-ext-400-normal-qHufge6k.woff2",
+      "sha256": "6d6be3a7d40feb9b785e62c4b629a0e5949e50cbbbad06eea4800a4c311e9898"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-ext-500-normal-BWC_xYeb.woff2",
+      "sha256": "a99e7e70a82255915e42d35ddf434d94c4e61d3e5ea02654083c113d1b97692a"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-ext-500-normal-SCgicl0l.woff",
+      "sha256": "00af14d7e4485f069bf09a75f42e6b53d562136af04828dbca44f93f90c406a7"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-ext-700-normal-BWOtdzfy.woff",
+      "sha256": "85a4aacb11b8fc214b3bca90cde1178085ac357a291a8bbb19cfa0d6b4175222"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-ext-700-normal-DmFxo5wj.woff2",
+      "sha256": "b64aec59c2342a732ec9a766e0846692dad652c571ca3bc7fd31bf53943887eb"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-greek-300-normal-DJEM9B4Z.woff2",
+      "sha256": "52f26ad27714b9352415641f6a2274e54ca2001e16a7544f7c1c7021fb40928e"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-greek-300-normal-xS8CB6LN.woff",
+      "sha256": "876c52cd5bb0cb8e4df142c6781839066e9b82d1778e234d0fc57cc04b3de863"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-greek-400-normal-D904r64h.woff",
+      "sha256": "e0b4a9370bb928018ef63412974b32e32c3392bc2a33bd02961a10307ea59b67"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-greek-400-normal-ai2Z1K3C.woff2",
+      "sha256": "1567c22e954336d26ec306a0dd756d19bb5e62c67e597ce0b778fc312dc68176"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-greek-500-normal-C9AnhcmC.woff2",
+      "sha256": "4a1a773d1cd80d3dbdd2a16c31192899a64e1fa09911a86c23364d108d74ef0a"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-greek-500-normal-XBIQOowA.woff",
+      "sha256": "7c7dc018718e4cf75943c5028d0981b0afb1ece12b1fbbcb96354c2231015a21"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-greek-700-normal-0aHWxGLu.woff2",
+      "sha256": "1e88ca8df7c8bfd43deab63817490110b302732a281984cdae74c8e424e5900b"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-greek-700-normal-xQsEWSIA.woff",
+      "sha256": "ec24c155ac13c4b5e0ff97283506ece9ad386d6d79c37e7d69caf5b87e9fd332"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-300-normal-CCzlftfr.woff2",
+      "sha256": "299f10a52fe1423dd5579ff7e83db8dbea312f1e924f3e06e55839286b4d1c1d"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-300-normal-Dqn3NW0Y.woff",
+      "sha256": "560569f50820f7ceff036478915fea183348a804dc89a3405e337daa3eeeac63"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-400-normal-BqEyEoaF.woff2",
+      "sha256": "425c0713a8176f92273d378599c7eac57de7fafabd4bd0ed457b70eb8f80d371"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-400-normal-D27F5sTu.woff",
+      "sha256": "6cff12116b83321230347db75d0721e70c27c6ec69eccca93ca4b1556eaaf67f"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-500-normal-7RbcRiD8.woff2",
+      "sha256": "5bcc3aa180e7f26f643cd5b2621cd7c2de193d0661d913a94afd3d4881a7a34b"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-500-normal-fsTFPL3E.woff",
+      "sha256": "8fa8e562e1a2997b442cd71ce0aa5c1814b119a80331d9cfdd0f4eb032e8a0bd"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-700-normal-BZpUvMxY.woff2",
+      "sha256": "b9d66d1708156f765ada51939bc24ed259dafa69eb631b36e443680fe9e15879"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-700-normal-YuyVweIx.woff",
+      "sha256": "19e78b1c5f2c683c28800f84dd6d453ddb67987b0079060a4cbe50c7bdded148"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-ext-300-normal-B0-sTZUp.woff",
+      "sha256": "5a7d49c3bcb3594be5d047db4a8a2598db0afd646a920a885b6e8cb4528ba3fa"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-ext-300-normal-B90pq-BC.woff2",
+      "sha256": "ccd24ea4a6eb7d7f2ad3d48078f64ffceb623faad8b4a52943bd7569d995dbec"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-ext-400-normal-C3tdtHj3.woff2",
+      "sha256": "5725eacca97303d8bce26f76cfcaee4393295bbf93c1eb6c3e5e4f260b2da189"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-ext-400-normal-CIveymTr.woff",
+      "sha256": "7468d3e77a4cbffab32ba29ef0201f6b6b6865ac5465964a7fbb973dbb7ff580"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-ext-500-normal-C1cK9xmS.woff",
+      "sha256": "2cf29a7aac76b74106f02002f590531bbeefc8041c9fa84c63c8abc7d4c9fb95"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-ext-500-normal-pMCM9Ixg.woff2",
+      "sha256": "1e597a6e3b163200475089698be3427ab1bb01553493d5b7d53694429948d8ec"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-ext-700-normal-BDePAh3g.woff",
+      "sha256": "854a8fa1a954fe8f3d1582494af20984a18c04710992f6e96b2dfedf669d7675"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-ext-700-normal-DSBUz0N1.woff2",
+      "sha256": "7673803a2d402018b1f726dded5bf2dbf2be4307039e8718f4bea654d6eca249"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-math-300-normal-5dF_7mZP.woff2",
+      "sha256": "744c67913a224bb25485edf13d97ccd88c62d84245dbc060fee9a185c86b0857"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-math-300-normal-CkwMvXpj.woff",
+      "sha256": "3ad8d813c5e245cedc2af53560f8aa81d8b40fe0e2664bced2e2e596ed4f5e4c"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-math-400-normal-BEFej5gc.woff2",
+      "sha256": "6fb289fea179641579de5b208600d490ee52177b347f83e92cf673afc419704e"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-math-400-normal-D6sS4O5l.woff",
+      "sha256": "a7232b8539b1050fcaa3ba8495b7d8af7d4a4e8ce66d44606b7de8c50618844a"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-math-500-normal-BNGXE_xU.woff",
+      "sha256": "5edcbd24a28a740466dea8c6812547c631de6d87253e86b173fde964e9e490f0"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-math-500-normal-C4NU9gLX.woff2",
+      "sha256": "41e63fe77c08977713ad31884c564f5e7c4767b7a1625d0753b6a39e0a0a93f4"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-math-700-normal-B8YqGHVc.woff2",
+      "sha256": "3cacb4c77c955f56a94ddf8ec9af8a546d2f009696a5b710eaf4d9a8aa8b3d39"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-math-700-normal-DbhUef31.woff",
+      "sha256": "37612c43570c35f4dbe1f79a1f91d5af0057a678c9a3e82251f6167cc4e4772d"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-symbols-300-normal-CBIeSvs3.woff",
+      "sha256": "278feb8cb11d4e7445eb7f310916f7211969240b95671f6150dc327c345bf237"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-symbols-300-normal-DDU7avhj.woff2",
+      "sha256": "6bf7976c1f1c9f52a543650845e74a2304a1f530ba1c5f537e5014a93b15c5bb"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-symbols-400-normal-C7tGlxgb.woff",
+      "sha256": "6c12462f33b711c773d282902ac26246f18c86dab70bca508372e9ca49efef03"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-symbols-400-normal-CB1Ce4Gk.woff2",
+      "sha256": "a50e7f2d64f85c2d81fe7be1da5c943fde45c4ac47d3147f9b5a56b705b97824"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-symbols-500-normal-B_CZKVJS.woff2",
+      "sha256": "5cb4c667beadbfc8c324b04fcea15837e253231e35ccc3d19b5e36e5280f92b4"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-symbols-500-normal-DFnofPUt.woff",
+      "sha256": "36e49aeecd3a3e894d221b178de7aaf7c20e5a90a29a25962fe48f00d9c2a33f"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-symbols-700-normal-BiFDindJ.woff2",
+      "sha256": "25910e65ad4da1280d717a906bb4677ba666405b3ca3a286f40e01f58fce24fb"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-symbols-700-normal-C59U6HqI.woff",
+      "sha256": "fbab7ac59b646e765441c65fdd0d1736c1aa1e67e167f83b21067bfda945316e"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-vietnamese-300-normal-BPvXm_f1.woff2",
+      "sha256": "8ab596dcace8d7e1dc26b49b4fdbf7be2611807c8846106ac27db7d592784d01"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-vietnamese-300-normal-CYjuQheQ.woff",
+      "sha256": "1feeb48f245278c105cdb7e8e5c6b24d438b9b616c778cdfa6dc6ab03609e635"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-vietnamese-400-normal-Bf76hAzZ.woff",
+      "sha256": "8881cd907e8f10a4fe6b5ad9bbb37088dc421bc58285d3f7c6e789611f0f6c81"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-vietnamese-400-normal-D2PTxGxD.woff2",
+      "sha256": "76afb0e482ab569c50a1ca35dfd052daa3d0f6d54d1b30865f6fea4c35c2b350"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-vietnamese-500-normal-B3ncpOoB.woff2",
+      "sha256": "15c77aed355b2ca99b34986268c33c67107613a2987c71dd9e12e79bbd6f9e63"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-vietnamese-500-normal-BgoYVz-9.woff",
+      "sha256": "784dc1e97a55033a8e1f18ca60022ec8d8e5524abd05abbe52cf4b936ac3f6e5"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-vietnamese-700-normal-BEVeWqJt.woff2",
+      "sha256": "bec340ec8c7ec4940533eeceadddb00ac2da872c57c67b0c55e772c7c32dad4e"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-vietnamese-700-normal-kpkdMgbf.woff",
+      "sha256": "0c5b83d883ce2e45aed6e1634002d1a19291f375ddfdb21bb3cd2820e5b354f1"
+    },
+    {
+      "path": "bridge/web/dist/assets/rolldown-runtime-BWaJ3C7D.js",
+      "sha256": "d0e9044430006c5bb48f477501a5af465f0a6377d2fcd7495aa215b8b75aaee3"
+    },
+    {
+      "path": "bridge/web/dist/assets/ru-YhkWY4Wm.js",
+      "sha256": "e0d937ae2b5c467d71df72998af6fbc011aac1a413ad3312cb4b824e5499b8c8"
+    },
+    {
+      "path": "bridge/web/dist/assets/setupMonaco-8QMfTM_X.css",
+      "sha256": "9af2007724eee9d4d76b5a55d95a658a7e7b4c151b6ce6741db4d1d7b5b207d5"
+    },
+    {
+      "path": "bridge/web/dist/assets/setupMonaco-CCsdYT10.js",
+      "sha256": "46ff159862869f3ce489396c0a3ae058677953f11550c5a0d9463ffda5b1a92e"
+    },
+    {
+      "path": "bridge/web/dist/assets/sl-BqW8jOTf.js",
+      "sha256": "e8c2baf6d766320585b857cd1ca82e63911586da2ed988ab321b0c2f54f217f8"
+    },
+    {
+      "path": "bridge/web/dist/assets/sleep-DuygSTkB.js",
+      "sha256": "161de30cd29a9a89b321e00f268f571a6b9043a160c747dbc8d54d774fd95428"
+    },
+    {
+      "path": "bridge/web/dist/assets/socketActions-Bkx2KJOe.js",
+      "sha256": "a9c14785597dcff7ef2833ef90fb589cb214d8b64b34896e8e40b8fbb96635e1"
+    },
+    {
+      "path": "bridge/web/dist/assets/sv-C7gGT_f4.js",
+      "sha256": "7ab3d1807726a1c56e8f825a4bfda24ece15b456f3102c6281021cef08af1886"
+    },
+    {
+      "path": "bridge/web/dist/assets/ta-DnSl_jkx.js",
+      "sha256": "fa832e3a0a417b5f14aba7bcf4a4f249e6ef8b30aa0d03eea3f0148b3ed83c84"
+    },
+    {
+      "path": "bridge/web/dist/assets/th-DOwCrGXH.js",
+      "sha256": "166bef96efabe34f525979a1a47af58cbbc09c2c412d335839c2bb85513d2d0e"
+    },
+    {
+      "path": "bridge/web/dist/assets/tr-D9_fZ2RF.js",
+      "sha256": "49a3992ee2c2d080f9e71e8918ad659d45a4f463ad8141e566e852a712adb264"
+    },
+    {
+      "path": "bridge/web/dist/assets/uk-CWsD8vUw.js",
+      "sha256": "8805bb8962b816e84bbfabe1feb792115ba753c54466f1077b5f5667e8b68da5"
+    },
+    {
+      "path": "bridge/web/dist/assets/v4-DDdyfk2q.js",
+      "sha256": "cec9bc5ab483d70ea893e0a25a3c3eba28f2f54d710c8a350c54f4d4476aaff8"
+    },
+    {
+      "path": "bridge/web/dist/assets/virtual_pwa-register-ODwI-Kex.js",
+      "sha256": "8050b6c2c922f4d834a378f44aa8559879e854a8ad084791ebf5ea5eda27daac"
+    },
+    {
+      "path": "bridge/web/dist/assets/vue-echarts-chunk-8SwUb9Hk.js",
+      "sha256": "b025968b76c2dfaedfbb07811d908d1d32e9c9e1e0b8fb86e5399f5e67ac0de7"
+    },
+    {
+      "path": "bridge/web/dist/assets/vue-vendor-B5QZnJ8r.js",
+      "sha256": "a9a3d1b290ce1f466c1575011737143a3e18e8ad3df146a500bbe9e37144767f"
+    },
+    {
+      "path": "bridge/web/dist/assets/vuetify-Cm30cL1j.css",
+      "sha256": "8ca08745ec1468f86640e3f768fbf71bf86392fc6847020a6739a1ff8229d77c"
+    },
+    {
+      "path": "bridge/web/dist/assets/vuetify-m2E8yArq.js",
+      "sha256": "c5f3773f36318f635fee28b84ec4fab1b4ea4837fef150badfd9d2ddaba462f6"
+    },
+    {
+      "path": "bridge/web/dist/assets/workbox-window.prod.es5-Bd17z0YL.js",
+      "sha256": "17bcc17d60dc78f927834b880c39649b03af46fd1f5cdbb8c42c5ae2b515dce9"
+    },
+    {
+      "path": "bridge/web/dist/assets/zh-CN-D6XZKBDq.js",
+      "sha256": "282b3e8943d8a3df4cf29541159456f7447e84387a4444085dcba2444d3964df"
+    },
+    {
+      "path": "bridge/web/dist/assets/zh-HK-CNvF68gV.js",
+      "sha256": "4766decac0cb0b1794a737ced7120f1655fcfa3a44bfbb404a9c1251106819c7"
+    },
+    {
+      "path": "bridge/web/dist/assets/zh-TW-DW_TE6w9.js",
+      "sha256": "892b131ef6b0661292a33d07daf3237e43178a2c54d39f601123c1c895daa46a"
+    },
+    {
+      "path": "bridge/web/dist/config.json",
+      "sha256": "7078a2aa730a2d55e76fc1dc3648d01f90c6519657cdd172229da755103f1587"
+    },
+    {
+      "path": "bridge/web/dist/favicon.ico",
+      "sha256": "94ed143b6aa3ed2a9f05a912767afbce53be81d6999532957523fd94dff67224"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/android-chrome-192x192.png",
+      "sha256": "3ce52c995eeb886b4c0e883f0e7117c2a2ad00913a43fd3fa8fa404f5180b203"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/android-chrome-512x512.png",
+      "sha256": "3665bd59a56ad204fda1d2e1334566fb1c3d7496bb5d5e05330ee11deb338096"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/android-chrome-maskable-192x192.png",
+      "sha256": "0c2e29d3b6f46e76d3724437d5410c1f6a2d452c9008d49b58207add860a9f8c"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/android-chrome-maskable-512x512.png",
+      "sha256": "551b8fe0b844ac0045dba153e8149520c2cbf842dc098506f12711fd5f13e769"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/apple-touch-icon-120x120.png",
+      "sha256": "fbca274e0ef94409aedbc4031a3b5f5d5b79799df39c50e7e37e83602e1bbfa5"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/apple-touch-icon-152x152.png",
+      "sha256": "fd51b55cc9b16ab28fe9559c4bffca79f89c089c42bacd82b58e6d54c58fc078"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/apple-touch-icon-180x180.png",
+      "sha256": "76d12bab795e5d4c55b9573fc726c074b1c3215bd092a626dc4a3e5f4a32b687"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/apple-touch-icon-60x60.png",
+      "sha256": "1470097b81b2d2e9596321d5d43087897e1d3b098fd1ccebfd9a8ca6014d99cb"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/apple-touch-icon-76x76.png",
+      "sha256": "f1055f89f0cd5e7ff36cb19058ecdce24438efe50c3955290ffcb198e0c88702"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/apple-touch-icon.png",
+      "sha256": "76d12bab795e5d4c55b9573fc726c074b1c3215bd092a626dc4a3e5f4a32b687"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/favicon-16x16.png",
+      "sha256": "8dd71d9bc1130fa983e5f3a10011d8400639248c12adb375fe1704797225aef6"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/favicon-32x32.png",
+      "sha256": "a5bc5af8b92f71cedaa96690101f6707e6c9bf9f09919fd55794cec19be48edb"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/favicon.ico",
+      "sha256": "94ed143b6aa3ed2a9f05a912767afbce53be81d6999532957523fd94dff67224"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/msapplication-icon-144x144.png",
+      "sha256": "85373ac91beaae436a4a0924fce56bd8fdbbcf154e804593b290ac314eb79c1d"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/mstile-150x150.png",
+      "sha256": "d6ac358b0199e678e05b0a1ddbd2734f51d87744152e4fb010f935dc47d7732d"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/safari-pinned-tab.svg",
+      "sha256": "abc7dfe3a21f244a27723c006cdb972a44b95c9e17497f18c3a6293b51668d4a"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/shortcut-configuration-96x96.png",
+      "sha256": "f84ed1a7df014b882d77885d6ab6c84a25382d6d725e4538a39b5266c8b2d646"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/shortcut-settings-96x96.png",
+      "sha256": "00d5daba2ade0a5fc682b717af2ed5165546acf2cfc5560e5ceb8be4998536f9"
+    },
+    {
+      "path": "bridge/web/dist/img/mmu/mmu_3MS.svg",
+      "sha256": "a5169bfe571ec118c215c11bba13b99d2b61e9015b10d6a678caeb385ffa1738"
+    },
+    {
+      "path": "bridge/web/dist/img/mmu/mmu_AngryBeaver.svg",
+      "sha256": "417d5a60095edb5c5ab8e44fc94986972962d0eb70f9fcade5115cd9248b874c"
+    },
+    {
+      "path": "bridge/web/dist/img/mmu/mmu_BoxTurtle.svg",
+      "sha256": "e3d88e39cd213a6d0a0d0c792e177f8cddc009d60b0d2449d65b1d1bbde0794f"
+    },
+    {
+      "path": "bridge/web/dist/img/mmu/mmu_EMU.svg",
+      "sha256": "8d199b99e0fd77193feb3019ee2c0d1044f348545bcaa180fef33e6e7a4b3194"
+    },
+    {
+      "path": "bridge/web/dist/img/mmu/mmu_ERCF.svg",
+      "sha256": "be9bf25621f113a8ad38fafb6717e8777f7e007048ff0346e0784cfe6d9f3ecd"
+    },
+    {
+      "path": "bridge/web/dist/img/mmu/mmu_HappyHare.svg",
+      "sha256": "15e31fe817793e0acbdd7d4351555f29195eaa4776ee7c3a56330bd0ac4318d8"
+    },
+    {
+      "path": "bridge/web/dist/img/mmu/mmu_KMS.svg",
+      "sha256": "03a12d1fd54df189b3a9baaeadbe542bc58d2a0ed8a6a87303e179c294524f60"
+    },
+    {
+      "path": "bridge/web/dist/img/mmu/mmu_MMX.svg",
+      "sha256": "94023b7d4f4d0b05ad2083647ec16da45a5bca733c0b2bf4f569a356f43f53fa"
+    },
+    {
+      "path": "bridge/web/dist/img/mmu/mmu_NightOwl.svg",
+      "sha256": "ee9aa591d1a912909c3ad52386fc34984bb3e6ef45e7ac5696206297e5975e22"
+    },
+    {
+      "path": "bridge/web/dist/img/mmu/mmu_QuattroBox.svg",
+      "sha256": "c74f417902bc529db7d7f49dcb2b7fa890296812c5406fd78ebe9d9d2a5864fa"
+    },
+    {
+      "path": "bridge/web/dist/img/mmu/mmu_Tradrack.svg",
+      "sha256": "4d1ae0557d83cc95355f42e29a6058e2193b39b9649f27125976d492e5c1245d"
+    },
+    {
+      "path": "bridge/web/dist/img/mmu/mmu_VVD.svg",
+      "sha256": "aee8bd2a7a3800d63c9b08d20d21392b28f7dbd3f837537ea765bd8d311d0bb7"
+    },
+    {
+      "path": "bridge/web/dist/index.html",
+      "sha256": "07688bf46969b7d0887d2f3e043454c80256a6c1d32cb559c92a714cc141003e"
+    },
+    {
+      "path": "bridge/web/dist/logo_annex.svg",
+      "sha256": "edc582678200e21f3fb5bb9bde9ed26aa73d1947efe64b1c7a50255c4109ac66"
+    },
+    {
+      "path": "bridge/web/dist/logo_automated_layers.svg",
+      "sha256": "bc87e59e237e87cdeae1665ea7426a1f917301ab3d4c6e375131ceb6aeafec8e"
+    },
+    {
+      "path": "bridge/web/dist/logo_btt.svg",
+      "sha256": "05a4d5fd25127f4e6e28f5352fb20c929be2f5beacefb8be71ee242f35137bf5"
+    },
+    {
+      "path": "bridge/web/dist/logo_cocoapress.svg",
+      "sha256": "16d05a40753b6c179f480fc72b405299fae9a1656ba29a91452ce0693e33a9ee"
+    },
+    {
+      "path": "bridge/web/dist/logo_eva.svg",
+      "sha256": "3f66b15538bf289adea5f195291847e55e1e3869c0a907ad0b461a83aa5b6645"
+    },
+    {
+      "path": "bridge/web/dist/logo_fluidd.svg",
+      "sha256": "be10c3642cf890d1498d06c71b3120f30529288bef1275e765612b4a83a847cb"
+    },
+    {
+      "path": "bridge/web/dist/logo_hevort.svg",
+      "sha256": "56744cda40ad5e3b86bd540c6736bb0c1d38aece6ea537254039c596f8c29dd8"
+    },
+    {
+      "path": "bridge/web/dist/logo_kingroon.svg",
+      "sha256": "08dc722ed23de2005347be44c2b4d396a6d9ea7013f33c0f368e307bf46a12a4"
+    },
+    {
+      "path": "bridge/web/dist/logo_klipper.svg",
+      "sha256": "62ed2d0f6f6d576856210dec65279dc25ecd202a552084fd30e413faa1726f52"
+    },
+    {
+      "path": "bridge/web/dist/logo_ldo.svg",
+      "sha256": "aab0b4bd27b9799bfe5ece4c5ab620800c12cadd1f4834578dc6509d9d4c6c6e"
+    },
+    {
+      "path": "bridge/web/dist/logo_mellow.svg",
+      "sha256": "7fba31dcca5ac264298e3106721cf4ca04f21cc9937a31b7fa01843481534249"
+    },
+    {
+      "path": "bridge/web/dist/logo_micron.svg",
+      "sha256": "d66fcb88f4b476cbaa12e80d72a9cee2dd3620489c64179e3323225ba55a4ba4"
+    },
+    {
+      "path": "bridge/web/dist/logo_peopoly.svg",
+      "sha256": "5b03ed24dc6a94da6b829efd75045965df2187b107c5280083d2cdd041dda622"
+    },
+    {
+      "path": "bridge/web/dist/logo_pfa.svg",
+      "sha256": "4c3f9a31f487e9c66444da42dd69a3de54aeb1f5033493fe252b4137eda5e720"
+    },
+    {
+      "path": "bridge/web/dist/logo_prusa.svg",
+      "sha256": "474b5e76fc2f73d963853a6a972c15b796b7a285975958f87e622d8894dccd25"
+    },
+    {
+      "path": "bridge/web/dist/logo_qidi.svg",
+      "sha256": "0edde85a4db51a0460eabc8a7496a2a01f40828698590cd3a40a63875169fd43"
+    },
+    {
+      "path": "bridge/web/dist/logo_ratrig.svg",
+      "sha256": "ba122fef28373fdc502665a205419d9cf4aa0153d35516aa2d2d806da1f1e326"
+    },
+    {
+      "path": "bridge/web/dist/logo_salad_fork.svg",
+      "sha256": "a86d19a60fa886f72a2b4e8e0d887bc6e61b697c44f091b9a9b171dd3fd84561"
+    },
+    {
+      "path": "bridge/web/dist/logo_siboor.svg",
+      "sha256": "37513b928c0f2927077eaffd6b4eac3faa50f43b3b232da0d7c2de704705a2c5"
+    },
+    {
+      "path": "bridge/web/dist/logo_snakeoil.svg",
+      "sha256": "a55f09cb2860eac88a0c24b9f7e00da8a7177fa9fface4cb1e412eccd3f3f983"
+    },
+    {
+      "path": "bridge/web/dist/logo_snapmaker.svg",
+      "sha256": "c427193d943fe9ccd58d321b7d051fdb02e858eec63cb6609fc00ad19db0f1bb"
+    },
+    {
+      "path": "bridge/web/dist/logo_voron.svg",
+      "sha256": "3614a61e111952642b0c9903404420ccd38bed92b08ae9db9cb97f77665d3590"
+    },
+    {
+      "path": "bridge/web/dist/logo_vzbot.svg",
+      "sha256": "0d781f1736ff690f537ebcc0ba5db3605bc7ee562ed156f99d13508e275bac38"
+    },
+    {
+      "path": "bridge/web/dist/logo_z-bolt.svg",
+      "sha256": "ddc446de54bd06156d9e8d74e68b011a198e15867297217da129bb1cc70ee4f4"
+    },
+    {
+      "path": "bridge/web/dist/logo_zerog.svg",
+      "sha256": "1697c9292a264edfe7742e82d980b6fbf1416882cd869258fcdf51061d131edb"
+    },
+    {
+      "path": "bridge/web/dist/manifest.webmanifest",
+      "sha256": "3f16b990eda5a4d937d7392837c917e3033483b35f7cedde3f74ec837f04b501"
+    },
+    {
+      "path": "bridge/web/dist/release_info.json",
+      "sha256": "3050708f123529feca96afec12638751e5d3196a05d3b193cc5f92dd4e9df8d3"
+    },
+    {
+      "path": "bridge/web/dist/robots.txt",
+      "sha256": "e5c4b84484ee4216e9373be99380320c25dd94805f99f0a805846f087636553f"
+    },
+    {
+      "path": "bridge/web/dist/sw.js",
+      "sha256": "1157eeb0aa20c6d6e8bef99f418c00a654372852d656f3107faae4906a06013c"
+    },
+    {
+      "path": "bridge/web/filament_mapping.js",
+      "sha256": "429ca9bb9a81ad1874aa5d5e293b3b19bb18aa95e1674c938bfe85e8994ebe67"
+    },
+    {
+      "path": "bridge/web/gcvt.js",
+      "sha256": "0658560bce25814d8fdb3745202e27309e0c0bbdeefd1725a14bd20dc93f49ac"
+    },
+    {
+      "path": "bridge/web/snapmaker.png",
+      "sha256": "e9d2b4c9e6e261742e1ce63e04025413124efe7e7a8b8cbb4fd1710146eb522d"
+    },
+    {
+      "path": "bridge/web/webui.html",
+      "sha256": "f9c092468d252b591a86c46086285fb443befd1fc96a5f288ea3db972e909f0b"
+    },
+    {
+      "path": "Snapmaker.json",
+      "sha256": "83fb4eea96f4059b1a28162eda90cf7468df0f431607528b43fb10a0983e5a14"
+    },
+    {
+      "path": "tools/nozzle-profiles/provenance.json",
+      "sha256": "a6edacd80d1239a0efd7ef043e2153efb3a9c8d042edd4e0ae64c3cb633088a9"
+    },
+    {
+      "path": "setup/setup-watchdog.ps1",
+      "sha256": "e7dd88aace926f10cf5117d6a372cdc691c1edd39513e812f822a35a32f76176"
+    }
+  ],
+  "bridge": [
+    {
+      "path": "bridge-node/advance_preheat.js",
+      "destination": "advance_preheat.js",
+      "sha256": "b2ade490924e7135148ffd23668b5684ac4bc3ebb2910a75a604350653e738f6"
+    },
+    {
+      "path": "bridge-node/aiClient.js",
+      "destination": "aiClient.js",
+      "sha256": "a78ada4023d513e488f486cf7371ed4602de5b15ef39d819b3d80c38d7d674aa"
+    },
+    {
+      "path": "bridge-node/dialog.js",
+      "destination": "dialog.js",
+      "sha256": "163e67593c613acab2fad31afc9919a81fe7ffa39f1371533d9aca19753392dc"
+    },
+    {
+      "path": "bridge-node/file_filaments.js",
+      "destination": "file_filaments.js",
+      "sha256": "5f824934384a7c127ae2f4a4319db9bd538815852beea360ac19d556c9bbfe30"
+    },
+    {
+      "path": "bridge-node/netUtils.js",
+      "destination": "netUtils.js",
+      "sha256": "6f88c8891e6601d6be2c7b32956bfda7ac208f13adaba500969d2a232b6f77cd"
+    },
+    {
+      "path": "bridge-node/package-lock.json",
+      "destination": "package-lock.json",
+      "sha256": "9e14791240b307d2fd3d0b904722b6fcffe0f1ec40fc5aab74cb7c6781a18955"
+    },
+    {
+      "path": "bridge-node/package.json",
+      "destination": "package.json",
+      "sha256": "ac63b440c966e961704ba22046a18c6e2c304ef084ecad77aa44501428a705f6"
+    },
+    {
+      "path": "bridge-node/server.js",
+      "destination": "server.js",
+      "sha256": "68a00518cc17d0caac490815c0a1fad7271b94f20ab3fc604e35fe6ca44ad784"
+    },
+    {
+      "path": "bridge-node/shared_preheat.js",
+      "destination": "shared_preheat.js",
+      "sha256": "5fa9884e435f2bfcbffb58864a6858530c8284f332bdb957c71c086c3e4c0bba"
+    },
+    {
+      "path": "bridge-node/slice_agent.js",
+      "destination": "slice_agent.js",
+      "sha256": "ccc1b70d9b5ed0797a35680f78c2d0320e4c5e5daeac8732b4cad62bf28e414c"
+    },
+    {
+      "path": "bridge-node/start-bridge.sh",
+      "destination": "start-bridge.sh",
+      "sha256": "79e4240970ac1f0e7f584d24ca0976ae7307b6cce736dfe8d3168789ed3ee8e0"
+    },
+    {
+      "path": "bridge-node/touchscreen_format.js",
+      "destination": "touchscreen_format.js",
+      "sha256": "bef8ce3d3d25d1cd2f291eff07e040c611b540884360fe1d8b7d4baf1fdd462a"
+    },
+    {
+      "path": "bridge-node/watchdog.ps1",
+      "destination": "watchdog.ps1",
+      "sha256": "c5af917a4628d594cddb732fdf362ee3eee0da860c054fd9b0945d0e2f606106"
+    },
+    {
+      "path": "bridge-node/workspace/knowledge.md",
+      "destination": "workspace/knowledge.md",
+      "sha256": "16a6ee10bee28195ce8e737d461f3238086ebd434c0c047a24ab50a358d32b7e"
+    },
+    {
+      "path": "bridge-node/workspace/memory.md",
+      "destination": "workspace/memory.md",
+      "sha256": "fb38b94d94e082670b4f18551274f34bed11682fdb2e7016f13f2f1882f8aeb1"
+    },
+    {
+      "path": "bridge-node/workspace/skills/analyze_model.md",
+      "destination": "workspace/skills/analyze_model.md",
+      "sha256": "5e4d2f9e75b8ecf6c400c6549346b1421672fe3bcd0d71aefc00d533044f7f69"
+    },
+    {
+      "path": "bridge-node/workspace/skills/optimize_gcode.md",
+      "destination": "workspace/skills/optimize_gcode.md",
+      "sha256": "7ae91ba6a58e1d1162d7529a5ca8ce31ad7b099b5dca967bbbca28fa20f33902"
+    },
+    {
+      "path": "bridge-node/workspace/skills/patch_gcode.md",
+      "destination": "workspace/skills/patch_gcode.md",
+      "sha256": "abee2f386a1a965599eb61a9fb86676f94760a7539005482fcb0638f9a6a2d21"
+    },
+    {
+      "path": "bridge-node/workspace/skills/print_qa.md",
+      "destination": "workspace/skills/print_qa.md",
+      "sha256": "9f2ef4eff8a34aadab89c25ea75018a7e6bb63297288e657a601f12d44eec1ca"
+    },
+    {
+      "path": "bridge-node/workspace/skills/rawpath.md",
+      "destination": "workspace/skills/rawpath.md",
+      "sha256": "529973f5aa61d4a09791275766fc97a58966a8fea0f2f22190f2907757002302"
+    },
+    {
+      "path": "bridge-node/workspace/skills/review_gcode.md",
+      "destination": "workspace/skills/review_gcode.md",
+      "sha256": "1e6a74b375d54bb799605ec46b86ba418440b71c7bb1e9428f9e2de2be53234a"
+    },
+    {
+      "path": "bridge-node/workspace/skills/slice_strategy.md",
+      "destination": "workspace/skills/slice_strategy.md",
+      "sha256": "043c54886dc0d47f3c022a7cf756936b9d5d1aa745ec4b3fac715641411fbe08"
+    },
+    {
+      "path": "bridge-node/workspace/soul.md",
+      "destination": "workspace/soul.md",
+      "sha256": "daa63968c3253ff6d2c01c363cd0ec2431c32cc5b4f0d17df7f2b1577e3dc289"
+    },
+    {
+      "path": "bridge-node/workspace/tools/voxelflow_analyze.md",
+      "destination": "workspace/tools/voxelflow_analyze.md",
+      "sha256": "870440a180f9159d49ef2eea498260150a4c6c464f50984b195e3e8b72f84117"
+    },
+    {
+      "path": "bridge-node/workspace/tools/voxelflow_rawpath.md",
+      "destination": "workspace/tools/voxelflow_rawpath.md",
+      "sha256": "f2c80092f843e50afb527bc1e731162f9a12cd83b49b3072d00d91136b1885b9"
+    },
+    {
+      "path": "bridge-node/workspace/tools/voxelflow_slice.md",
+      "destination": "workspace/tools/voxelflow_slice.md",
+      "sha256": "4993e9a1273fdd38c6446f79e27d6cf791aa98810314514edc66c80eb2bdf65c"
+    },
+    {
+      "path": "bridge/web/FLUIDD-LICENSE.txt",
+      "destination": "web/FLUIDD-LICENSE.txt",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "bridge/web/FLUIDD-SOURCE.txt",
+      "destination": "web/FLUIDD-SOURCE.txt",
+      "sha256": "5ddb093246ef3dcfbafff80f248528addd2143e645d3238a5bf298016bd01992"
+    },
+    {
+      "path": "bridge/web/ailab.css",
+      "destination": "web/ailab.css",
+      "sha256": "23c3bed8c281292717130820fa436b7e906f2a90b653f2c145c3f1185eabddc3"
+    },
+    {
+      "path": "bridge/web/ailab.js",
+      "destination": "web/ailab.js",
+      "sha256": "ad8e73ffeda3b9d33b1209bc4ddde2e911e1381ddee132b4303455147596b6eb"
+    },
+    {
+      "path": "bridge/web/dist/assets/AfcPrintStartDialogTool-BQT3cRm2.js",
+      "destination": "web/dist/assets/AfcPrintStartDialogTool-BQT3cRm2.js",
+      "sha256": "fef9c468eb7f58b023bfe7131f00e530af48363813b1e22f2a14d78938bbe00a"
+    },
+    {
+      "path": "bridge/web/dist/assets/AppBtnCollapseGroup-D3wt7InZ.js",
+      "destination": "web/dist/assets/AppBtnCollapseGroup-D3wt7InZ.js",
+      "sha256": "3cb1afddb35e190928d6887de128864460616ee34cfc3c642325db5ffb935e5b"
+    },
+    {
+      "path": "bridge/web/dist/assets/AppChart-CaRjef7V.js",
+      "destination": "web/dist/assets/AppChart-CaRjef7V.js",
+      "sha256": "55a3236f7fc3b24dce27f9cac523e63c9bd240dcc2e57fcaffd54f148d6a86fa"
+    },
+    {
+      "path": "bridge/web/dist/assets/AppChart-DQ4vOyOv.css",
+      "destination": "web/dist/assets/AppChart-DQ4vOyOv.css",
+      "sha256": "015e8516d2dfe3083ca39f456d48b66b2206f87a8e633f5575f09b900da525cb"
+    },
+    {
+      "path": "bridge/web/dist/assets/AppColorPicker-CzgFGFlL.js",
+      "destination": "web/dist/assets/AppColorPicker-CzgFGFlL.js",
+      "sha256": "4089d0cd3f51ea0d4105af4090c3caa081eeeabd0c67b508493a0f780fca103e"
+    },
+    {
+      "path": "bridge/web/dist/assets/AppColorPicker-DY59qRAE.css",
+      "destination": "web/dist/assets/AppColorPicker-DY59qRAE.css",
+      "sha256": "41b194f5b6c2789b68f797e033ea3e61ecf9bc13cba48184935948086017fc84"
+    },
+    {
+      "path": "bridge/web/dist/assets/AppInlineChart-BWWgW9Jo.js",
+      "destination": "web/dist/assets/AppInlineChart-BWWgW9Jo.js",
+      "sha256": "cd2bf7329967134607c5d508fcc6d3b915c4b2e483d450b24205b63dbac969b7"
+    },
+    {
+      "path": "bridge/web/dist/assets/AppInlineChart-CIdlNXN4.css",
+      "destination": "web/dist/assets/AppInlineChart-CIdlNXN4.css",
+      "sha256": "c5dd70c4c7144704245944b1ff68910b034da1260e243b79a7903fb4f55ca0ca"
+    },
+    {
+      "path": "bridge/web/dist/assets/AppNamedSlider-CmCqChwb.js",
+      "destination": "web/dist/assets/AppNamedSlider-CmCqChwb.js",
+      "sha256": "1fdbecb391e065aefc56a8fe0dfd19d9ce217829136f72e01b7e992a8f4c4b45"
+    },
+    {
+      "path": "bridge/web/dist/assets/AppSettingsNav-B6exGjxw.js",
+      "destination": "web/dist/assets/AppSettingsNav-B6exGjxw.js",
+      "sha256": "a36724f34d8016945417bbefd12f693ed45f0cfa33f4ee163319f23ff8429537"
+    },
+    {
+      "path": "bridge/web/dist/assets/AppTextField-KTP7MU6R.js",
+      "destination": "web/dist/assets/AppTextField-KTP7MU6R.js",
+      "sha256": "2f878c3f6b059c13916307e537dc269ce090bb189c30aba21b3098838da8faee"
+    },
+    {
+      "path": "bridge/web/dist/assets/BeaconCard-BtL_yy-W.js",
+      "destination": "web/dist/assets/BeaconCard-BtL_yy-W.js",
+      "sha256": "9b5df77f3eef433d96aedf10bcf006197b0a08759a595f5d0e53e98b84fa2abf"
+    },
+    {
+      "path": "bridge/web/dist/assets/BeaconCard-CEcIMqLQ.css",
+      "destination": "web/dist/assets/BeaconCard-CEcIMqLQ.css",
+      "sha256": "e45f9fb0e9e4fe2b4e6b5c28ce62c93a8223236010577e24621d43df0caeed65"
+    },
+    {
+      "path": "bridge/web/dist/assets/Configure-BqVvlyi2.js",
+      "destination": "web/dist/assets/Configure-BqVvlyi2.js",
+      "sha256": "ebb1b0a2a1806bb22c2b4c358fddbd76cc32aebf15f577264af5667e01fc28fd"
+    },
+    {
+      "path": "bridge/web/dist/assets/Configure-jpJLplJh.css",
+      "destination": "web/dist/assets/Configure-jpJLplJh.css",
+      "sha256": "5e5238243fe417828964ac60044af7450fb65b4644ad28e253e9b2d89f576fa2"
+    },
+    {
+      "path": "bridge/web/dist/assets/Console-HNYRLpLH.js",
+      "destination": "web/dist/assets/Console-HNYRLpLH.js",
+      "sha256": "5027f256203cc582c8248c7c5a6e8afbc52039ce65269b4f42aa05ef7d543d09"
+    },
+    {
+      "path": "bridge/web/dist/assets/ConsoleCard-kSbAf-JB.js",
+      "destination": "web/dist/assets/ConsoleCard-kSbAf-JB.js",
+      "sha256": "00589697ef3c24137c39c2269c151854f72507eef0c60a6de31c4ef6c8fce2db"
+    },
+    {
+      "path": "bridge/web/dist/assets/ConsoleCard-wznOIkYo.css",
+      "destination": "web/dist/assets/ConsoleCard-wznOIkYo.css",
+      "sha256": "7a15fca822107eb6ba7053b26a0446e83bab50874490265e90383cac6db59793"
+    },
+    {
+      "path": "bridge/web/dist/assets/Dashboard-Bu4hE5X6.js",
+      "destination": "web/dist/assets/Dashboard-Bu4hE5X6.js",
+      "sha256": "99bc047085fc4a6cefe4ed2f5f6426fd1dd0687019c260551fce0d145fdd967c"
+    },
+    {
+      "path": "bridge/web/dist/assets/Dashboard-CKV2ZgbB.css",
+      "destination": "web/dist/assets/Dashboard-CKV2ZgbB.css",
+      "sha256": "c2df4d46157d49fea89b94c6c5751453c76abf7493a5ac3ee3e34a9f13f3bd84"
+    },
+    {
+      "path": "bridge/web/dist/assets/DeviceCamera-BSUZwsxG.js",
+      "destination": "web/dist/assets/DeviceCamera-BSUZwsxG.js",
+      "sha256": "413ab90bac3575e1e3022724173be87c46fb61287edbeee0634242d7a8ded41d"
+    },
+    {
+      "path": "bridge/web/dist/assets/Diagnostics-BbM4Re7j.js",
+      "destination": "web/dist/assets/Diagnostics-BbM4Re7j.js",
+      "sha256": "2a27db2f9b567f1d790aec7b06892565a50b9b052ef1be179fda95e71d59ed1f"
+    },
+    {
+      "path": "bridge/web/dist/assets/Diagnostics-_-XoX9i3.css",
+      "destination": "web/dist/assets/Diagnostics-_-XoX9i3.css",
+      "sha256": "8045e26f6da5d81a8703d56eb13710d5cf218dcb218767d3c0584709d3347e04"
+    },
+    {
+      "path": "bridge/web/dist/assets/DiskUsageCard-DFzmTL94.js",
+      "destination": "web/dist/assets/DiskUsageCard-DFzmTL94.js",
+      "sha256": "55b0019ca6a0b7195f1f18ef53c181d90e886b1c2369b0e703a3947fbf46007d"
+    },
+    {
+      "path": "bridge/web/dist/assets/FileSystem-DqQH7wGv.css",
+      "destination": "web/dist/assets/FileSystem-DqQH7wGv.css",
+      "sha256": "50ad74cbb89ba8b932f2a0cc246757a57161563c8c044bc6b143628d08e45d9e"
+    },
+    {
+      "path": "bridge/web/dist/assets/FileSystem-gdaQO3e4.js",
+      "destination": "web/dist/assets/FileSystem-gdaQO3e4.js",
+      "sha256": "1ba29c5093c81d768617e268d6ce62b2ed9a5318654e14e80b50efd51d9341a2"
+    },
+    {
+      "path": "bridge/web/dist/assets/FullscreenCamera-CowZ90zr.js",
+      "destination": "web/dist/assets/FullscreenCamera-CowZ90zr.js",
+      "sha256": "5b47aebb95e821d98d9ab3f1ad5c58ec72255b2cb6d81c48156af9821b8fa04a"
+    },
+    {
+      "path": "bridge/web/dist/assets/GcodePreview-DFkzV0iS.js",
+      "destination": "web/dist/assets/GcodePreview-DFkzV0iS.js",
+      "sha256": "eadc495de9bdf7d31eb0fab5bd8b71df325767b098337db1e4d492f6ff1ffcd1"
+    },
+    {
+      "path": "bridge/web/dist/assets/GcodePreviewCard-2sNt3_AG.css",
+      "destination": "web/dist/assets/GcodePreviewCard-2sNt3_AG.css",
+      "sha256": "10ae8cb7c55d220786c6209ed4dd3e64936939cd4d4396ce8eafb77e2b4a80ff"
+    },
+    {
+      "path": "bridge/web/dist/assets/GcodePreviewCard-BpEcUlUl.js",
+      "destination": "web/dist/assets/GcodePreviewCard-BpEcUlUl.js",
+      "sha256": "0d20c9a22bc70a345b6093b67e6be7399d2a02e1fe23f32f4a2e5674a1f17b4a"
+    },
+    {
+      "path": "bridge/web/dist/assets/History-DXuBOM-_.js",
+      "destination": "web/dist/assets/History-DXuBOM-_.js",
+      "sha256": "c12badf0391aca01fd030c0a94dbcd9ffd9ece653a257f0dd9361af399c09477"
+    },
+    {
+      "path": "bridge/web/dist/assets/History-IqaLA2bn.css",
+      "destination": "web/dist/assets/History-IqaLA2bn.css",
+      "sha256": "58e4ef3a2f11e265c3403e07ba88ffe3bd88a962f24e79107543a05d1904ab00"
+    },
+    {
+      "path": "bridge/web/dist/assets/HlsstreamCamera-BTgpOD_K.js",
+      "destination": "web/dist/assets/HlsstreamCamera-BTgpOD_K.js",
+      "sha256": "fe27f91b643541415776680435a27bceb2d3500d6f0c3208554998c2b1153a89"
+    },
+    {
+      "path": "bridge/web/dist/assets/Icons-DelM7gxf.js",
+      "destination": "web/dist/assets/Icons-DelM7gxf.js",
+      "sha256": "fe57349ec9bcd3787b65807745eee25aea5956c776b60c3e1484347efef04038"
+    },
+    {
+      "path": "bridge/web/dist/assets/IframeCamera-ETdKQ-GD.js",
+      "destination": "web/dist/assets/IframeCamera-ETdKQ-GD.js",
+      "sha256": "049d6468755b39cf39089d2ac1af939903e5b818c7790364119a9f8c31a700b5"
+    },
+    {
+      "path": "bridge/web/dist/assets/IpstreamCamera-BS0UnwOH.js",
+      "destination": "web/dist/assets/IpstreamCamera-BS0UnwOH.js",
+      "sha256": "e71a73bda410cf70278861fdb3011b97b64ae3a6c7583d278005461982250e37"
+    },
+    {
+      "path": "bridge/web/dist/assets/JobHistoryItemStatus-ir4et7pw.js",
+      "destination": "web/dist/assets/JobHistoryItemStatus-ir4et7pw.js",
+      "sha256": "e3f23fa49ffd16bc1de625131fb6b82c4f2797701f807dbcd269e179692bcd53"
+    },
+    {
+      "path": "bridge/web/dist/assets/JobQueueCard-CrDSIGmA.js",
+      "destination": "web/dist/assets/JobQueueCard-CrDSIGmA.js",
+      "sha256": "25dc204cfd2427f81d78a57fe2afced5b569b5df224380549ef70b5c0def0c4a"
+    },
+    {
+      "path": "bridge/web/dist/assets/JobQueueCard-wD83NPR2.css",
+      "destination": "web/dist/assets/JobQueueCard-wD83NPR2.css",
+      "sha256": "d3a2e680a176ac1404c3d5b718f05a1252eddd27d28776bbd4d6086ab354441c"
+    },
+    {
+      "path": "bridge/web/dist/assets/Jobs-BVOXC6aL.js",
+      "destination": "web/dist/assets/Jobs-BVOXC6aL.js",
+      "sha256": "16878ad140d0db922f9e3198b0e80c1793fc23ae406b3e49515b28f4dcc4d5e7"
+    },
+    {
+      "path": "bridge/web/dist/assets/MacroCategorySettings-DEwzuryi.js",
+      "destination": "web/dist/assets/MacroCategorySettings-DEwzuryi.js",
+      "sha256": "4dc9556e2e3e991e8b12871dde4994f8ca84e3458c5f6266c128da2d91d3dab5"
+    },
+    {
+      "path": "bridge/web/dist/assets/MjpegstreamerAdaptiveCamera-C6Be9Ggw.js",
+      "destination": "web/dist/assets/MjpegstreamerAdaptiveCamera-C6Be9Ggw.js",
+      "sha256": "df71ef545ed76307a8468068a85d0600e505d9ef87a1f807c74533e695a480f7"
+    },
+    {
+      "path": "bridge/web/dist/assets/MjpegstreamerCamera-zlfu-_IM.js",
+      "destination": "web/dist/assets/MjpegstreamerCamera-zlfu-_IM.js",
+      "sha256": "78a5833703085d36891b034bcefac05fc6e9701f8c9c7e2a2f62e6e88a2c1cfc"
+    },
+    {
+      "path": "bridge/web/dist/assets/NotFound-_alnQtA2.js",
+      "destination": "web/dist/assets/NotFound-_alnQtA2.js",
+      "sha256": "2f5d496a5b99b2d4f63bd5289e1b0c2c243b1cfc82e9ffee7faa490a5c1044c3"
+    },
+    {
+      "path": "bridge/web/dist/assets/Settings-D-7ouhHX.js",
+      "destination": "web/dist/assets/Settings-D-7ouhHX.js",
+      "sha256": "862d06bbd764518f0b6c6f3fd6c1b6d0ea3040358c459ec21523279cdadedb1d"
+    },
+    {
+      "path": "bridge/web/dist/assets/Settings-DBzJD1xO.css",
+      "destination": "web/dist/assets/Settings-DBzJD1xO.css",
+      "sha256": "5d5cfb9d5aaf329f96fc3296666c2a3a223d07daebe21bc9f8fe2196d361b1b6"
+    },
+    {
+      "path": "bridge/web/dist/assets/System-BlvP9rKp.js",
+      "destination": "web/dist/assets/System-BlvP9rKp.js",
+      "sha256": "0d990bda063d470a38cf46f5bb2727541c2b8fdf5625e6bd792186d2211ed8b7"
+    },
+    {
+      "path": "bridge/web/dist/assets/Timelapse-C8nYrEGX.css",
+      "destination": "web/dist/assets/Timelapse-C8nYrEGX.css",
+      "sha256": "872a101e6836e4168722ac6ec3173d26dbdc9f9d622f2698302ca5eda4f6c66d"
+    },
+    {
+      "path": "bridge/web/dist/assets/Timelapse-DOagNpgZ.js",
+      "destination": "web/dist/assets/Timelapse-DOagNpgZ.js",
+      "sha256": "7e4be61795711138770685f3fa6f0074fffa1ba0cb09f9e0c4199ebe7afc217f"
+    },
+    {
+      "path": "bridge/web/dist/assets/TimelapseRenderSettingsDialog-Cps2wzll.js",
+      "destination": "web/dist/assets/TimelapseRenderSettingsDialog-Cps2wzll.js",
+      "sha256": "7b435db31b9e0260bc562900694d249023f4135e5bfce5cbcdced8ab1e6b6b28"
+    },
+    {
+      "path": "bridge/web/dist/assets/Tune-BHkxONzW.css",
+      "destination": "web/dist/assets/Tune-BHkxONzW.css",
+      "sha256": "63e867f4bd4cd89e70c77b297192fbfdfbf0dc45fa3a6664d9a0d88971f80425"
+    },
+    {
+      "path": "bridge/web/dist/assets/Tune-dstb9xtH.js",
+      "destination": "web/dist/assets/Tune-dstb9xtH.js",
+      "sha256": "92422af80f6516afff4e09c2edcc076a118aa921b5b3076044cdb9b696538cba"
+    },
+    {
+      "path": "bridge/web/dist/assets/Uv4LMjpegCamera-BEfs1U4v.js",
+      "destination": "web/dist/assets/Uv4LMjpegCamera-BEfs1U4v.js",
+      "sha256": "97adfb09355e8b605a75158831e09151cb4be24a9a914a5476ba4759f8d62fac"
+    },
+    {
+      "path": "bridge/web/dist/assets/VModel-w3Krb54F.js",
+      "destination": "web/dist/assets/VModel-w3Krb54F.js",
+      "sha256": "bdee5e844e9a42dd785f8409632449e937920010f9e41046e3e06d42c3865a46"
+    },
+    {
+      "path": "bridge/web/dist/assets/Watch-CyFL_YBj.js",
+      "destination": "web/dist/assets/Watch-CyFL_YBj.js",
+      "sha256": "0a0aadd92b00c1d393871c3ce291ead27af2cd484297eacb6d39ae23ba2eb378"
+    },
+    {
+      "path": "bridge/web/dist/assets/WebrtcCamerastreamerCamera-DawK5xZj.js",
+      "destination": "web/dist/assets/WebrtcCamerastreamerCamera-DawK5xZj.js",
+      "sha256": "aaa5d5ae7ef1c53f0aa45372343fa123f5c5df953cc889899c1cab605eebdb4b"
+    },
+    {
+      "path": "bridge/web/dist/assets/WebrtcGo2RtcCamera-C1R9nKeX.js",
+      "destination": "web/dist/assets/WebrtcGo2RtcCamera-C1R9nKeX.js",
+      "sha256": "36e105559dd406fb92d0e7f482d09b2d957ffe08e33c2eca04589f52409233c1"
+    },
+    {
+      "path": "bridge/web/dist/assets/WebrtcMediamtxCamera-BIY89J0h.js",
+      "destination": "web/dist/assets/WebrtcMediamtxCamera-BIY89J0h.js",
+      "sha256": "6293e31fbaf199245838d8c5bd6bcb6921eb4ea9800fdb6852abfebd8a51c0c3"
+    },
+    {
+      "path": "bridge/web/dist/assets/_plugin-vue2_normalizer-BGKUv7Z2.js",
+      "destination": "web/dist/assets/_plugin-vue2_normalizer-BGKUv7Z2.js",
+      "sha256": "993c1de18abdf25cc15da6b280996c7814363b353fc700b91e4b2db9f4aa2537"
+    },
+    {
+      "path": "bridge/web/dist/assets/af-7CwGNRwk.js",
+      "destination": "web/dist/assets/af-7CwGNRwk.js",
+      "sha256": "fffb7e031dc60a22c4f744a8c394f03539eb4a5c64d1993ec4b46ebafaa9ac27"
+    },
+    {
+      "path": "bridge/web/dist/assets/ar-C9QILje9.js",
+      "destination": "web/dist/assets/ar-C9QILje9.js",
+      "sha256": "7cd2e31a1e7ea34a6f8b007c2f657e1d0642eb52aaa37fb40615e2ff10bf2b42"
+    },
+    {
+      "path": "bridge/web/dist/assets/browser-CD6speBm.js",
+      "destination": "web/dist/assets/browser-CD6speBm.js",
+      "sha256": "3ae0dad2aebb39183ac887b1271ffd18c3da45ef630f1f3180807078ea116e1e"
+    },
+    {
+      "path": "bridge/web/dist/assets/camera-DJ4d_P9_.js",
+      "destination": "web/dist/assets/camera-DJ4d_P9_.js",
+      "sha256": "20ebe0d8788ac093128d0c16054990472a6fa8eff3277cc687731b3ddb2f8e71"
+    },
+    {
+      "path": "bridge/web/dist/assets/codicon-DF1abBS2.ttf",
+      "destination": "web/dist/assets/codicon-DF1abBS2.ttf",
+      "sha256": "77f902557231f95c4c71ae517d09a1a842753656f5f665086b3e5ad8095538da"
+    },
+    {
+      "path": "bridge/web/dist/assets/cs-BoK5zobD.js",
+      "destination": "web/dist/assets/cs-BoK5zobD.js",
+      "sha256": "ba4beefbc7c54a1daf22d3fc8ecc05effbb2a29eff7d43dd19d63a11c54b43f9"
+    },
+    {
+      "path": "bridge/web/dist/assets/css-DIMkf-bt.js",
+      "destination": "web/dist/assets/css-DIMkf-bt.js",
+      "sha256": "361b35ed3c739617f90ee999b6bcfe6e7047c1d30c52df58401c50486f5fd8e4"
+    },
+    {
+      "path": "bridge/web/dist/assets/css.worker-DwfUZ3fB.js",
+      "destination": "web/dist/assets/css.worker-DwfUZ3fB.js",
+      "sha256": "f8e2985ddc8de1b2533bb71e65182ebf3e7f9b1968f5c8b638daa48515719d61"
+    },
+    {
+      "path": "bridge/web/dist/assets/cssMode-DcV4vc95.js",
+      "destination": "web/dist/assets/cssMode-DcV4vc95.js",
+      "sha256": "ecc69448d1689929a4ccd70c4d476b7d71c4b42de3f85face15a983de45c6585"
+    },
+    {
+      "path": "bridge/web/dist/assets/de-BoAhsOzX.js",
+      "destination": "web/dist/assets/de-BoAhsOzX.js",
+      "sha256": "173eeb664b7935adb1647748eb222c14df3423c5ffddf76063785e806816d172"
+    },
+    {
+      "path": "bridge/web/dist/assets/dynamicImports-qNCGxksJ.js",
+      "destination": "web/dist/assets/dynamicImports-qNCGxksJ.js",
+      "sha256": "734e303e2d012656d50e25cf2ab7f27bed8895cbe189cf44403937e683d3d359"
+    },
+    {
+      "path": "bridge/web/dist/assets/editor.worker-CRz__AKW.js",
+      "destination": "web/dist/assets/editor.worker-CRz__AKW.js",
+      "sha256": "a8d36cd1157642e5729b76731d3c20eb4f773c7706594643e5baa7791861629d"
+    },
+    {
+      "path": "bridge/web/dist/assets/en-Bf4yA98I.js",
+      "destination": "web/dist/assets/en-Bf4yA98I.js",
+      "sha256": "56daaf3aa3ac6549af69e0f4e80b067f0cef3cbd18e4ed438c21017f2dfeed5d"
+    },
+    {
+      "path": "bridge/web/dist/assets/es-Bwg3ZCwV.js",
+      "destination": "web/dist/assets/es-Bwg3ZCwV.js",
+      "sha256": "64aadf9363bdc2abee1bafeba6e716b5bed867bd4189b91da5bb03dda823af1b"
+    },
+    {
+      "path": "bridge/web/dist/assets/file-data-transfer-BphkXqDT.js",
+      "destination": "web/dist/assets/file-data-transfer-BphkXqDT.js",
+      "sha256": "4e1c6045f0d257a787b365dc6d5cbd4bb032ece7318b45635ad391c72e52669f"
+    },
+    {
+      "path": "bridge/web/dist/assets/fr-Dm-7EG40.js",
+      "destination": "web/dist/assets/fr-Dm-7EG40.js",
+      "sha256": "ea1adcc88960cbce9a21cc8a1c00d4e959a3e08f2d14ce5c86b0633059d35c55"
+    },
+    {
+      "path": "bridge/web/dist/assets/hu-Bh9P1Sdr.js",
+      "destination": "web/dist/assets/hu-Bh9P1Sdr.js",
+      "sha256": "b5e74234a36b7f373f84d6630299fe8bd8ae84ed7ee6964f8b0b82e40f26200d"
+    },
+    {
+      "path": "bridge/web/dist/assets/index-B5NJjjpu.js",
+      "destination": "web/dist/assets/index-B5NJjjpu.js",
+      "sha256": "139e0080b4674df47f87732ef1e45e7a42d92b574ca30439fd2f537b1784e429"
+    },
+    {
+      "path": "bridge/web/dist/assets/index-DW9TONRi.css",
+      "destination": "web/dist/assets/index-DW9TONRi.css",
+      "sha256": "d0746c0310806c442e415a91be48f0beebed7cd663afdacb1f72e73788a65718"
+    },
+    {
+      "path": "bridge/web/dist/assets/it-DBy6sBWm.js",
+      "destination": "web/dist/assets/it-DBy6sBWm.js",
+      "sha256": "94a0e359ce2818a90c648cba211470a6bb0976ada782f6a80906d87e59f0cdb0"
+    },
+    {
+      "path": "bridge/web/dist/assets/ja-DCYPogNB.js",
+      "destination": "web/dist/assets/ja-DCYPogNB.js",
+      "sha256": "39199df3d03a86b0c0e4baa461483205adec7589c68a75272d51c5429970e55a"
+    },
+    {
+      "path": "bridge/web/dist/assets/json.worker-CV9fqkUp.js",
+      "destination": "web/dist/assets/json.worker-CV9fqkUp.js",
+      "sha256": "266d65936d65a0287c07f6264dc9ce720e92c35b6b0d84d98653e4c58bf95fcf"
+    },
+    {
+      "path": "bridge/web/dist/assets/jsonMode-Cw4iP3rX.js",
+      "destination": "web/dist/assets/jsonMode-Cw4iP3rX.js",
+      "sha256": "0e477fc2166db621c5f01337c831015337a8b54f7daebf92e081079d80dbc075"
+    },
+    {
+      "path": "bridge/web/dist/assets/ko-i0YnNdHX.js",
+      "destination": "web/dist/assets/ko-i0YnNdHX.js",
+      "sha256": "09a86ba8340095565c9dab2bb59fd07141d38c2611c2433a3a46b34cf41266ff"
+    },
+    {
+      "path": "bridge/web/dist/assets/lodash-CZSpLV_R.js",
+      "destination": "web/dist/assets/lodash-CZSpLV_R.js",
+      "sha256": "2bc29ba0e9ced8d354096bf754f7b8ce277ca5360f6f9192ab520d4bbf198f2e"
+    },
+    {
+      "path": "bridge/web/dist/assets/lspLanguageFeatures-8IGrxjS1.js",
+      "destination": "web/dist/assets/lspLanguageFeatures-8IGrxjS1.js",
+      "sha256": "8d4ab6c0a4aec8455ba8bf053ad45c792a07cd9c52ef40eb0a96232e86dcc9b6"
+    },
+    {
+      "path": "bridge/web/dist/assets/markdown-Cimd5fb3.js",
+      "destination": "web/dist/assets/markdown-Cimd5fb3.js",
+      "sha256": "621e51234c4fea96a2a3a6e0dd59151f1c0216d7cb4a963361ee29aa302c7977"
+    },
+    {
+      "path": "bridge/web/dist/assets/mjpegStream.worker-t6QLCVyx.js",
+      "destination": "web/dist/assets/mjpegStream.worker-t6QLCVyx.js",
+      "sha256": "045de335dedeebb0bbf37ea06c6c6ed0341f77aab94c447570e420e8b67c838a"
+    },
+    {
+      "path": "bridge/web/dist/assets/monacoCodeLensWorker-Pm3EKEqe.js",
+      "destination": "web/dist/assets/monacoCodeLensWorker-Pm3EKEqe.js",
+      "sha256": "a9b7813cc67ef17abdc68bf0416ea199ee96225201481c8b7f6f7f47a76bf3b6"
+    },
+    {
+      "path": "bridge/web/dist/assets/monacoDocumentSymbolsWorker-Xqbs4tWx.js",
+      "destination": "web/dist/assets/monacoDocumentSymbolsWorker-Xqbs4tWx.js",
+      "sha256": "fad6d93b3500bc81df44790311216e376e515f49c56afa2df645c0731df0a935"
+    },
+    {
+      "path": "bridge/web/dist/assets/monacoFoldingRangesWorker-hlHUwiv0.js",
+      "destination": "web/dist/assets/monacoFoldingRangesWorker-hlHUwiv0.js",
+      "sha256": "4e1b79e4c6fa8bcc042d1634a2feb0890d2095b935cda7d868e85580681d764d"
+    },
+    {
+      "path": "bridge/web/dist/assets/nl-CXb7aX1p.js",
+      "destination": "web/dist/assets/nl-CXb7aX1p.js",
+      "sha256": "e45c1c03004b5427bef1bd70b456913751ae528d19642f9a24a38390ff4c194b"
+    },
+    {
+      "path": "bridge/web/dist/assets/parseGcode.worker-BFePDIup.js",
+      "destination": "web/dist/assets/parseGcode.worker-BFePDIup.js",
+      "sha256": "03fb2d5ae95674a61e1b85b2b091b76ab0ba8a602428311d95d71e84ab3a5c1a"
+    },
+    {
+      "path": "bridge/web/dist/assets/pl-DdgDvDEz.js",
+      "destination": "web/dist/assets/pl-DdgDvDEz.js",
+      "sha256": "23c90250d592b3f1dfab4135d95ecf9b45ad0e66fa04c16a352d570d8025d44b"
+    },
+    {
+      "path": "bridge/web/dist/assets/preload-helper-DclECHGd.js",
+      "destination": "web/dist/assets/preload-helper-DclECHGd.js",
+      "sha256": "8674df70cbffd5753771a8dd5b08ac3b6ec29c1170468e46848760a0ffeea550"
+    },
+    {
+      "path": "bridge/web/dist/assets/pt-BR-BWw-g3C6.js",
+      "destination": "web/dist/assets/pt-BR-BWw-g3C6.js",
+      "sha256": "4ee4b473a40ee6d518885f776d84a2094d38807474a924384d6727fded665a76"
+    },
+    {
+      "path": "bridge/web/dist/assets/pt-BZiVe4ez.js",
+      "destination": "web/dist/assets/pt-BZiVe4ez.js",
+      "sha256": "7ae131bf9b2c5d97755a9ea0b9d8beb92e31a5acfaf16b54cbe7a44876c1e58b"
+    },
+    {
+      "path": "bridge/web/dist/assets/qr-scanner-worker.min-CJaXo3yu.js",
+      "destination": "web/dist/assets/qr-scanner-worker.min-CJaXo3yu.js",
+      "sha256": "b157457419e0a544694c3b10a6affcb0846da74d89c328178726722ef8f85f67"
+    },
+    {
+      "path": "bridge/web/dist/assets/raleway-cyrillic-400-normal-B1ZxqHSH.woff2",
+      "destination": "web/dist/assets/raleway-cyrillic-400-normal-B1ZxqHSH.woff2",
+      "sha256": "58595093e22b9aca94b18ae5b76b61bef158b63a87828cc4fcd6d5e11e70ef4f"
+    },
+    {
+      "path": "bridge/web/dist/assets/raleway-cyrillic-400-normal-BOk4FNQ-.woff",
+      "destination": "web/dist/assets/raleway-cyrillic-400-normal-BOk4FNQ-.woff",
+      "sha256": "f73cea3dc14f1b29c693970a801ccd684fbfcdbb4fccf41d073c17b231dca723"
+    },
+    {
+      "path": "bridge/web/dist/assets/raleway-cyrillic-ext-400-normal-QD38Acpa.woff",
+      "destination": "web/dist/assets/raleway-cyrillic-ext-400-normal-QD38Acpa.woff",
+      "sha256": "e2ec182c4ba3effa7da0e916d0e48e7b723da5f168c78d3a7d1879a71d2299cd"
+    },
+    {
+      "path": "bridge/web/dist/assets/raleway-cyrillic-ext-400-normal-zbv6uFvq.woff2",
+      "destination": "web/dist/assets/raleway-cyrillic-ext-400-normal-zbv6uFvq.woff2",
+      "sha256": "5fa7b587d83c527eaf3411234a156ca0993c2d8d1aa923a351e3306d901567e9"
+    },
+    {
+      "path": "bridge/web/dist/assets/raleway-latin-400-normal-C5eIEfLm.woff2",
+      "destination": "web/dist/assets/raleway-latin-400-normal-C5eIEfLm.woff2",
+      "sha256": "2318962e7930f55b45907ee85a6b6165ca3bba437b05ca17068a5c876d3de18b"
+    },
+    {
+      "path": "bridge/web/dist/assets/raleway-latin-400-normal-sMcq1OIP.woff",
+      "destination": "web/dist/assets/raleway-latin-400-normal-sMcq1OIP.woff",
+      "sha256": "b57c24f082aec6ab1daa4aec034e79b95a0381bd929f03baf4795d724650c2bb"
+    },
+    {
+      "path": "bridge/web/dist/assets/raleway-latin-ext-400-normal-B4d0sYmR.woff2",
+      "destination": "web/dist/assets/raleway-latin-ext-400-normal-B4d0sYmR.woff2",
+      "sha256": "e8ab3804b770bc1f6ee998bdcaa28e05d02346654356869ae726469e5148dd0d"
+    },
+    {
+      "path": "bridge/web/dist/assets/raleway-latin-ext-400-normal-DoUy7GWe.woff",
+      "destination": "web/dist/assets/raleway-latin-ext-400-normal-DoUy7GWe.woff",
+      "sha256": "15f05025b909fa0577ba9fa927bdc7758610596a2697e1902ebb9191646a7892"
+    },
+    {
+      "path": "bridge/web/dist/assets/raleway-vietnamese-400-normal-CTqj18iX.woff",
+      "destination": "web/dist/assets/raleway-vietnamese-400-normal-CTqj18iX.woff",
+      "sha256": "18924cce05f1fa41bb4f6d124d293de44f18fbb3623ed965275c7555fa413df0"
+    },
+    {
+      "path": "bridge/web/dist/assets/raleway-vietnamese-400-normal-CTw6K1Xj.woff2",
+      "destination": "web/dist/assets/raleway-vietnamese-400-normal-CTw6K1Xj.woff2",
+      "sha256": "4a5c4ac2798f5c0f19481494607048397fa3e45c2c34d4564842357d0cd98820"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-300-normal-D0x1uCa7.woff",
+      "destination": "web/dist/assets/roboto-cyrillic-300-normal-D0x1uCa7.woff",
+      "sha256": "1c9387727df3ee2c770ac3d0ac2da964794b28633fabecc0f2ff87487b77d61f"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-300-normal-DzUz0kzv.woff2",
+      "destination": "web/dist/assets/roboto-cyrillic-300-normal-DzUz0kzv.woff2",
+      "sha256": "b054e90b2260ca3790dd89fc23d63f1a2dd7a446204dc2162f2a15a95811dec7"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-400-normal-BepgbcUK.woff",
+      "destination": "web/dist/assets/roboto-cyrillic-400-normal-BepgbcUK.woff",
+      "sha256": "383c105bb30e149e8f2603918cbbf3e2f1051bb170a16ad3e329f695c136128c"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-400-normal-CBPI_iaY.woff2",
+      "destination": "web/dist/assets/roboto-cyrillic-400-normal-CBPI_iaY.woff2",
+      "sha256": "fe349e5377e88095a1b04b615bf5e745f1899556545383c348a007aab628815e"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-500-normal-C8ZOEKN4.woff",
+      "destination": "web/dist/assets/roboto-cyrillic-500-normal-C8ZOEKN4.woff",
+      "sha256": "ca94f499f57a4030baacee0bce1b1e6a21f41a14d8d1491db0a98727f0568d9a"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-500-normal-CLao9AfR.woff2",
+      "destination": "web/dist/assets/roboto-cyrillic-500-normal-CLao9AfR.woff2",
+      "sha256": "0991339551f58fb49d106c4b2a2beaf403823c0cdd0ed99d1a38f1a8b20d1595"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-700-normal-C2o7G-SM.woff2",
+      "destination": "web/dist/assets/roboto-cyrillic-700-normal-C2o7G-SM.woff2",
+      "sha256": "450e0c66acb4c5377a4f30dd5dec8370152f5f9521c0bc452589b3586bd978eb"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-700-normal-D8g9KsRf.woff",
+      "destination": "web/dist/assets/roboto-cyrillic-700-normal-D8g9KsRf.woff",
+      "sha256": "e49c6d295ba3dbd3a8f890ec383d7505e94653bf005a4b6018239fd2313874a4"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-ext-300-normal-C0UYUNTV.woff",
+      "destination": "web/dist/assets/roboto-cyrillic-ext-300-normal-C0UYUNTV.woff",
+      "sha256": "447b6e2d213e9d3225b388098d62ab42780adcc123a7b559e36555bfcaaa42fd"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-ext-300-normal-DIxttMbC.woff2",
+      "destination": "web/dist/assets/roboto-cyrillic-ext-300-normal-DIxttMbC.woff2",
+      "sha256": "88c0fef59b53be2fe400bc83d10bea46f691ac102185243eeb14bfc7b6216b9c"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-ext-400-normal-DhDk0Xwi.woff",
+      "destination": "web/dist/assets/roboto-cyrillic-ext-400-normal-DhDk0Xwi.woff",
+      "sha256": "8a8ac89e32a6f299be8fe353e7303f3b281ebe127ce6aa7ee2670e9c11e1e251"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-ext-400-normal-qHufge6k.woff2",
+      "destination": "web/dist/assets/roboto-cyrillic-ext-400-normal-qHufge6k.woff2",
+      "sha256": "6d6be3a7d40feb9b785e62c4b629a0e5949e50cbbbad06eea4800a4c311e9898"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-ext-500-normal-BWC_xYeb.woff2",
+      "destination": "web/dist/assets/roboto-cyrillic-ext-500-normal-BWC_xYeb.woff2",
+      "sha256": "a99e7e70a82255915e42d35ddf434d94c4e61d3e5ea02654083c113d1b97692a"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-ext-500-normal-SCgicl0l.woff",
+      "destination": "web/dist/assets/roboto-cyrillic-ext-500-normal-SCgicl0l.woff",
+      "sha256": "00af14d7e4485f069bf09a75f42e6b53d562136af04828dbca44f93f90c406a7"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-ext-700-normal-BWOtdzfy.woff",
+      "destination": "web/dist/assets/roboto-cyrillic-ext-700-normal-BWOtdzfy.woff",
+      "sha256": "85a4aacb11b8fc214b3bca90cde1178085ac357a291a8bbb19cfa0d6b4175222"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-cyrillic-ext-700-normal-DmFxo5wj.woff2",
+      "destination": "web/dist/assets/roboto-cyrillic-ext-700-normal-DmFxo5wj.woff2",
+      "sha256": "b64aec59c2342a732ec9a766e0846692dad652c571ca3bc7fd31bf53943887eb"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-greek-300-normal-DJEM9B4Z.woff2",
+      "destination": "web/dist/assets/roboto-greek-300-normal-DJEM9B4Z.woff2",
+      "sha256": "52f26ad27714b9352415641f6a2274e54ca2001e16a7544f7c1c7021fb40928e"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-greek-300-normal-xS8CB6LN.woff",
+      "destination": "web/dist/assets/roboto-greek-300-normal-xS8CB6LN.woff",
+      "sha256": "876c52cd5bb0cb8e4df142c6781839066e9b82d1778e234d0fc57cc04b3de863"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-greek-400-normal-D904r64h.woff",
+      "destination": "web/dist/assets/roboto-greek-400-normal-D904r64h.woff",
+      "sha256": "e0b4a9370bb928018ef63412974b32e32c3392bc2a33bd02961a10307ea59b67"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-greek-400-normal-ai2Z1K3C.woff2",
+      "destination": "web/dist/assets/roboto-greek-400-normal-ai2Z1K3C.woff2",
+      "sha256": "1567c22e954336d26ec306a0dd756d19bb5e62c67e597ce0b778fc312dc68176"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-greek-500-normal-C9AnhcmC.woff2",
+      "destination": "web/dist/assets/roboto-greek-500-normal-C9AnhcmC.woff2",
+      "sha256": "4a1a773d1cd80d3dbdd2a16c31192899a64e1fa09911a86c23364d108d74ef0a"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-greek-500-normal-XBIQOowA.woff",
+      "destination": "web/dist/assets/roboto-greek-500-normal-XBIQOowA.woff",
+      "sha256": "7c7dc018718e4cf75943c5028d0981b0afb1ece12b1fbbcb96354c2231015a21"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-greek-700-normal-0aHWxGLu.woff2",
+      "destination": "web/dist/assets/roboto-greek-700-normal-0aHWxGLu.woff2",
+      "sha256": "1e88ca8df7c8bfd43deab63817490110b302732a281984cdae74c8e424e5900b"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-greek-700-normal-xQsEWSIA.woff",
+      "destination": "web/dist/assets/roboto-greek-700-normal-xQsEWSIA.woff",
+      "sha256": "ec24c155ac13c4b5e0ff97283506ece9ad386d6d79c37e7d69caf5b87e9fd332"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-300-normal-CCzlftfr.woff2",
+      "destination": "web/dist/assets/roboto-latin-300-normal-CCzlftfr.woff2",
+      "sha256": "299f10a52fe1423dd5579ff7e83db8dbea312f1e924f3e06e55839286b4d1c1d"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-300-normal-Dqn3NW0Y.woff",
+      "destination": "web/dist/assets/roboto-latin-300-normal-Dqn3NW0Y.woff",
+      "sha256": "560569f50820f7ceff036478915fea183348a804dc89a3405e337daa3eeeac63"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-400-normal-BqEyEoaF.woff2",
+      "destination": "web/dist/assets/roboto-latin-400-normal-BqEyEoaF.woff2",
+      "sha256": "425c0713a8176f92273d378599c7eac57de7fafabd4bd0ed457b70eb8f80d371"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-400-normal-D27F5sTu.woff",
+      "destination": "web/dist/assets/roboto-latin-400-normal-D27F5sTu.woff",
+      "sha256": "6cff12116b83321230347db75d0721e70c27c6ec69eccca93ca4b1556eaaf67f"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-500-normal-7RbcRiD8.woff2",
+      "destination": "web/dist/assets/roboto-latin-500-normal-7RbcRiD8.woff2",
+      "sha256": "5bcc3aa180e7f26f643cd5b2621cd7c2de193d0661d913a94afd3d4881a7a34b"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-500-normal-fsTFPL3E.woff",
+      "destination": "web/dist/assets/roboto-latin-500-normal-fsTFPL3E.woff",
+      "sha256": "8fa8e562e1a2997b442cd71ce0aa5c1814b119a80331d9cfdd0f4eb032e8a0bd"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-700-normal-BZpUvMxY.woff2",
+      "destination": "web/dist/assets/roboto-latin-700-normal-BZpUvMxY.woff2",
+      "sha256": "b9d66d1708156f765ada51939bc24ed259dafa69eb631b36e443680fe9e15879"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-700-normal-YuyVweIx.woff",
+      "destination": "web/dist/assets/roboto-latin-700-normal-YuyVweIx.woff",
+      "sha256": "19e78b1c5f2c683c28800f84dd6d453ddb67987b0079060a4cbe50c7bdded148"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-ext-300-normal-B0-sTZUp.woff",
+      "destination": "web/dist/assets/roboto-latin-ext-300-normal-B0-sTZUp.woff",
+      "sha256": "5a7d49c3bcb3594be5d047db4a8a2598db0afd646a920a885b6e8cb4528ba3fa"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-ext-300-normal-B90pq-BC.woff2",
+      "destination": "web/dist/assets/roboto-latin-ext-300-normal-B90pq-BC.woff2",
+      "sha256": "ccd24ea4a6eb7d7f2ad3d48078f64ffceb623faad8b4a52943bd7569d995dbec"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-ext-400-normal-C3tdtHj3.woff2",
+      "destination": "web/dist/assets/roboto-latin-ext-400-normal-C3tdtHj3.woff2",
+      "sha256": "5725eacca97303d8bce26f76cfcaee4393295bbf93c1eb6c3e5e4f260b2da189"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-ext-400-normal-CIveymTr.woff",
+      "destination": "web/dist/assets/roboto-latin-ext-400-normal-CIveymTr.woff",
+      "sha256": "7468d3e77a4cbffab32ba29ef0201f6b6b6865ac5465964a7fbb973dbb7ff580"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-ext-500-normal-C1cK9xmS.woff",
+      "destination": "web/dist/assets/roboto-latin-ext-500-normal-C1cK9xmS.woff",
+      "sha256": "2cf29a7aac76b74106f02002f590531bbeefc8041c9fa84c63c8abc7d4c9fb95"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-ext-500-normal-pMCM9Ixg.woff2",
+      "destination": "web/dist/assets/roboto-latin-ext-500-normal-pMCM9Ixg.woff2",
+      "sha256": "1e597a6e3b163200475089698be3427ab1bb01553493d5b7d53694429948d8ec"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-ext-700-normal-BDePAh3g.woff",
+      "destination": "web/dist/assets/roboto-latin-ext-700-normal-BDePAh3g.woff",
+      "sha256": "854a8fa1a954fe8f3d1582494af20984a18c04710992f6e96b2dfedf669d7675"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-latin-ext-700-normal-DSBUz0N1.woff2",
+      "destination": "web/dist/assets/roboto-latin-ext-700-normal-DSBUz0N1.woff2",
+      "sha256": "7673803a2d402018b1f726dded5bf2dbf2be4307039e8718f4bea654d6eca249"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-math-300-normal-5dF_7mZP.woff2",
+      "destination": "web/dist/assets/roboto-math-300-normal-5dF_7mZP.woff2",
+      "sha256": "744c67913a224bb25485edf13d97ccd88c62d84245dbc060fee9a185c86b0857"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-math-300-normal-CkwMvXpj.woff",
+      "destination": "web/dist/assets/roboto-math-300-normal-CkwMvXpj.woff",
+      "sha256": "3ad8d813c5e245cedc2af53560f8aa81d8b40fe0e2664bced2e2e596ed4f5e4c"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-math-400-normal-BEFej5gc.woff2",
+      "destination": "web/dist/assets/roboto-math-400-normal-BEFej5gc.woff2",
+      "sha256": "6fb289fea179641579de5b208600d490ee52177b347f83e92cf673afc419704e"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-math-400-normal-D6sS4O5l.woff",
+      "destination": "web/dist/assets/roboto-math-400-normal-D6sS4O5l.woff",
+      "sha256": "a7232b8539b1050fcaa3ba8495b7d8af7d4a4e8ce66d44606b7de8c50618844a"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-math-500-normal-BNGXE_xU.woff",
+      "destination": "web/dist/assets/roboto-math-500-normal-BNGXE_xU.woff",
+      "sha256": "5edcbd24a28a740466dea8c6812547c631de6d87253e86b173fde964e9e490f0"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-math-500-normal-C4NU9gLX.woff2",
+      "destination": "web/dist/assets/roboto-math-500-normal-C4NU9gLX.woff2",
+      "sha256": "41e63fe77c08977713ad31884c564f5e7c4767b7a1625d0753b6a39e0a0a93f4"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-math-700-normal-B8YqGHVc.woff2",
+      "destination": "web/dist/assets/roboto-math-700-normal-B8YqGHVc.woff2",
+      "sha256": "3cacb4c77c955f56a94ddf8ec9af8a546d2f009696a5b710eaf4d9a8aa8b3d39"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-math-700-normal-DbhUef31.woff",
+      "destination": "web/dist/assets/roboto-math-700-normal-DbhUef31.woff",
+      "sha256": "37612c43570c35f4dbe1f79a1f91d5af0057a678c9a3e82251f6167cc4e4772d"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-symbols-300-normal-CBIeSvs3.woff",
+      "destination": "web/dist/assets/roboto-symbols-300-normal-CBIeSvs3.woff",
+      "sha256": "278feb8cb11d4e7445eb7f310916f7211969240b95671f6150dc327c345bf237"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-symbols-300-normal-DDU7avhj.woff2",
+      "destination": "web/dist/assets/roboto-symbols-300-normal-DDU7avhj.woff2",
+      "sha256": "6bf7976c1f1c9f52a543650845e74a2304a1f530ba1c5f537e5014a93b15c5bb"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-symbols-400-normal-C7tGlxgb.woff",
+      "destination": "web/dist/assets/roboto-symbols-400-normal-C7tGlxgb.woff",
+      "sha256": "6c12462f33b711c773d282902ac26246f18c86dab70bca508372e9ca49efef03"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-symbols-400-normal-CB1Ce4Gk.woff2",
+      "destination": "web/dist/assets/roboto-symbols-400-normal-CB1Ce4Gk.woff2",
+      "sha256": "a50e7f2d64f85c2d81fe7be1da5c943fde45c4ac47d3147f9b5a56b705b97824"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-symbols-500-normal-B_CZKVJS.woff2",
+      "destination": "web/dist/assets/roboto-symbols-500-normal-B_CZKVJS.woff2",
+      "sha256": "5cb4c667beadbfc8c324b04fcea15837e253231e35ccc3d19b5e36e5280f92b4"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-symbols-500-normal-DFnofPUt.woff",
+      "destination": "web/dist/assets/roboto-symbols-500-normal-DFnofPUt.woff",
+      "sha256": "36e49aeecd3a3e894d221b178de7aaf7c20e5a90a29a25962fe48f00d9c2a33f"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-symbols-700-normal-BiFDindJ.woff2",
+      "destination": "web/dist/assets/roboto-symbols-700-normal-BiFDindJ.woff2",
+      "sha256": "25910e65ad4da1280d717a906bb4677ba666405b3ca3a286f40e01f58fce24fb"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-symbols-700-normal-C59U6HqI.woff",
+      "destination": "web/dist/assets/roboto-symbols-700-normal-C59U6HqI.woff",
+      "sha256": "fbab7ac59b646e765441c65fdd0d1736c1aa1e67e167f83b21067bfda945316e"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-vietnamese-300-normal-BPvXm_f1.woff2",
+      "destination": "web/dist/assets/roboto-vietnamese-300-normal-BPvXm_f1.woff2",
+      "sha256": "8ab596dcace8d7e1dc26b49b4fdbf7be2611807c8846106ac27db7d592784d01"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-vietnamese-300-normal-CYjuQheQ.woff",
+      "destination": "web/dist/assets/roboto-vietnamese-300-normal-CYjuQheQ.woff",
+      "sha256": "1feeb48f245278c105cdb7e8e5c6b24d438b9b616c778cdfa6dc6ab03609e635"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-vietnamese-400-normal-Bf76hAzZ.woff",
+      "destination": "web/dist/assets/roboto-vietnamese-400-normal-Bf76hAzZ.woff",
+      "sha256": "8881cd907e8f10a4fe6b5ad9bbb37088dc421bc58285d3f7c6e789611f0f6c81"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-vietnamese-400-normal-D2PTxGxD.woff2",
+      "destination": "web/dist/assets/roboto-vietnamese-400-normal-D2PTxGxD.woff2",
+      "sha256": "76afb0e482ab569c50a1ca35dfd052daa3d0f6d54d1b30865f6fea4c35c2b350"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-vietnamese-500-normal-B3ncpOoB.woff2",
+      "destination": "web/dist/assets/roboto-vietnamese-500-normal-B3ncpOoB.woff2",
+      "sha256": "15c77aed355b2ca99b34986268c33c67107613a2987c71dd9e12e79bbd6f9e63"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-vietnamese-500-normal-BgoYVz-9.woff",
+      "destination": "web/dist/assets/roboto-vietnamese-500-normal-BgoYVz-9.woff",
+      "sha256": "784dc1e97a55033a8e1f18ca60022ec8d8e5524abd05abbe52cf4b936ac3f6e5"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-vietnamese-700-normal-BEVeWqJt.woff2",
+      "destination": "web/dist/assets/roboto-vietnamese-700-normal-BEVeWqJt.woff2",
+      "sha256": "bec340ec8c7ec4940533eeceadddb00ac2da872c57c67b0c55e772c7c32dad4e"
+    },
+    {
+      "path": "bridge/web/dist/assets/roboto-vietnamese-700-normal-kpkdMgbf.woff",
+      "destination": "web/dist/assets/roboto-vietnamese-700-normal-kpkdMgbf.woff",
+      "sha256": "0c5b83d883ce2e45aed6e1634002d1a19291f375ddfdb21bb3cd2820e5b354f1"
+    },
+    {
+      "path": "bridge/web/dist/assets/rolldown-runtime-BWaJ3C7D.js",
+      "destination": "web/dist/assets/rolldown-runtime-BWaJ3C7D.js",
+      "sha256": "d0e9044430006c5bb48f477501a5af465f0a6377d2fcd7495aa215b8b75aaee3"
+    },
+    {
+      "path": "bridge/web/dist/assets/ru-YhkWY4Wm.js",
+      "destination": "web/dist/assets/ru-YhkWY4Wm.js",
+      "sha256": "e0d937ae2b5c467d71df72998af6fbc011aac1a413ad3312cb4b824e5499b8c8"
+    },
+    {
+      "path": "bridge/web/dist/assets/setupMonaco-8QMfTM_X.css",
+      "destination": "web/dist/assets/setupMonaco-8QMfTM_X.css",
+      "sha256": "9af2007724eee9d4d76b5a55d95a658a7e7b4c151b6ce6741db4d1d7b5b207d5"
+    },
+    {
+      "path": "bridge/web/dist/assets/setupMonaco-CCsdYT10.js",
+      "destination": "web/dist/assets/setupMonaco-CCsdYT10.js",
+      "sha256": "46ff159862869f3ce489396c0a3ae058677953f11550c5a0d9463ffda5b1a92e"
+    },
+    {
+      "path": "bridge/web/dist/assets/sl-BqW8jOTf.js",
+      "destination": "web/dist/assets/sl-BqW8jOTf.js",
+      "sha256": "e8c2baf6d766320585b857cd1ca82e63911586da2ed988ab321b0c2f54f217f8"
+    },
+    {
+      "path": "bridge/web/dist/assets/sleep-DuygSTkB.js",
+      "destination": "web/dist/assets/sleep-DuygSTkB.js",
+      "sha256": "161de30cd29a9a89b321e00f268f571a6b9043a160c747dbc8d54d774fd95428"
+    },
+    {
+      "path": "bridge/web/dist/assets/socketActions-Bkx2KJOe.js",
+      "destination": "web/dist/assets/socketActions-Bkx2KJOe.js",
+      "sha256": "a9c14785597dcff7ef2833ef90fb589cb214d8b64b34896e8e40b8fbb96635e1"
+    },
+    {
+      "path": "bridge/web/dist/assets/sv-C7gGT_f4.js",
+      "destination": "web/dist/assets/sv-C7gGT_f4.js",
+      "sha256": "7ab3d1807726a1c56e8f825a4bfda24ece15b456f3102c6281021cef08af1886"
+    },
+    {
+      "path": "bridge/web/dist/assets/ta-DnSl_jkx.js",
+      "destination": "web/dist/assets/ta-DnSl_jkx.js",
+      "sha256": "fa832e3a0a417b5f14aba7bcf4a4f249e6ef8b30aa0d03eea3f0148b3ed83c84"
+    },
+    {
+      "path": "bridge/web/dist/assets/th-DOwCrGXH.js",
+      "destination": "web/dist/assets/th-DOwCrGXH.js",
+      "sha256": "166bef96efabe34f525979a1a47af58cbbc09c2c412d335839c2bb85513d2d0e"
+    },
+    {
+      "path": "bridge/web/dist/assets/tr-D9_fZ2RF.js",
+      "destination": "web/dist/assets/tr-D9_fZ2RF.js",
+      "sha256": "49a3992ee2c2d080f9e71e8918ad659d45a4f463ad8141e566e852a712adb264"
+    },
+    {
+      "path": "bridge/web/dist/assets/uk-CWsD8vUw.js",
+      "destination": "web/dist/assets/uk-CWsD8vUw.js",
+      "sha256": "8805bb8962b816e84bbfabe1feb792115ba753c54466f1077b5f5667e8b68da5"
+    },
+    {
+      "path": "bridge/web/dist/assets/v4-DDdyfk2q.js",
+      "destination": "web/dist/assets/v4-DDdyfk2q.js",
+      "sha256": "cec9bc5ab483d70ea893e0a25a3c3eba28f2f54d710c8a350c54f4d4476aaff8"
+    },
+    {
+      "path": "bridge/web/dist/assets/virtual_pwa-register-ODwI-Kex.js",
+      "destination": "web/dist/assets/virtual_pwa-register-ODwI-Kex.js",
+      "sha256": "8050b6c2c922f4d834a378f44aa8559879e854a8ad084791ebf5ea5eda27daac"
+    },
+    {
+      "path": "bridge/web/dist/assets/vue-echarts-chunk-8SwUb9Hk.js",
+      "destination": "web/dist/assets/vue-echarts-chunk-8SwUb9Hk.js",
+      "sha256": "b025968b76c2dfaedfbb07811d908d1d32e9c9e1e0b8fb86e5399f5e67ac0de7"
+    },
+    {
+      "path": "bridge/web/dist/assets/vue-vendor-B5QZnJ8r.js",
+      "destination": "web/dist/assets/vue-vendor-B5QZnJ8r.js",
+      "sha256": "a9a3d1b290ce1f466c1575011737143a3e18e8ad3df146a500bbe9e37144767f"
+    },
+    {
+      "path": "bridge/web/dist/assets/vuetify-Cm30cL1j.css",
+      "destination": "web/dist/assets/vuetify-Cm30cL1j.css",
+      "sha256": "8ca08745ec1468f86640e3f768fbf71bf86392fc6847020a6739a1ff8229d77c"
+    },
+    {
+      "path": "bridge/web/dist/assets/vuetify-m2E8yArq.js",
+      "destination": "web/dist/assets/vuetify-m2E8yArq.js",
+      "sha256": "c5f3773f36318f635fee28b84ec4fab1b4ea4837fef150badfd9d2ddaba462f6"
+    },
+    {
+      "path": "bridge/web/dist/assets/workbox-window.prod.es5-Bd17z0YL.js",
+      "destination": "web/dist/assets/workbox-window.prod.es5-Bd17z0YL.js",
+      "sha256": "17bcc17d60dc78f927834b880c39649b03af46fd1f5cdbb8c42c5ae2b515dce9"
+    },
+    {
+      "path": "bridge/web/dist/assets/zh-CN-D6XZKBDq.js",
+      "destination": "web/dist/assets/zh-CN-D6XZKBDq.js",
+      "sha256": "282b3e8943d8a3df4cf29541159456f7447e84387a4444085dcba2444d3964df"
+    },
+    {
+      "path": "bridge/web/dist/assets/zh-HK-CNvF68gV.js",
+      "destination": "web/dist/assets/zh-HK-CNvF68gV.js",
+      "sha256": "4766decac0cb0b1794a737ced7120f1655fcfa3a44bfbb404a9c1251106819c7"
+    },
+    {
+      "path": "bridge/web/dist/assets/zh-TW-DW_TE6w9.js",
+      "destination": "web/dist/assets/zh-TW-DW_TE6w9.js",
+      "sha256": "892b131ef6b0661292a33d07daf3237e43178a2c54d39f601123c1c895daa46a"
+    },
+    {
+      "path": "bridge/web/dist/config.json",
+      "destination": "web/dist/config.json",
+      "sha256": "7078a2aa730a2d55e76fc1dc3648d01f90c6519657cdd172229da755103f1587"
+    },
+    {
+      "path": "bridge/web/dist/favicon.ico",
+      "destination": "web/dist/favicon.ico",
+      "sha256": "94ed143b6aa3ed2a9f05a912767afbce53be81d6999532957523fd94dff67224"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/android-chrome-192x192.png",
+      "destination": "web/dist/img/icons/android-chrome-192x192.png",
+      "sha256": "3ce52c995eeb886b4c0e883f0e7117c2a2ad00913a43fd3fa8fa404f5180b203"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/android-chrome-512x512.png",
+      "destination": "web/dist/img/icons/android-chrome-512x512.png",
+      "sha256": "3665bd59a56ad204fda1d2e1334566fb1c3d7496bb5d5e05330ee11deb338096"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/android-chrome-maskable-192x192.png",
+      "destination": "web/dist/img/icons/android-chrome-maskable-192x192.png",
+      "sha256": "0c2e29d3b6f46e76d3724437d5410c1f6a2d452c9008d49b58207add860a9f8c"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/android-chrome-maskable-512x512.png",
+      "destination": "web/dist/img/icons/android-chrome-maskable-512x512.png",
+      "sha256": "551b8fe0b844ac0045dba153e8149520c2cbf842dc098506f12711fd5f13e769"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/apple-touch-icon-120x120.png",
+      "destination": "web/dist/img/icons/apple-touch-icon-120x120.png",
+      "sha256": "fbca274e0ef94409aedbc4031a3b5f5d5b79799df39c50e7e37e83602e1bbfa5"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/apple-touch-icon-152x152.png",
+      "destination": "web/dist/img/icons/apple-touch-icon-152x152.png",
+      "sha256": "fd51b55cc9b16ab28fe9559c4bffca79f89c089c42bacd82b58e6d54c58fc078"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/apple-touch-icon-180x180.png",
+      "destination": "web/dist/img/icons/apple-touch-icon-180x180.png",
+      "sha256": "76d12bab795e5d4c55b9573fc726c074b1c3215bd092a626dc4a3e5f4a32b687"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/apple-touch-icon-60x60.png",
+      "destination": "web/dist/img/icons/apple-touch-icon-60x60.png",
+      "sha256": "1470097b81b2d2e9596321d5d43087897e1d3b098fd1ccebfd9a8ca6014d99cb"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/apple-touch-icon-76x76.png",
+      "destination": "web/dist/img/icons/apple-touch-icon-76x76.png",
+      "sha256": "f1055f89f0cd5e7ff36cb19058ecdce24438efe50c3955290ffcb198e0c88702"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/apple-touch-icon.png",
+      "destination": "web/dist/img/icons/apple-touch-icon.png",
+      "sha256": "76d12bab795e5d4c55b9573fc726c074b1c3215bd092a626dc4a3e5f4a32b687"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/favicon-16x16.png",
+      "destination": "web/dist/img/icons/favicon-16x16.png",
+      "sha256": "8dd71d9bc1130fa983e5f3a10011d8400639248c12adb375fe1704797225aef6"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/favicon-32x32.png",
+      "destination": "web/dist/img/icons/favicon-32x32.png",
+      "sha256": "a5bc5af8b92f71cedaa96690101f6707e6c9bf9f09919fd55794cec19be48edb"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/favicon.ico",
+      "destination": "web/dist/img/icons/favicon.ico",
+      "sha256": "94ed143b6aa3ed2a9f05a912767afbce53be81d6999532957523fd94dff67224"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/msapplication-icon-144x144.png",
+      "destination": "web/dist/img/icons/msapplication-icon-144x144.png",
+      "sha256": "85373ac91beaae436a4a0924fce56bd8fdbbcf154e804593b290ac314eb79c1d"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/mstile-150x150.png",
+      "destination": "web/dist/img/icons/mstile-150x150.png",
+      "sha256": "d6ac358b0199e678e05b0a1ddbd2734f51d87744152e4fb010f935dc47d7732d"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/safari-pinned-tab.svg",
+      "destination": "web/dist/img/icons/safari-pinned-tab.svg",
+      "sha256": "abc7dfe3a21f244a27723c006cdb972a44b95c9e17497f18c3a6293b51668d4a"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/shortcut-configuration-96x96.png",
+      "destination": "web/dist/img/icons/shortcut-configuration-96x96.png",
+      "sha256": "f84ed1a7df014b882d77885d6ab6c84a25382d6d725e4538a39b5266c8b2d646"
+    },
+    {
+      "path": "bridge/web/dist/img/icons/shortcut-settings-96x96.png",
+      "destination": "web/dist/img/icons/shortcut-settings-96x96.png",
+      "sha256": "00d5daba2ade0a5fc682b717af2ed5165546acf2cfc5560e5ceb8be4998536f9"
+    },
+    {
+      "path": "bridge/web/dist/img/mmu/mmu_3MS.svg",
+      "destination": "web/dist/img/mmu/mmu_3MS.svg",
+      "sha256": "a5169bfe571ec118c215c11bba13b99d2b61e9015b10d6a678caeb385ffa1738"
+    },
+    {
+      "path": "bridge/web/dist/img/mmu/mmu_AngryBeaver.svg",
+      "destination": "web/dist/img/mmu/mmu_AngryBeaver.svg",
+      "sha256": "417d5a60095edb5c5ab8e44fc94986972962d0eb70f9fcade5115cd9248b874c"
+    },
+    {
+      "path": "bridge/web/dist/img/mmu/mmu_BoxTurtle.svg",
+      "destination": "web/dist/img/mmu/mmu_BoxTurtle.svg",
+      "sha256": "e3d88e39cd213a6d0a0d0c792e177f8cddc009d60b0d2449d65b1d1bbde0794f"
+    },
+    {
+      "path": "bridge/web/dist/img/mmu/mmu_EMU.svg",
+      "destination": "web/dist/img/mmu/mmu_EMU.svg",
+      "sha256": "8d199b99e0fd77193feb3019ee2c0d1044f348545bcaa180fef33e6e7a4b3194"
+    },
+    {
+      "path": "bridge/web/dist/img/mmu/mmu_ERCF.svg",
+      "destination": "web/dist/img/mmu/mmu_ERCF.svg",
+      "sha256": "be9bf25621f113a8ad38fafb6717e8777f7e007048ff0346e0784cfe6d9f3ecd"
+    },
+    {
+      "path": "bridge/web/dist/img/mmu/mmu_HappyHare.svg",
+      "destination": "web/dist/img/mmu/mmu_HappyHare.svg",
+      "sha256": "15e31fe817793e0acbdd7d4351555f29195eaa4776ee7c3a56330bd0ac4318d8"
+    },
+    {
+      "path": "bridge/web/dist/img/mmu/mmu_KMS.svg",
+      "destination": "web/dist/img/mmu/mmu_KMS.svg",
+      "sha256": "03a12d1fd54df189b3a9baaeadbe542bc58d2a0ed8a6a87303e179c294524f60"
+    },
+    {
+      "path": "bridge/web/dist/img/mmu/mmu_MMX.svg",
+      "destination": "web/dist/img/mmu/mmu_MMX.svg",
+      "sha256": "94023b7d4f4d0b05ad2083647ec16da45a5bca733c0b2bf4f569a356f43f53fa"
+    },
+    {
+      "path": "bridge/web/dist/img/mmu/mmu_NightOwl.svg",
+      "destination": "web/dist/img/mmu/mmu_NightOwl.svg",
+      "sha256": "ee9aa591d1a912909c3ad52386fc34984bb3e6ef45e7ac5696206297e5975e22"
+    },
+    {
+      "path": "bridge/web/dist/img/mmu/mmu_QuattroBox.svg",
+      "destination": "web/dist/img/mmu/mmu_QuattroBox.svg",
+      "sha256": "c74f417902bc529db7d7f49dcb2b7fa890296812c5406fd78ebe9d9d2a5864fa"
+    },
+    {
+      "path": "bridge/web/dist/img/mmu/mmu_Tradrack.svg",
+      "destination": "web/dist/img/mmu/mmu_Tradrack.svg",
+      "sha256": "4d1ae0557d83cc95355f42e29a6058e2193b39b9649f27125976d492e5c1245d"
+    },
+    {
+      "path": "bridge/web/dist/img/mmu/mmu_VVD.svg",
+      "destination": "web/dist/img/mmu/mmu_VVD.svg",
+      "sha256": "aee8bd2a7a3800d63c9b08d20d21392b28f7dbd3f837537ea765bd8d311d0bb7"
+    },
+    {
+      "path": "bridge/web/dist/index.html",
+      "destination": "web/dist/index.html",
+      "sha256": "07688bf46969b7d0887d2f3e043454c80256a6c1d32cb559c92a714cc141003e"
+    },
+    {
+      "path": "bridge/web/dist/logo_annex.svg",
+      "destination": "web/dist/logo_annex.svg",
+      "sha256": "edc582678200e21f3fb5bb9bde9ed26aa73d1947efe64b1c7a50255c4109ac66"
+    },
+    {
+      "path": "bridge/web/dist/logo_automated_layers.svg",
+      "destination": "web/dist/logo_automated_layers.svg",
+      "sha256": "bc87e59e237e87cdeae1665ea7426a1f917301ab3d4c6e375131ceb6aeafec8e"
+    },
+    {
+      "path": "bridge/web/dist/logo_btt.svg",
+      "destination": "web/dist/logo_btt.svg",
+      "sha256": "05a4d5fd25127f4e6e28f5352fb20c929be2f5beacefb8be71ee242f35137bf5"
+    },
+    {
+      "path": "bridge/web/dist/logo_cocoapress.svg",
+      "destination": "web/dist/logo_cocoapress.svg",
+      "sha256": "16d05a40753b6c179f480fc72b405299fae9a1656ba29a91452ce0693e33a9ee"
+    },
+    {
+      "path": "bridge/web/dist/logo_eva.svg",
+      "destination": "web/dist/logo_eva.svg",
+      "sha256": "3f66b15538bf289adea5f195291847e55e1e3869c0a907ad0b461a83aa5b6645"
+    },
+    {
+      "path": "bridge/web/dist/logo_fluidd.svg",
+      "destination": "web/dist/logo_fluidd.svg",
+      "sha256": "be10c3642cf890d1498d06c71b3120f30529288bef1275e765612b4a83a847cb"
+    },
+    {
+      "path": "bridge/web/dist/logo_hevort.svg",
+      "destination": "web/dist/logo_hevort.svg",
+      "sha256": "56744cda40ad5e3b86bd540c6736bb0c1d38aece6ea537254039c596f8c29dd8"
+    },
+    {
+      "path": "bridge/web/dist/logo_kingroon.svg",
+      "destination": "web/dist/logo_kingroon.svg",
+      "sha256": "08dc722ed23de2005347be44c2b4d396a6d9ea7013f33c0f368e307bf46a12a4"
+    },
+    {
+      "path": "bridge/web/dist/logo_klipper.svg",
+      "destination": "web/dist/logo_klipper.svg",
+      "sha256": "62ed2d0f6f6d576856210dec65279dc25ecd202a552084fd30e413faa1726f52"
+    },
+    {
+      "path": "bridge/web/dist/logo_ldo.svg",
+      "destination": "web/dist/logo_ldo.svg",
+      "sha256": "aab0b4bd27b9799bfe5ece4c5ab620800c12cadd1f4834578dc6509d9d4c6c6e"
+    },
+    {
+      "path": "bridge/web/dist/logo_mellow.svg",
+      "destination": "web/dist/logo_mellow.svg",
+      "sha256": "7fba31dcca5ac264298e3106721cf4ca04f21cc9937a31b7fa01843481534249"
+    },
+    {
+      "path": "bridge/web/dist/logo_micron.svg",
+      "destination": "web/dist/logo_micron.svg",
+      "sha256": "d66fcb88f4b476cbaa12e80d72a9cee2dd3620489c64179e3323225ba55a4ba4"
+    },
+    {
+      "path": "bridge/web/dist/logo_peopoly.svg",
+      "destination": "web/dist/logo_peopoly.svg",
+      "sha256": "5b03ed24dc6a94da6b829efd75045965df2187b107c5280083d2cdd041dda622"
+    },
+    {
+      "path": "bridge/web/dist/logo_pfa.svg",
+      "destination": "web/dist/logo_pfa.svg",
+      "sha256": "4c3f9a31f487e9c66444da42dd69a3de54aeb1f5033493fe252b4137eda5e720"
+    },
+    {
+      "path": "bridge/web/dist/logo_prusa.svg",
+      "destination": "web/dist/logo_prusa.svg",
+      "sha256": "474b5e76fc2f73d963853a6a972c15b796b7a285975958f87e622d8894dccd25"
+    },
+    {
+      "path": "bridge/web/dist/logo_qidi.svg",
+      "destination": "web/dist/logo_qidi.svg",
+      "sha256": "0edde85a4db51a0460eabc8a7496a2a01f40828698590cd3a40a63875169fd43"
+    },
+    {
+      "path": "bridge/web/dist/logo_ratrig.svg",
+      "destination": "web/dist/logo_ratrig.svg",
+      "sha256": "ba122fef28373fdc502665a205419d9cf4aa0153d35516aa2d2d806da1f1e326"
+    },
+    {
+      "path": "bridge/web/dist/logo_salad_fork.svg",
+      "destination": "web/dist/logo_salad_fork.svg",
+      "sha256": "a86d19a60fa886f72a2b4e8e0d887bc6e61b697c44f091b9a9b171dd3fd84561"
+    },
+    {
+      "path": "bridge/web/dist/logo_siboor.svg",
+      "destination": "web/dist/logo_siboor.svg",
+      "sha256": "37513b928c0f2927077eaffd6b4eac3faa50f43b3b232da0d7c2de704705a2c5"
+    },
+    {
+      "path": "bridge/web/dist/logo_snakeoil.svg",
+      "destination": "web/dist/logo_snakeoil.svg",
+      "sha256": "a55f09cb2860eac88a0c24b9f7e00da8a7177fa9fface4cb1e412eccd3f3f983"
+    },
+    {
+      "path": "bridge/web/dist/logo_snapmaker.svg",
+      "destination": "web/dist/logo_snapmaker.svg",
+      "sha256": "c427193d943fe9ccd58d321b7d051fdb02e858eec63cb6609fc00ad19db0f1bb"
+    },
+    {
+      "path": "bridge/web/dist/logo_voron.svg",
+      "destination": "web/dist/logo_voron.svg",
+      "sha256": "3614a61e111952642b0c9903404420ccd38bed92b08ae9db9cb97f77665d3590"
+    },
+    {
+      "path": "bridge/web/dist/logo_vzbot.svg",
+      "destination": "web/dist/logo_vzbot.svg",
+      "sha256": "0d781f1736ff690f537ebcc0ba5db3605bc7ee562ed156f99d13508e275bac38"
+    },
+    {
+      "path": "bridge/web/dist/logo_z-bolt.svg",
+      "destination": "web/dist/logo_z-bolt.svg",
+      "sha256": "ddc446de54bd06156d9e8d74e68b011a198e15867297217da129bb1cc70ee4f4"
+    },
+    {
+      "path": "bridge/web/dist/logo_zerog.svg",
+      "destination": "web/dist/logo_zerog.svg",
+      "sha256": "1697c9292a264edfe7742e82d980b6fbf1416882cd869258fcdf51061d131edb"
+    },
+    {
+      "path": "bridge/web/dist/manifest.webmanifest",
+      "destination": "web/dist/manifest.webmanifest",
+      "sha256": "3f16b990eda5a4d937d7392837c917e3033483b35f7cedde3f74ec837f04b501"
+    },
+    {
+      "path": "bridge/web/dist/release_info.json",
+      "destination": "web/dist/release_info.json",
+      "sha256": "3050708f123529feca96afec12638751e5d3196a05d3b193cc5f92dd4e9df8d3"
+    },
+    {
+      "path": "bridge/web/dist/robots.txt",
+      "destination": "web/dist/robots.txt",
+      "sha256": "e5c4b84484ee4216e9373be99380320c25dd94805f99f0a805846f087636553f"
+    },
+    {
+      "path": "bridge/web/dist/sw.js",
+      "destination": "web/dist/sw.js",
+      "sha256": "1157eeb0aa20c6d6e8bef99f418c00a654372852d656f3107faae4906a06013c"
+    },
+    {
+      "path": "bridge/web/filament_mapping.js",
+      "destination": "web/filament_mapping.js",
+      "sha256": "429ca9bb9a81ad1874aa5d5e293b3b19bb18aa95e1674c938bfe85e8994ebe67"
+    },
+    {
+      "path": "bridge/web/gcvt.js",
+      "destination": "web/gcvt.js",
+      "sha256": "0658560bce25814d8fdb3745202e27309e0c0bbdeefd1725a14bd20dc93f49ac"
+    },
+    {
+      "path": "bridge/web/snapmaker.png",
+      "destination": "web/snapmaker.png",
+      "sha256": "e9d2b4c9e6e261742e1ce63e04025413124efe7e7a8b8cbb4fd1710146eb522d"
+    },
+    {
+      "path": "bridge/web/webui.html",
+      "destination": "web/webui.html",
+      "sha256": "f9c092468d252b591a86c46086285fb443befd1fc96a5f288ea3db972e909f0b"
+    },
+    {
+      "path": "setup/setup-watchdog.ps1",
+      "destination": "setup-watchdog.ps1",
+      "sha256": "e7dd88aace926f10cf5117d6a372cdc691c1edd39513e812f822a35a32f76176"
+    }
+  ]
+}

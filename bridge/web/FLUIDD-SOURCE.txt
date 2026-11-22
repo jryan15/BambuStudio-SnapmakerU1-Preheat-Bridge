@@ -1,0 +1,4 @@
+Fluidd v1.38.1
+Source: https://github.com/fluidd-core/fluidd
+Release: https://github.com/fluidd-core/fluidd/releases/tag/v1.38.1
+Distributed under GPL-3.0. Archive: fluidd.zip

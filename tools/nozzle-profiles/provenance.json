@@ -1,0 +1,316 @@
+{
+    "source": "https://github.com/Snapmaker/snapmaker-profiles",
+    "commit": "655b5b7f1711d1aa64d5fd00e061ba76514b0e4c",
+    "profiles": [
+        {
+            "name": "0.08mm High Quality @Snapmaker U1 (0.2 nozzle) [Bridge test]",
+            "source_profile": "0.08mm High Quality @Snapmaker U1 (0.2 nozzle)",
+            "kind": "process"
+        },
+        {
+            "name": "0.10mm High Quality @Snapmaker U1 (0.2 nozzle) [Bridge test]",
+            "source_profile": "0.10mm High Quality @Snapmaker U1 (0.2 nozzle)",
+            "kind": "process"
+        },
+        {
+            "name": "0.12mm Standard @Snapmaker U1 (0.2 nozzle) [Bridge test]",
+            "source_profile": "0.12mm Standard @Snapmaker U1 (0.2 nozzle)",
+            "kind": "process"
+        },
+        {
+            "name": "Generic ABS @U1 0.2 nozzle [Bridge test]",
+            "source_profile": "Generic ABS @U1 0.2 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic ASA @U1 0.2 nozzle [Bridge test]",
+            "source_profile": "Generic ASA @U1 0.2 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic PETG @U1 0.2 nozzle [Bridge test]",
+            "source_profile": "Generic PETG @U1 0.2 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic PETG HF @U1 0.2 nozzle [Bridge test]",
+            "source_profile": "Generic PETG HF @U1 0.2 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic PLA @U1 0.2 nozzle [Bridge test]",
+            "source_profile": "Generic PLA @U1 0.2 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic PLA High Speed @U1 0.2 nozzle [Bridge test]",
+            "source_profile": "Generic PLA High Speed @U1 0.2 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic PLA Silk @U1 0.2 nozzle [Bridge test]",
+            "source_profile": "Generic PLA Silk @U1 0.2 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Snapmaker PETG HF @U1 0.2 nozzle [Bridge test]",
+            "source_profile": "Snapmaker PETG HF @U1 0.2 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Snapmaker PLA Matte @U1 0.2 nozzle [Bridge test]",
+            "source_profile": "Snapmaker PLA Matte @U1 0.2 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Snapmaker PLA Silk @U1 0.2 nozzle [Bridge test]",
+            "source_profile": "Snapmaker PLA Silk @U1 0.2 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Snapmaker PLA SnapSpeed @U1 0.2 nozzle [Bridge test]",
+            "source_profile": "Snapmaker PLA SnapSpeed @U1 0.2 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Snapmaker U1 (0.2 nozzle)",
+            "source_profile": "Snapmaker U1 (0.2 nozzle)",
+            "kind": "machine"
+        },
+        {
+            "name": "0.18mm Standard @Snapmaker U1 (0.6 nozzle) [Bridge test]",
+            "source_profile": "0.18mm Standard @Snapmaker U1 (0.6 nozzle)",
+            "kind": "process"
+        },
+        {
+            "name": "0.24mm Standard @Snapmaker U1 (0.6 nozzle) [Bridge test]",
+            "source_profile": "0.24mm Standard @Snapmaker U1 (0.6 nozzle)",
+            "kind": "process"
+        },
+        {
+            "name": "0.30mm Standard @Snapmaker U1 (0.6 nozzle) [Bridge test]",
+            "source_profile": "0.30mm Standard @Snapmaker U1 (0.6 nozzle)",
+            "kind": "process"
+        },
+        {
+            "name": "Generic ABS @U1 0.6 nozzle [Bridge test]",
+            "source_profile": "Generic ABS @U1 0.6 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic ASA @U1 0.6 nozzle [Bridge test]",
+            "source_profile": "Generic ASA @U1 0.6 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic PA-CF @U1 0.6 nozzle [Bridge test]",
+            "source_profile": "Generic PA-CF @U1 0.6 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic PC @U1 0.6 nozzle [Bridge test]",
+            "source_profile": "Generic PC @U1 0.6 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic PETG @U1 0.6 nozzle [Bridge test]",
+            "source_profile": "Generic PETG @U1 0.6 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic PETG HF @U1 0.6 nozzle [Bridge test]",
+            "source_profile": "Generic PETG HF @U1 0.6 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic PETG-CF @U1 0.6 nozzle [Bridge test]",
+            "source_profile": "Generic PETG-CF @U1 0.6 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic PLA @U1 0.6 nozzle [Bridge test]",
+            "source_profile": "Generic PLA @U1 0.6 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic PLA High Speed @U1 0.6 nozzle [Bridge test]",
+            "source_profile": "Generic PLA High Speed @U1 0.6 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic PLA Silk @U1 0.6 nozzle [Bridge test]",
+            "source_profile": "Generic PLA Silk @U1 0.6 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic PLA-CF @U1 0.6 nozzle [Bridge test]",
+            "source_profile": "Generic PLA-CF @U1 0.6 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic PVA @U1 0.6 nozzle [Bridge test]",
+            "source_profile": "Generic PVA @U1 0.6 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic TPU @U1 0.6 nozzle [Bridge test]",
+            "source_profile": "Generic TPU @U1 0.6 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Snapmaker PETG HF @U1 0.6 nozzle [Bridge test]",
+            "source_profile": "Snapmaker PETG HF @U1 0.6 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Snapmaker PLA Matte @U1 0.6 nozzle [Bridge test]",
+            "source_profile": "Snapmaker PLA Matte @U1 0.6 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Snapmaker PLA Silk @U1 0.6 nozzle [Bridge test]",
+            "source_profile": "Snapmaker PLA Silk @U1 0.6 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Snapmaker PLA SnapSpeed @U1 0.6 nozzle [Bridge test]",
+            "source_profile": "Snapmaker PLA SnapSpeed @U1 0.6 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Snapmaker TPU 90A @U1 0.6 nozzle [Bridge test]",
+            "source_profile": "Snapmaker TPU 90A @U1 0.6 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Snapmaker TPU 95A HF @U1 0.6 nozzle [Bridge test]",
+            "source_profile": "Snapmaker TPU 95A HF @U1 0.6 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Snapmaker U1 (0.6 nozzle)",
+            "source_profile": "Snapmaker U1 (0.6 nozzle)",
+            "kind": "machine"
+        },
+        {
+            "name": "0.24mm Standard @Snapmaker U1 (0.8 nozzle) [Bridge test]",
+            "source_profile": "0.24mm Standard @Snapmaker U1 (0.8 nozzle)",
+            "kind": "process"
+        },
+        {
+            "name": "0.32mm Standard @Snapmaker U1 (0.8 nozzle) [Bridge test]",
+            "source_profile": "0.32mm Standard @Snapmaker U1 (0.8 nozzle)",
+            "kind": "process"
+        },
+        {
+            "name": "0.40mm Standard @Snapmaker U1 (0.8 nozzle) [Bridge test]",
+            "source_profile": "0.40mm Standard @Snapmaker U1 (0.8 nozzle)",
+            "kind": "process"
+        },
+        {
+            "name": "0.40mm Strength @Snapmaker U1 (0.8 nozzle) [Bridge test]",
+            "source_profile": "0.40mm Strength @Snapmaker U1 (0.8 nozzle)",
+            "kind": "process"
+        },
+        {
+            "name": "Generic ABS @U1 0.8 nozzle [Bridge test]",
+            "source_profile": "Generic ABS @U1 0.8 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic ASA @U1 0.8 nozzle [Bridge test]",
+            "source_profile": "Generic ASA @U1 0.8 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic PA-CF @U1 0.8 nozzle [Bridge test]",
+            "source_profile": "Generic PA-CF @U1 0.8 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic PC @U1 0.8 nozzle [Bridge test]",
+            "source_profile": "Generic PC @U1 0.8 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic PETG @U1 0.8 nozzle [Bridge test]",
+            "source_profile": "Generic PETG @U1 0.8 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic PETG HF @U1 0.8 nozzle [Bridge test]",
+            "source_profile": "Generic PETG HF @U1 0.8 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic PETG-CF @U1 0.8 nozzle [Bridge test]",
+            "source_profile": "Generic PETG-CF @U1 0.8 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic PLA @U1 0.8 nozzle [Bridge test]",
+            "source_profile": "Generic PLA @U1 0.8 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic PLA High Speed @U1 0.8 nozzle [Bridge test]",
+            "source_profile": "Generic PLA High Speed @U1 0.8 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic PLA Silk @U1 0.8 nozzle [Bridge test]",
+            "source_profile": "Generic PLA Silk @U1 0.8 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic PLA-CF @U1 0.8 nozzle [Bridge test]",
+            "source_profile": "Generic PLA-CF @U1 0.8 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic PVA @U1 0.8 nozzle [Bridge test]",
+            "source_profile": "Generic PVA @U1 0.8 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Generic TPU @U1 0.8 nozzle [Bridge test]",
+            "source_profile": "Generic TPU @U1 0.8 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Snapmaker PETG HF @U1 0.8 nozzle [Bridge test]",
+            "source_profile": "Snapmaker PETG HF @U1 0.8 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Snapmaker PLA Matte @U1 0.8 nozzle [Bridge test]",
+            "source_profile": "Snapmaker PLA Matte @U1 0.8 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Snapmaker PLA Silk @U1 0.8 nozzle [Bridge test]",
+            "source_profile": "Snapmaker PLA Silk @U1 0.8 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Snapmaker PLA SnapSpeed @U1 0.8 nozzle [Bridge test]",
+            "source_profile": "Snapmaker PLA SnapSpeed @U1 0.8 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Snapmaker TPU 90A @U1 0.8 nozzle [Bridge test]",
+            "source_profile": "Snapmaker TPU 90A @U1 0.8 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Snapmaker TPU 95A HF @U1 0.8 nozzle [Bridge test]",
+            "source_profile": "Snapmaker TPU 95A HF @U1 0.8 nozzle",
+            "kind": "filament"
+        },
+        {
+            "name": "Snapmaker U1 (0.8 nozzle)",
+            "source_profile": "Snapmaker U1 (0.8 nozzle)",
+            "kind": "machine"
+        }
+    ]
+}

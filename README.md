@@ -1,3 +1,7 @@
+> **Test 4:** fixes grouped nozzle choices, includes the missing Fluidd console, and reports bridge version 5.48.0-u1.4-test.4. Close Bambu and wait for the printer to finish before running SETUP.bat.
+
+> **u1.4 test setup:** Extract the ZIP and run `SETUP.bat`. This opens the new install/update/remove interface. Read `SETUP-READ-ME.txt` first. Windows validation is pending; this is not a published production release.
+
 # 5.48.0-u1.3 — Single-color printing and bounded logs
 
 - Fixed single-color prints being rejected with “No explicit tool-change temperature waits found.”
